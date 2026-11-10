@@ -1,0 +1,761 @@
+{
+ "company": "arbisoft",
+ "questions": [
+  {
+   "slug": "arbisoft-tech-01",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "mutability"
+   ],
+   "prompt": "What is the difference between a list and a tuple in Python, and when would you choose a tuple?",
+   "ideal_answer": "A list is mutable and a tuple is immutable. Choose a tuple for fixed records, dictionary keys or values that must not change; choose a list when the collection grows or is edited.",
+   "key_points": [
+    "Mutable vs immutable",
+    "Tuples are hashable when their items are",
+    "Tuples signal fixed-size records"
+   ],
+   "follow_ups": [
+    "Can a tuple contain a list? What happens if you change that list?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-02",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "dictionaries",
+    "sets"
+   ],
+   "prompt": "How do dictionaries and sets achieve fast lookups, and what must be true of their keys?",
+   "ideal_answer": "Both use a hash table: the key's hash picks a slot so lookup is O(1) on average. Keys must be hashable, meaning immutable and with a stable hash consistent with equality.",
+   "key_points": [
+    "Hash table, average O(1)",
+    "Keys must be hashable",
+    "Worst case O(n) with many collisions"
+   ],
+   "follow_ups": [
+    "Why can a list not be a dictionary key?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-03",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "generators"
+   ],
+   "prompt": "Explain generators and why you would use one instead of building a list, for example when reading a 5 GB log file.",
+   "ideal_answer": "A generator produces items lazily with yield, keeping only one item in memory at a time. For a huge file you iterate line by line and process each one, so memory stays flat instead of loading everything.",
+   "key_points": [
+    "Lazy evaluation with yield",
+    "Constant memory",
+    "Single pass, cannot rewind"
+   ],
+   "follow_ups": [
+    "How do you pass a generator through a pipeline of steps?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-04",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "decorators"
+   ],
+   "prompt": "What is a decorator? Write the idea of a decorator that logs how long a function took.",
+   "ideal_answer": "A decorator is a function that takes a function and returns a wrapped one. The wrapper records the start time, calls the original, records the end time, logs the difference and returns the result; functools.wraps keeps the name and docstring.",
+   "key_points": [
+    "Function taking and returning a function",
+    "Wrapper measures time around the call",
+    "functools.wraps preserves metadata"
+   ],
+   "follow_ups": [
+    "How would you make the decorator accept an argument such as a log level?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-05",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "gil",
+    "concurrency"
+   ],
+   "prompt": "What is the GIL, and how does it affect threads versus processes for CPU-bound and I/O-bound work in CPython?",
+   "ideal_answer": "The GIL lets only one thread run Python bytecode at a time. Threads still help for I/O-bound work because the lock is released while waiting; CPU-bound work needs multiprocessing or native code to use several cores.",
+   "key_points": [
+    "One thread executes bytecode at a time",
+    "Threads fine for I/O-bound",
+    "Processes for CPU-bound"
+   ],
+   "follow_ups": [
+    "Where does asyncio fit between these two?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-06",
+   "kind": "technical",
+   "category": "oop",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "oop-pillars"
+   ],
+   "prompt": "Explain encapsulation, inheritance and polymorphism with one small example each.",
+   "ideal_answer": "Encapsulation hides internal state behind methods, such as a BankAccount whose balance changes only through deposit. Inheritance lets a subclass reuse a parent, such as SavingsAccount extending Account. Polymorphism lets different classes answer the same method, such as several payment classes each implementing pay().",
+   "key_points": [
+    "Encapsulation: hide state, expose methods",
+    "Inheritance: reuse and specialise",
+    "Polymorphism: same call, different behaviour"
+   ],
+   "follow_ups": [
+    "When is composition a better choice than inheritance?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-07",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "complexity"
+   ],
+   "prompt": "What does O(n) versus O(n log n) mean, and what is the complexity of searching in a list, in a sorted list with binary search, and in a set?",
+   "ideal_answer": "Big-O describes how work grows with input size. A list search is O(n), binary search on a sorted list is O(log n), and a set lookup is O(1) on average; sorting is O(n log n).",
+   "key_points": [
+    "Growth rate, not exact time",
+    "List O(n), binary O(log n), set O(1) average",
+    "Sorting O(n log n)"
+   ],
+   "follow_ups": [
+    "When is a linear scan faster than building a set?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-08",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "hash-maps"
+   ],
+   "prompt": "Given a list of numbers and a target, find two numbers that add up to the target. Describe a brute force way and a better way.",
+   "ideal_answer": "Brute force checks every pair in O(n squared). A hash map stores numbers already seen, and for each number checks whether target minus that number is in the map, giving O(n) time and O(n) space.",
+   "key_points": [
+    "Brute force O(n^2)",
+    "Hash map of seen values",
+    "O(n) time, O(n) space"
+   ],
+   "follow_ups": [
+    "What changes if the list is already sorted?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-09",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "sliding-window"
+   ],
+   "prompt": "Find the length of the longest substring without repeating characters. Explain the algorithm and its complexity.",
+   "ideal_answer": "Use a sliding window with a dictionary of last seen positions. Move the right end forward; when a character repeats inside the window, move the left end past its previous position, and track the maximum window size. It runs in O(n) time and O(k) space for k distinct characters.",
+   "key_points": [
+    "Sliding window with two pointers",
+    "Dictionary of last seen index",
+    "O(n) time"
+   ],
+   "follow_ups": [
+    "How would you return the substring itself, not only its length?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-10",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "joins"
+   ],
+   "prompt": "Explain INNER JOIN, LEFT JOIN and what a NULL does to a join condition.",
+   "ideal_answer": "INNER JOIN keeps only rows that match on both sides. LEFT JOIN keeps every left row and fills right columns with NULL when nothing matches. NULL never equals anything, so a NULL key does not match even another NULL.",
+   "key_points": [
+    "INNER keeps matches only",
+    "LEFT keeps all left rows",
+    "NULL = NULL is not true"
+   ],
+   "follow_ups": [
+    "How do you find customers who have no orders?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-11",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "group-by",
+    "aggregation"
+   ],
+   "prompt": "What is the difference between WHERE and HAVING? Write the idea of a query for departments whose average salary is above 100000.",
+   "ideal_answer": "WHERE filters rows before grouping and HAVING filters groups after aggregation. You select department, group by department and add HAVING AVG(salary) > 100000.",
+   "key_points": [
+    "WHERE before grouping",
+    "HAVING after aggregation",
+    "GROUP BY with AVG"
+   ],
+   "follow_ups": [
+    "Can HAVING be used without GROUP BY?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-12",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "indexes",
+    "performance"
+   ],
+   "prompt": "A query on a table with 50 million rows is slow. How would you investigate and what could an index do or not do?",
+   "ideal_answer": "Run EXPLAIN to see whether it scans the whole table, then add an index on the columns used in WHERE, JOIN and ORDER BY in a useful order. An index speeds reads but costs disk space and slows writes, and it is ignored when a function wraps the column or the filter is not selective.",
+   "key_points": [
+    "Use EXPLAIN first",
+    "Index columns used to filter, join and sort",
+    "Trade-off: slower writes and more space"
+   ],
+   "follow_ups": [
+    "What is a composite index and why does column order matter?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-13",
+   "kind": "technical",
+   "category": "rest-api",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "http-methods"
+   ],
+   "prompt": "What are the main HTTP methods, which are idempotent, and which status codes would you return for create, validation failure and not found?",
+   "ideal_answer": "GET reads, POST creates, PUT replaces, PATCH changes part, DELETE removes. GET, PUT and DELETE are idempotent, POST is not. Use 201 for created, 400 or 422 for invalid input and 404 for not found.",
+   "key_points": [
+    "Meaning of each method",
+    "Idempotent: GET, PUT, DELETE",
+    "201, 400/422, 404"
+   ],
+   "follow_ups": [
+    "Why is retrying a POST risky and how do idempotency keys help?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-14",
+   "kind": "technical",
+   "category": "rest-api",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "api-design"
+   ],
+   "prompt": "How would you design pagination and error responses for a REST endpoint that lists orders?",
+   "ideal_answer": "Offer limit and offset or, better for large data, a cursor so results stay stable when rows are added. Return a total or next cursor and use one consistent error shape with a code, a message and field details, along with the right status code.",
+   "key_points": [
+    "Limit/offset or cursor pagination",
+    "Cursor is stable for big data",
+    "Consistent error body and status codes"
+   ],
+   "follow_ups": [
+    "Why does offset pagination get slow on deep pages?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-15",
+   "kind": "technical",
+   "category": "django",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "mvt"
+   ],
+   "prompt": "Explain Django's request flow: URL, view, model and template, and where middleware fits.",
+   "ideal_answer": "A request passes through middleware, the URL resolver picks a view, the view uses models to read or write the database and returns a response, often by rendering a template. Middleware wraps this flow for concerns like sessions, authentication and security headers.",
+   "key_points": [
+    "URL routing to a view",
+    "Model layer talks to the database",
+    "Middleware wraps request and response"
+   ],
+   "follow_ups": [
+    "Name one built-in middleware and what it does."
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-16",
+   "kind": "technical",
+   "category": "django",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "orm",
+    "n+1"
+   ],
+   "prompt": "What is the N+1 query problem in the Django ORM and how do select_related and prefetch_related solve it?",
+   "ideal_answer": "Looping over objects and touching a related object runs one extra query per row. select_related uses a SQL join for single-valued relations and prefetch_related runs a second query and joins the results in Python for many-valued relations.",
+   "key_points": [
+    "One extra query per row",
+    "select_related joins foreign keys",
+    "prefetch_related for many-to-many and reverse"
+   ],
+   "follow_ups": [
+    "How can you spot N+1 queries during development?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-17",
+   "kind": "technical",
+   "category": "django",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "security"
+   ],
+   "prompt": "Which common web vulnerabilities does Django help protect against, and what must the developer still do?",
+   "ideal_answer": "Django escapes template output against XSS, uses CSRF tokens, and its ORM parameterises queries against SQL injection. The developer must avoid raw SQL with string formatting, avoid marking user data safe, keep DEBUG off and secrets out of the code, and validate permissions on every view.",
+   "key_points": [
+    "XSS escaping, CSRF tokens, parameterised ORM",
+    "Avoid raw SQL formatting and mark_safe",
+    "Authorisation checks are still your job"
+   ],
+   "follow_ups": [
+    "What is the difference between authentication and authorisation?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-18",
+   "kind": "technical",
+   "category": "git",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "git-workflow"
+   ],
+   "prompt": "What is the difference between git merge and git rebase, and when would you avoid rebase?",
+   "ideal_answer": "Merge joins two branches with a merge commit and keeps history as it happened. Rebase replays your commits on top of another branch for a linear history, but it rewrites commits, so avoid it on branches others already use.",
+   "key_points": [
+    "Merge keeps true history",
+    "Rebase rewrites and linearises",
+    "Never rebase shared branches"
+   ],
+   "follow_ups": [
+    "How do you undo a pushed bad commit safely?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-19",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "unit-testing"
+   ],
+   "prompt": "How do you test a function that calls an external payment API without hitting the real service?",
+   "ideal_answer": "Replace the HTTP call with a mock or fake in the test, assert the function sends the right request and handles success, failure and timeout responses, and keep a few separate integration tests against a sandbox.",
+   "key_points": [
+    "Mock the external call",
+    "Test success, failure and timeout",
+    "Keep integration tests separate"
+   ],
+   "follow_ups": [
+    "What is the risk of mocking too much?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-20",
+   "kind": "technical",
+   "category": "system-design",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "caching"
+   ],
+   "prompt": "A product listing endpoint is slow under load. How would you add caching and how do you keep the cache correct?",
+   "ideal_answer": "Cache the rendered or queried result in a store like Redis with a sensible expiry, and invalidate or update it when the product changes. Cover stampedes with locking or early refresh and measure hit rate to confirm it helps.",
+   "key_points": [
+    "Cache in Redis with a TTL",
+    "Invalidate on writes",
+    "Handle stampedes and measure hit rate"
+   ],
+   "follow_ups": [
+    "What data should never be cached?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-21",
+   "kind": "technical",
+   "category": "system-design",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "queues"
+   ],
+   "prompt": "When would you move work such as sending emails or generating reports to a background queue, and what can go wrong?",
+   "ideal_answer": "Move work that is slow, can be retried and does not need to finish before the response. Problems to plan for are duplicate execution, so tasks must be idempotent, lost tasks, retries with backoff and visibility into failures.",
+   "key_points": [
+    "Slow, retryable work",
+    "Idempotent tasks",
+    "Retries, backoff and monitoring"
+   ],
+   "follow_ups": [
+    "How would you handle a task that always fails?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-22",
+   "kind": "scenario",
+   "category": "backend-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "debugging"
+   ],
+   "prompt": "Scenario: after a deployment your API starts returning 500 errors for about 5 percent of requests. Walk through how you would find and fix the cause.",
+   "ideal_answer": "Check logs and error tracking for the stack trace, compare errors with the deployment time, and look for the pattern in which requests fail. Roll back if users are hurt, reproduce locally with the failing input, fix, add a test and confirm with monitoring.",
+   "key_points": [
+    "Read logs and traces first",
+    "Roll back to protect users",
+    "Reproduce, fix, add a regression test"
+   ],
+   "follow_ups": [
+    "What would you put in the post-incident write-up?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-23",
+   "kind": "scenario",
+   "category": "backend-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "data-integrity"
+   ],
+   "prompt": "Scenario: two users buy the last item in stock at the same moment and stock goes to -1. How do you prevent it?",
+   "ideal_answer": "Make the stock check and decrement one atomic step, using a database transaction with row locking or an update that only succeeds when stock is above zero, and return a clear error to the loser.",
+   "key_points": [
+    "Race condition on read then write",
+    "Atomic update or row lock",
+    "Clear error for the second buyer"
+   ],
+   "follow_ups": [
+    "How is optimistic locking different from pessimistic locking?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-24",
+   "kind": "scenario",
+   "category": "backend-scenario",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "code-review"
+   ],
+   "prompt": "Scenario: during code review you notice a teammate stores passwords as plain text. What do you say and what is the right approach?",
+   "ideal_answer": "Explain politely that plain text passwords leak everyone's accounts if the database is exposed. Store a salted hash made with a slow algorithm such as bcrypt or argon2, never encrypt reversibly, and plan a migration for existing users.",
+   "key_points": [
+    "Plain text is a serious risk",
+    "Salted slow hash such as bcrypt or argon2",
+    "Migrate existing passwords"
+   ],
+   "follow_ups": [
+    "Why is a salt needed?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "arbisoft-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "arbisoft"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Tell me about a project you built in Python. What was your part, what was the hardest bug and what would you change?",
+   "ideal_answer": "A strong answer names the problem, the stack and exactly what you built yourself, describes one concrete bug with how you found the cause, and gives an honest improvement such as tests, structure or performance.",
+   "key_points": [
+    "Clear own contribution",
+    "One concrete bug and its cause",
+    "Honest improvement"
+   ],
+   "follow_ups": [
+    "How did you test that it worked?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

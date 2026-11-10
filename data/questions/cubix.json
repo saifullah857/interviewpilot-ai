@@ -1,0 +1,780 @@
+{
+ "company": "cubix",
+ "questions": [
+  {
+   "slug": "cubix-tech-01",
+   "kind": "technical",
+   "category": "flutter",
+   "difficulty": "easy",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "widgets"
+   ],
+   "prompt": "What is a widget in Flutter and how do StatelessWidget and StatefulWidget differ?",
+   "ideal_answer": "Everything in Flutter's UI is a widget, a description of part of the screen. A StatelessWidget never changes after it is built, while a StatefulWidget has a State object that holds changing data and rebuilds when setState is called.",
+   "key_points": [
+    "Widgets describe the UI",
+    "State object for changing data",
+    "setState rebuilds"
+   ],
+   "follow_ups": [
+    "How do you keep a widget rebuild cheap?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-02",
+   "kind": "technical",
+   "category": "flutter",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "state-management"
+   ],
+   "prompt": "Compare setState, Provider and Bloc for state management and say when each fits.",
+   "ideal_answer": "setState suits local state in one widget. Provider shares state across a subtree with little code, and Bloc separates events and states into a predictable structure for larger apps. Choose by app size and team.",
+   "key_points": [
+    "Local vs shared state",
+    "Provider is simple",
+    "Bloc is structured"
+   ],
+   "follow_ups": [
+    "How do you test business logic in Bloc?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-03",
+   "kind": "technical",
+   "category": "flutter",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "lifecycle"
+   ],
+   "prompt": "How does Flutter render the UI and what is the difference between hot reload and hot restart?",
+   "ideal_answer": "Flutter draws its own widgets with its rendering engine and rebuilds the widget tree efficiently when state changes. Hot reload injects changed code and keeps the state, while hot restart restarts the app and resets state.",
+   "key_points": [
+    "Own rendering engine",
+    "Hot reload keeps state",
+    "Hot restart resets state"
+   ],
+   "follow_ups": [
+    "Why can hot reload fail to show a change?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-04",
+   "kind": "technical",
+   "category": "flutter",
+   "difficulty": "hard",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "performance"
+   ],
+   "prompt": "A Flutter list with thousands of items scrolls slowly. How do you fix it?",
+   "ideal_answer": "Use ListView.builder so items are built lazily, keep item widgets simple and const where possible, avoid heavy work in build, cache images and profile with DevTools to find rebuilds and expensive frames.",
+   "key_points": [
+    "Lazy builders",
+    "Cheap build methods",
+    "Profile with DevTools"
+   ],
+   "follow_ups": [
+    "What is jank?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-05",
+   "kind": "technical",
+   "category": "flutter",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "async"
+   ],
+   "prompt": "How do Future, async and await and Streams work in Dart and when do you use a Stream?",
+   "ideal_answer": "A Future represents a single value that arrives later and await pauses a function until it completes. A Stream delivers a sequence of values over time, such as location updates or chat messages.",
+   "key_points": [
+    "Future is one value later",
+    "await pauses the function",
+    "Stream is many values"
+   ],
+   "follow_ups": [
+    "How do you cancel a stream subscription?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-06",
+   "kind": "technical",
+   "category": "react",
+   "difficulty": "easy",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "react"
+   ],
+   "prompt": "What is the difference between controlled and uncontrolled inputs in React?",
+   "ideal_answer": "A controlled input keeps its value in React state and updates through onChange, so React is the source of truth. An uncontrolled input keeps its value in the DOM and you read it with a ref when needed.",
+   "key_points": [
+    "State as source of truth",
+    "Refs for uncontrolled",
+    "Controlled is easier to validate"
+   ],
+   "follow_ups": [
+    "Which is better for a large form?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-07",
+   "kind": "technical",
+   "category": "react",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "hooks"
+   ],
+   "prompt": "What are custom hooks and why would you write one for data fetching?",
+   "ideal_answer": "A custom hook is a function that uses other hooks to package reusable stateful logic. A data fetching hook handles loading, error and data once, so components stay small and consistent.",
+   "key_points": [
+    "Reusable stateful logic",
+    "Loading, error, data",
+    "Smaller components"
+   ],
+   "follow_ups": [
+    "What are the rules of hooks?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-08",
+   "kind": "technical",
+   "category": "react",
+   "difficulty": "hard",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "rendering"
+   ],
+   "prompt": "What causes unnecessary re-renders in React and how do memo, useCallback and useMemo help or hurt?",
+   "ideal_answer": "A component re-renders when its state, props or context change, including new object or function props created each render. memo, useCallback and useMemo skip work when inputs are unchanged, but they add overhead and complexity, so use them where profiling shows a problem.",
+   "key_points": [
+    "New references cause re-renders",
+    "Memoisation tools",
+    "Profile before optimising"
+   ],
+   "follow_ups": [
+    "When does useMemo make code slower?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-09",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "api"
+   ],
+   "prompt": "How should a mobile app store an authentication token securely?",
+   "ideal_answer": "Use the platform's secure storage, the Keychain on iOS and the Keystore with encrypted preferences on Android, not plain preferences or logs. Use short-lived tokens with refresh and clear them on logout.",
+   "key_points": [
+    "Secure storage",
+    "Short-lived tokens",
+    "Clear on logout"
+   ],
+   "follow_ups": [
+    "Why is a hard-coded API key in the app a problem?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-10",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "push"
+   ],
+   "prompt": "How do push notifications work and what must you handle on the server and in the app?",
+   "ideal_answer": "The app registers with the platform's push service and gives its token to your server, the server sends messages through that service and the device displays them. Handle token refresh, permissions, invalid tokens and opening the right screen on tap.",
+   "key_points": [
+    "Token registration",
+    "Server sends through the push service",
+    "Permissions and deep links"
+   ],
+   "follow_ups": [
+    "How would you avoid notifying a user on every device?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-11",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "hard",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "offline"
+   ],
+   "prompt": "How would you build a notes app that works offline and syncs when the network returns?",
+   "ideal_answer": "Store notes in a local database, queue changes with timestamps and ids, sync in the background with retries and resolve conflicts with a defined rule such as last write wins or merge. Show sync status.",
+   "key_points": [
+    "Local database first",
+    "Change queue with ids",
+    "Conflict rule"
+   ],
+   "follow_ups": [
+    "How do you avoid duplicates when a sync is retried?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-12",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "easy",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "release"
+   ],
+   "prompt": "What steps does it take to publish an app update to Google Play or the App Store?",
+   "ideal_answer": "Increase the version, build a signed release, test it, upload it with release notes and screenshots, pass the store review and roll out gradually. Keep older app versions working with your API.",
+   "key_points": [
+    "Signed release build",
+    "Store review",
+    "Staged rollout"
+   ],
+   "follow_ups": [
+    "How do you roll back a bad release?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-13",
+   "kind": "technical",
+   "category": "blockchain",
+   "difficulty": "easy",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "basics"
+   ],
+   "prompt": "What is a blockchain and why is it hard to change past records?",
+   "ideal_answer": "A blockchain is a shared ledger of blocks, each containing the hash of the previous block. Changing an old block changes its hash and breaks all later blocks, and many independent nodes would reject the altered chain.",
+   "key_points": [
+    "Linked blocks by hash",
+    "Tampering breaks the chain",
+    "Many independent nodes"
+   ],
+   "follow_ups": [
+    "What does consensus mean?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-14",
+   "kind": "technical",
+   "category": "blockchain",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "smart-contracts"
+   ],
+   "prompt": "What is a smart contract and what are its main risks?",
+   "ideal_answer": "A smart contract is code stored on a blockchain that runs when conditions are met. Once deployed it is hard to change, so bugs such as reentrancy or bad access control can cost real money, which makes testing and audits essential.",
+   "key_points": [
+    "Code on a blockchain",
+    "Immutable once deployed",
+    "Testing and audits"
+   ],
+   "follow_ups": [
+    "What is a reentrancy attack?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-15",
+   "kind": "technical",
+   "category": "blockchain",
+   "difficulty": "hard",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "integration"
+   ],
+   "prompt": "How would a mobile or web app interact with a blockchain wallet safely?",
+   "ideal_answer": "Never handle the user's private key yourself, ask a wallet to sign transactions, show clear transaction details before signing, verify results on-chain and handle slow confirmations and failures.",
+   "key_points": [
+    "Keys stay in the wallet",
+    "Clear signing prompts",
+    "Confirmations and failures"
+   ],
+   "follow_ups": [
+    "Why must you not trust the front end alone for balances?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-16",
+   "kind": "technical",
+   "category": "api",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "rest"
+   ],
+   "prompt": "How do you design a mobile-friendly API with pagination, partial updates and versioning?",
+   "ideal_answer": "Use cursor or page based pagination with small page sizes, PATCH for partial updates, compress and limit payloads and version the API so older app versions keep working. Return clear errors.",
+   "key_points": [
+    "Pagination and small payloads",
+    "PATCH",
+    "Versioning for old apps"
+   ],
+   "follow_ups": [
+    "How do you force users to update an old app?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-17",
+   "kind": "technical",
+   "category": "api",
+   "difficulty": "hard",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "auth"
+   ],
+   "prompt": "How does OAuth login with Google or Apple work in a mobile app at a high level?",
+   "ideal_answer": "The app opens the provider's login, the user approves and the provider returns a code or token to the app, which your server verifies with the provider before creating its own session. Never trust a token without verifying it on the server.",
+   "key_points": [
+    "Provider handles credentials",
+    "Code or token returned",
+    "Server verifies the token"
+   ],
+   "follow_ups": [
+    "What is the benefit of PKCE?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-18",
+   "kind": "technical",
+   "category": "node",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "backend"
+   ],
+   "prompt": "How would you build a simple Node.js API for a mobile app with authentication and a database?",
+   "ideal_answer": "Use Express or similar with routes and validation, hash passwords with bcrypt, issue short-lived JWTs, use a database through a driver or ORM with migrations, handle errors centrally and add logging and rate limiting.",
+   "key_points": [
+    "Routes and validation",
+    "Password hashing and JWT",
+    "Database and error handling"
+   ],
+   "follow_ups": [
+    "How would you deploy it?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-19",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "database"
+   ],
+   "prompt": "When would you use SQLite on a device versus a remote database, and how do you handle schema changes in the app?",
+   "ideal_answer": "SQLite stores local data for offline use and fast access, while a remote database is the shared source of truth. Schema changes in an app need versioned migrations that run on update without losing user data.",
+   "key_points": [
+    "Local vs remote data",
+    "Versioned migrations",
+    "Never lose user data"
+   ],
+   "follow_ups": [
+    "How do you test a migration?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-20",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "mobile-testing"
+   ],
+   "prompt": "How do you test a mobile app across many devices and OS versions?",
+   "ideal_answer": "Use unit and widget tests for logic and UI, automated integration tests, a device farm or a set of representative real devices and beta testing, and prioritise devices by user statistics. Add crash reporting.",
+   "key_points": [
+    "Layers of tests",
+    "Representative devices",
+    "Beta and crash reports"
+   ],
+   "follow_ups": [
+    "How do you decide which devices to support?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-21",
+   "kind": "scenario",
+   "category": "cubix-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "debugging"
+   ],
+   "prompt": "Scenario: your app works fine on Wi-Fi but users on slow mobile data see long loading screens. What do you do?",
+   "ideal_answer": "Measure the request sizes and timings, reduce payloads and image sizes, cache data, load content progressively with placeholders, set sensible timeouts and test with network throttling.",
+   "key_points": [
+    "Measure first",
+    "Smaller payloads and caching",
+    "Progressive loading and throttled tests"
+   ],
+   "follow_ups": [
+    "How would you show progress honestly?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-22",
+   "kind": "scenario",
+   "category": "cubix-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: design a food delivery app's order tracking screen that updates in near real time.",
+   "ideal_answer": "The server stores order status changes and pushes updates through WebSockets or push notifications, the app shows the latest status and falls back to polling, and the courier's location is sent at a limited frequency to subscribed customers only.",
+   "key_points": [
+    "Server-driven status updates",
+    "Fallback to polling",
+    "Limited, private location sharing"
+   ],
+   "follow_ups": [
+    "How would you save battery?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-23",
+   "kind": "scenario",
+   "category": "cubix-scenario",
+   "difficulty": "easy",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "teamwork"
+   ],
+   "prompt": "Scenario: the client changes the design after you finished the screen. How do you respond?",
+   "ideal_answer": "Look at the change and its cost, explain the impact on time, offer to reuse components to make it cheap and agree the change in writing with the project lead before starting.",
+   "key_points": [
+    "Assess the impact",
+    "Reuse components",
+    "Agree in writing"
+   ],
+   "follow_ups": [
+    "How do you build screens that are easy to restyle?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-24",
+   "kind": "technical",
+   "category": "git",
+   "difficulty": "easy",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "git"
+   ],
+   "prompt": "How do you work with branches and pull requests in a mobile team to avoid breaking the main branch?",
+   "ideal_answer": "Create a branch per feature, keep changes small, run automated tests on the pull request, get a review and merge only when checks pass. Tag releases so you can rebuild or hotfix an exact version.",
+   "key_points": [
+    "Branch per feature",
+    "Checks before merge",
+    "Tag releases"
+   ],
+   "follow_ups": [
+    "How do you handle a hotfix for a released version?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "cubix-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "mobile-app-developer",
+    "frontend-developer",
+    "full-stack-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "cubix"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe a mobile or web app you built. What did you build yourself, which package or library did you rely on and what was hard to get right?",
+   "ideal_answer": "A strong answer names the app and your role, explains the tools chosen and why, and describes a real difficulty such as state, navigation or performance and how it was solved.",
+   "key_points": [
+    "Own role and tools",
+    "Reason for choices",
+    "A real difficulty and fix"
+   ],
+   "follow_ups": [
+    "What would you improve first?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

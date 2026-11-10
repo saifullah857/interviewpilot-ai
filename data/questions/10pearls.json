@@ -1,0 +1,784 @@
+{
+ "company": "10pearls",
+ "questions": [
+  {
+   "slug": "10pearls-tech-01",
+   "kind": "technical",
+   "category": "cloud",
+   "difficulty": "easy",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "cloud-basics"
+   ],
+   "prompt": "What are IaaS, PaaS and SaaS? Give an example of each.",
+   "ideal_answer": "IaaS gives raw infrastructure such as virtual machines, for example EC2. PaaS gives a managed platform to run your code, for example Heroku or Elastic Beanstalk. SaaS is a finished application, for example Gmail.",
+   "key_points": [
+    "Three service levels",
+    "More control to less control",
+    "Example of each"
+   ],
+   "follow_ups": [
+    "Which would you pick for a small startup and why?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-02",
+   "kind": "technical",
+   "category": "cloud",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "aws"
+   ],
+   "prompt": "Explain what an AWS S3 bucket, an EC2 instance and an IAM role are and how they work together in a simple web application.",
+   "ideal_answer": "EC2 runs your application code, S3 stores files such as images and backups, and an IAM role gives the EC2 instance permission to read and write S3 without storing access keys in code. Permissions follow least privilege.",
+   "key_points": [
+    "Compute, storage, permissions",
+    "Role instead of hard-coded keys",
+    "Least privilege"
+   ],
+   "follow_ups": [
+    "How would you serve files in S3 to users safely?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-03",
+   "kind": "technical",
+   "category": "cloud",
+   "difficulty": "hard",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "scalability"
+   ],
+   "prompt": "A web application slows down when traffic doubles. How would you scale it and what limits each approach?",
+   "ideal_answer": "Scale vertically by using a bigger server, which is simple but limited, or horizontally by running several instances behind a load balancer, which needs stateless servers and shared sessions. Also cache, use a read replica and move slow work to queues, and find the real bottleneck first.",
+   "key_points": [
+    "Vertical vs horizontal",
+    "Stateless servers and a load balancer",
+    "Cache, replicas, queues"
+   ],
+   "follow_ups": [
+    "What makes an application hard to scale horizontally?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-04",
+   "kind": "technical",
+   "category": "docker",
+   "difficulty": "easy",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "containers"
+   ],
+   "prompt": "What is Docker and how is a container different from a virtual machine?",
+   "ideal_answer": "Docker packages an application with its dependencies into an image that runs as a container. Containers share the host kernel and start quickly, while a virtual machine includes a full operating system and is heavier.",
+   "key_points": [
+    "Image and container",
+    "Shared kernel",
+    "Lighter and faster than a VM"
+   ],
+   "follow_ups": [
+    "What goes into a Dockerfile?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-05",
+   "kind": "technical",
+   "category": "docker",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "docker-practice"
+   ],
+   "prompt": "How would you containerise a web application with a database for local development, and what should not go inside the image?",
+   "ideal_answer": "Write a Dockerfile for the app and use Docker Compose to run it with a database container and a volume for data. Keep secrets, local data and unneeded build files out of the image, and pass configuration through environment variables.",
+   "key_points": [
+    "Dockerfile and Compose",
+    "Volume for database data",
+    "No secrets in the image"
+   ],
+   "follow_ups": [
+    "Why use a multi-stage build?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-06",
+   "kind": "technical",
+   "category": "devops",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "ci-cd"
+   ],
+   "prompt": "Describe a CI/CD pipeline for a web project and what each stage protects against.",
+   "ideal_answer": "On every push the pipeline installs dependencies, runs linting and tests, builds the app and then deploys to staging and, after approval or checks, to production. Tests catch regressions, the build catches broken packaging and staged deployment limits damage.",
+   "key_points": [
+    "Lint, test, build, deploy",
+    "Staging before production",
+    "Automatic and repeatable"
+   ],
+   "follow_ups": [
+    "How would you roll back a bad release?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-07",
+   "kind": "technical",
+   "category": "architecture",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "microservices"
+   ],
+   "prompt": "What are microservices and what problems do they introduce compared with a monolith?",
+   "ideal_answer": "Microservices split an application into small independently deployed services. They allow separate scaling and team ownership but add network failures, distributed data, harder debugging and deployment complexity, so a monolith is often better for small teams.",
+   "key_points": [
+    "Small independent services",
+    "Benefits: scaling and ownership",
+    "Costs: distribution complexity"
+   ],
+   "follow_ups": [
+    "How would services find and talk to each other?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-08",
+   "kind": "technical",
+   "category": "architecture",
+   "difficulty": "hard",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "api-gateway",
+    "messaging"
+   ],
+   "prompt": "When would you use a message queue between services instead of a direct API call?",
+   "ideal_answer": "Use a queue when the caller does not need an immediate answer, when the receiver can be slow or down, or to smooth traffic spikes. It decouples services but needs handling of duplicates, ordering and failed messages.",
+   "key_points": [
+    "Asynchronous work",
+    "Decoupling and buffering",
+    "Duplicates and dead letters"
+   ],
+   "follow_ups": [
+    "What is a dead-letter queue?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-09",
+   "kind": "technical",
+   "category": "rest-api",
+   "difficulty": "easy",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "http"
+   ],
+   "prompt": "What is the difference between PUT and PATCH and between authentication and authorisation?",
+   "ideal_answer": "PUT replaces a whole resource and PATCH changes only some fields. Authentication proves who the user is and authorisation decides what that user is allowed to do.",
+   "key_points": [
+    "PUT replaces, PATCH partially updates",
+    "Who you are vs what you may do",
+    "Both are needed"
+   ],
+   "follow_ups": [
+    "Which HTTP status codes do you use for each failure?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-10",
+   "kind": "technical",
+   "category": "rest-api",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "graphql"
+   ],
+   "prompt": "Compare REST and GraphQL and say when you would choose GraphQL.",
+   "ideal_answer": "REST exposes resources at fixed endpoints, while GraphQL lets the client ask for exactly the fields it needs from one endpoint. GraphQL helps when clients need varied data shapes, but it adds caching and security complexity such as query depth limits.",
+   "key_points": [
+    "Fixed endpoints vs flexible queries",
+    "Avoids over-fetching",
+    "Complexity: caching and limits"
+   ],
+   "follow_ups": [
+    "What is the N+1 problem in GraphQL resolvers?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-11",
+   "kind": "technical",
+   "category": "database",
+   "difficulty": "easy",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "sql-nosql"
+   ],
+   "prompt": "What is the difference between SQL and NoSQL databases and how do you choose?",
+   "ideal_answer": "SQL databases use tables with a fixed schema, relations and strong transactions, while NoSQL databases use flexible models such as documents or key-value pairs. Choose by data shape, consistency needs and how the data is queried.",
+   "key_points": [
+    "Schema and relations vs flexibility",
+    "Consistency needs",
+    "Choose by access pattern"
+   ],
+   "follow_ups": [
+    "Can one application use both?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-12",
+   "kind": "technical",
+   "category": "database",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "indexing"
+   ],
+   "prompt": "How do you decide which columns to index and what is the cost of too many indexes?",
+   "ideal_answer": "Index columns used in frequent filters, joins and sorting and that are selective enough to narrow results. Every extra index uses space and slows inserts and updates, so verify with query plans and remove unused ones.",
+   "key_points": [
+    "Index filter, join and sort columns",
+    "Selectivity matters",
+    "Cost on writes and space"
+   ],
+   "follow_ups": [
+    "What is a composite index?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-13",
+   "kind": "technical",
+   "category": "database",
+   "difficulty": "hard",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "migrations"
+   ],
+   "prompt": "How do you change a database table in production without downtime?",
+   "ideal_answer": "Make changes backward compatible in steps: add the new column as nullable, deploy code that writes both, backfill old rows in batches, switch reads and only later remove the old column. Test on a copy and have a rollback.",
+   "key_points": [
+    "Backward compatible steps",
+    "Backfill in batches",
+    "Remove the old column last"
+   ],
+   "follow_ups": [
+    "Why can adding an index lock a big table?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-14",
+   "kind": "technical",
+   "category": "javascript",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "async"
+   ],
+   "prompt": "Explain the difference between synchronous and asynchronous code and show how you would call two independent APIs in parallel.",
+   "ideal_answer": "Synchronous code blocks until each step finishes, while asynchronous code lets other work run while waiting. Start both requests together and await them with Promise.all so the total time is about that of the slower call.",
+   "key_points": [
+    "Blocking vs non-blocking",
+    "Start both, then await",
+    "Promise.all for independent calls"
+   ],
+   "follow_ups": [
+    "How do you handle one of them failing?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-15",
+   "kind": "technical",
+   "category": "react",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "forms"
+   ],
+   "prompt": "How would you build a form in React with validation and good error messages?",
+   "ideal_answer": "Keep form values in state or a form library, validate on change or submit, show clear messages next to each field, disable the button while submitting and handle server errors. Also validate on the server because client checks can be bypassed.",
+   "key_points": [
+    "Controlled inputs",
+    "Clear field errors",
+    "Server-side validation too"
+   ],
+   "follow_ups": [
+    "How do you keep the form accessible?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-16",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "app-release"
+   ],
+   "prompt": "What steps and risks are involved in releasing a mobile app update to the app stores?",
+   "ideal_answer": "Build a signed release, test on real devices and versions, update the version number, submit for store review and roll out gradually. The risks are review delays, users on old versions and no instant rollback, so use feature flags and keep the API backward compatible.",
+   "key_points": [
+    "Signed build and device testing",
+    "Store review and staged rollout",
+    "Old versions must keep working"
+   ],
+   "follow_ups": [
+    "How would you force users off a broken version?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-17",
+   "kind": "technical",
+   "category": "agile",
+   "difficulty": "easy",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "scrum"
+   ],
+   "prompt": "Explain sprints, standups and retrospectives in Scrum.",
+   "ideal_answer": "A sprint is a fixed period in which the team completes planned work. A standup is a short daily sync on progress and blockers, and a retrospective at the end looks at what went well and what to improve.",
+   "key_points": [
+    "Time-boxed sprint",
+    "Daily standup for blockers",
+    "Retrospective to improve"
+   ],
+   "follow_ups": [
+    "What would you do if you are blocked?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-18",
+   "kind": "technical",
+   "category": "git",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "branching"
+   ],
+   "prompt": "A merge conflict appears in a pull request. How do you resolve it and avoid it in the future?",
+   "ideal_answer": "Pull the latest target branch, open the conflicting files, decide which changes to keep with the other developer if needed, test, then commit the resolution. Keep branches small and short-lived and integrate often to reduce conflicts.",
+   "key_points": [
+    "Understand both changes",
+    "Resolve and test",
+    "Small, frequent integration"
+   ],
+   "follow_ups": [
+    "When would you use rebase instead of merge?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-19",
+   "kind": "technical",
+   "category": "security",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "web-security"
+   ],
+   "prompt": "What is CORS and why does the browser block some cross-origin requests?",
+   "ideal_answer": "The browser blocks scripts on one origin from reading responses from another unless the server allows it with CORS headers. This protects users from malicious sites using their logged-in session, and it must be configured with specific allowed origins, not a wildcard for credentialed requests.",
+   "key_points": [
+    "Same-origin policy",
+    "Server opts in with headers",
+    "Avoid wildcard with credentials"
+   ],
+   "follow_ups": [
+    "Is CORS a server security feature?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-20",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "test-strategy"
+   ],
+   "prompt": "How do you decide what to cover with unit tests, integration tests and end-to-end tests?",
+   "ideal_answer": "Write many fast unit tests for logic, fewer integration tests for how parts such as the API and database work together, and a few end-to-end tests for critical user journeys. Higher-level tests are slower and more fragile.",
+   "key_points": [
+    "Test pyramid",
+    "Cost grows with scope",
+    "Critical journeys end-to-end"
+   ],
+   "follow_ups": [
+    "What would you do about a flaky test?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-21",
+   "kind": "scenario",
+   "category": "fullstack-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "debugging"
+   ],
+   "prompt": "Scenario: users report that saving a profile sometimes fails with an error but works for you. How do you track it down?",
+   "ideal_answer": "Look at server logs and the failing requests, find a common factor such as input size, special characters or a particular account, reproduce with that data, fix the cause and add a test. Improve the error message and monitoring.",
+   "key_points": [
+    "Find the pattern in failures",
+    "Reproduce with real data",
+    "Fix, test and add monitoring"
+   ],
+   "follow_ups": [
+    "How would you add logging without leaking personal data?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-22",
+   "kind": "scenario",
+   "category": "fullstack-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: design a file upload feature for large videos that works on mobile networks.",
+   "ideal_answer": "Upload directly to object storage with a signed URL in resumable chunks, so the app server is not overloaded and interrupted uploads can resume. Validate type and size, scan or process the file in the background and show progress.",
+   "key_points": [
+    "Signed URL straight to storage",
+    "Chunked resumable uploads",
+    "Background processing and validation"
+   ],
+   "follow_ups": [
+    "How would you stop users from uploading harmful files?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-23",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "easy",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "python-basics"
+   ],
+   "prompt": "Compare how you would loop over a list of orders to total their prices in Python and in JavaScript, and what built-in helps in each.",
+   "ideal_answer": "In Python use a for loop or sum with a generator expression, and in JavaScript use a for...of loop or reduce. Both are O(n) and the built-in helpers express the intent more clearly than manual index handling.",
+   "key_points": [
+    "Loop or built-in helper",
+    "sum in Python, reduce in JavaScript",
+    "O(n) either way"
+   ],
+   "follow_ups": [
+    "How do you avoid mutating the original list?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-24",
+   "kind": "technical",
+   "category": "data-structures",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "hash-maps"
+   ],
+   "prompt": "How would you group a list of orders by customer and find the customer with the highest total?",
+   "ideal_answer": "Use a dictionary keyed by customer that accumulates totals in one pass, then take the maximum of its values. This is O(n) and avoids repeated scans of the list.",
+   "key_points": [
+    "Dictionary keyed by customer",
+    "Accumulate in one pass",
+    "Take the maximum"
+   ],
+   "follow_ups": [
+    "What if two customers tie?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "10pearls-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "10pearls"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe a full-stack or mobile project you built. How did the front end, back end and database communicate and what would you change?",
+   "ideal_answer": "A strong answer explains the architecture and data flow, your own contribution, one problem such as authentication or deployment and its fix, and a realistic improvement such as tests or performance.",
+   "key_points": [
+    "Clear data flow",
+    "Own contribution",
+    "Realistic improvement"
+   ],
+   "follow_ups": [
+    "How is it deployed?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

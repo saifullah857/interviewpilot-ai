@@ -1,0 +1,781 @@
+{
+ "company": "nextbridge",
+ "questions": [
+  {
+   "slug": "nextbridge-tech-01",
+   "kind": "technical",
+   "category": "oop",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "oop"
+   ],
+   "prompt": "What is the difference between an abstract class and an interface in Java or C#?",
+   "ideal_answer": "An abstract class can hold shared state and implemented methods and a class can extend only one, while an interface defines a contract and a class can implement many. Use an interface for capabilities and an abstract class for shared base behaviour.",
+   "key_points": [
+    "State and code vs contract",
+    "Single vs multiple",
+    "Choose by purpose"
+   ],
+   "follow_ups": [
+    "Can an interface have default methods?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-02",
+   "kind": "technical",
+   "category": "oop",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "polymorphism"
+   ],
+   "prompt": "Explain method overloading and overriding and what happens at runtime when you call an overridden method through a parent reference.",
+   "ideal_answer": "Overloading uses the same method name with different parameters, resolved at compile time. Overriding replaces a parent's method in a subclass, and a call through a parent reference runs the subclass version at runtime, which is dynamic dispatch.",
+   "key_points": [
+    "Overload: same name, different parameters",
+    "Override: subclass replaces",
+    "Dynamic dispatch"
+   ],
+   "follow_ups": [
+    "Can you override a static method?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-03",
+   "kind": "technical",
+   "category": "java",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "collections"
+   ],
+   "prompt": "What is the difference between ArrayList and LinkedList and between HashMap and TreeMap in Java?",
+   "ideal_answer": "ArrayList gives fast indexed access and LinkedList fast insertion at known nodes. HashMap gives average O(1) lookup without order, while TreeMap keeps keys sorted with O(log n) operations.",
+   "key_points": [
+    "Array-backed vs node-based",
+    "Hash vs sorted map",
+    "Complexities"
+   ],
+   "follow_ups": [
+    "Why must keys implement equals and hashCode correctly?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-04",
+   "kind": "technical",
+   "category": "java",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "exceptions"
+   ],
+   "prompt": "What is the difference between checked and unchecked exceptions in Java and when would you create your own?",
+   "ideal_answer": "Checked exceptions must be declared or handled and suit recoverable conditions, while unchecked ones such as NullPointerException signal programming errors. Create a custom exception to express a domain error clearly, such as InsufficientBalanceException.",
+   "key_points": [
+    "Compile-time enforcement",
+    "Recoverable vs programming errors",
+    "Domain-specific exceptions"
+   ],
+   "follow_ups": [
+    "What does try-with-resources do?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-05",
+   "kind": "technical",
+   "category": "java",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "multithreading"
+   ],
+   "prompt": "How do you make code thread-safe in Java and what is a race condition?",
+   "ideal_answer": "A race condition happens when threads read and write shared data in an unsafe order. Protect it with synchronized blocks, locks, atomic classes or concurrent collections, or avoid shared mutable state by using immutable objects.",
+   "key_points": [
+    "Race condition defined",
+    "Synchronisation tools",
+    "Prefer immutability"
+   ],
+   "follow_ups": [
+    "What is a deadlock and how can you avoid it?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-06",
+   "kind": "technical",
+   "category": "java",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "spring"
+   ],
+   "prompt": "What is Spring Boot and what do dependency injection and annotations such as @RestController do?",
+   "ideal_answer": "Spring Boot sets up a Spring application with sensible defaults. Dependency injection supplies objects a class needs, and @RestController marks a class whose methods handle HTTP requests and return data such as JSON.",
+   "key_points": [
+    "Boot gives defaults",
+    "Dependency injection",
+    "Controller annotations"
+   ],
+   "follow_ups": [
+    "How does Spring decide which bean to inject?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-07",
+   "kind": "technical",
+   "category": "csharp",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "csharp"
+   ],
+   "prompt": "What is the difference between a class and a struct in C#, and between string and StringBuilder?",
+   "ideal_answer": "A class is a reference type and a struct a value type copied on assignment. Strings are immutable, so repeated concatenation creates many objects, while StringBuilder changes a buffer efficiently.",
+   "key_points": [
+    "Reference vs value type",
+    "Immutable strings",
+    "StringBuilder in loops"
+   ],
+   "follow_ups": [
+    "When would you choose a struct?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-08",
+   "kind": "technical",
+   "category": "csharp",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "generics"
+   ],
+   "prompt": "What are generics and why are they better than using object in collections?",
+   "ideal_answer": "Generics let a class or method work with a type chosen by the caller, such as List<int>. They give compile-time type safety, avoid casts and boxing and make code reusable.",
+   "key_points": [
+    "Type parameters",
+    "Compile-time safety",
+    "No casting or boxing"
+   ],
+   "follow_ups": [
+    "What is a generic constraint?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-09",
+   "kind": "technical",
+   "category": "dotnet",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "web-api"
+   ],
+   "prompt": "How would you build and secure a REST API in ASP.NET Core?",
+   "ideal_answer": "Create controllers or minimal endpoints with models and validation, use dependency injection for services, secure with authentication such as JWT bearer tokens and authorisation policies, return consistent errors and log requests.",
+   "key_points": [
+    "Controllers, models, validation",
+    "JWT and authorisation",
+    "Consistent errors and logging"
+   ],
+   "follow_ups": [
+    "How do you handle versioning?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-10",
+   "kind": "technical",
+   "category": "dotnet",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "performance"
+   ],
+   "prompt": "An ASP.NET endpoint is slow under load. What do you check?",
+   "ideal_answer": "Measure with profiling and tracing, check database queries and indexes, avoid blocking calls and unnecessary allocations, add caching and use asynchronous I/O. Confirm the improvement with a load test.",
+   "key_points": [
+    "Measure first",
+    "Queries and indexes",
+    "Async I/O, caching, load test"
+   ],
+   "follow_ups": [
+    "What is thread pool starvation?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-11",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "sql"
+   ],
+   "prompt": "What is the difference between a primary key, a unique key and an index?",
+   "ideal_answer": "A primary key uniquely identifies a row and cannot be null, a unique key enforces uniqueness on other columns, and an index is a structure that speeds up searches and may or may not enforce uniqueness.",
+   "key_points": [
+    "Identity vs uniqueness vs speed",
+    "Primary key not null",
+    "Indexes cost writes"
+   ],
+   "follow_ups": [
+    "Can a table have more than one primary key?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-12",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "joins"
+   ],
+   "prompt": "Write the idea of a query that returns each department with its number of employees, including departments with none.",
+   "ideal_answer": "Left join departments to employees, group by department and count the employee key, not star, so empty departments show zero.",
+   "key_points": [
+    "LEFT JOIN from departments",
+    "GROUP BY department",
+    "COUNT of the employee column"
+   ],
+   "follow_ups": [
+    "Why does COUNT(*) give the wrong answer here?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-13",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "transactions"
+   ],
+   "prompt": "Describe how you would handle a booking system where two users try to reserve the last seat.",
+   "ideal_answer": "Do the check and the reservation in one transaction with a lock or a unique constraint on the seat so only one succeeds, and return a clear message to the other user. Consider short holds that expire.",
+   "key_points": [
+    "Race on the last seat",
+    "Lock or unique constraint",
+    "Clear failure and expiry"
+   ],
+   "follow_ups": [
+    "What are the downsides of long locks?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-14",
+   "kind": "technical",
+   "category": "web",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "html-css"
+   ],
+   "prompt": "What is the CSS box model and what does box-sizing: border-box change?",
+   "ideal_answer": "Every element is a box made of content, padding, border and margin. With border-box the width includes padding and border, which makes sizing layouts easier.",
+   "key_points": [
+    "Content, padding, border, margin",
+    "border-box includes padding",
+    "Simpler sizing"
+   ],
+   "follow_ups": [
+    "How do margins collapse?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-15",
+   "kind": "technical",
+   "category": "web",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "javascript"
+   ],
+   "prompt": "What is the difference between null and undefined and how do you check for them safely in JavaScript?",
+   "ideal_answer": "undefined means a variable has no value assigned and null is an intentional empty value. Use === or the nullish operators such as ?? and ?. to handle both safely.",
+   "key_points": [
+    "Unassigned vs intentional",
+    "Use strict equality",
+    "?? and ?."
+   ],
+   "follow_ups": [
+    "What does typeof return for each?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-16",
+   "kind": "technical",
+   "category": "web",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "angular-react"
+   ],
+   "prompt": "How do front-end frameworks such as Angular or React help build large apps, and how do components talk to each other?",
+   "ideal_answer": "They split the UI into reusable components with their own state and templates, and handle updates efficiently. Parents pass data down through inputs or props and children send events up, with shared state or services for distant components.",
+   "key_points": [
+    "Reusable components",
+    "Data down, events up",
+    "Shared state for distant parts"
+   ],
+   "follow_ups": [
+    "How would you structure a large project's folders?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-17",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "android-ios"
+   ],
+   "prompt": "What is the difference between native Android, native iOS and a cross-platform approach and how do you choose?",
+   "ideal_answer": "Native apps use each platform's own language and tools for the best performance and features, while cross-platform tools share code across both at lower cost. Choose by performance needs, team skills, budget and device features required.",
+   "key_points": [
+    "Native vs shared code",
+    "Trade-offs",
+    "Choose by requirements"
+   ],
+   "follow_ups": [
+    "Which features usually force native code?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-18",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "api-integration"
+   ],
+   "prompt": "How should a mobile app call an API and handle errors, slow networks and expired tokens?",
+   "ideal_answer": "Use a central API layer with timeouts, retry on transient errors, show clear loading and error states, refresh expired tokens automatically once and log out when refresh fails. Cache data for offline use.",
+   "key_points": [
+    "Central API layer",
+    "Timeouts and retries",
+    "Token refresh and offline cache"
+   ],
+   "follow_ups": [
+    "What should happen when two requests refresh the token together?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-19",
+   "kind": "technical",
+   "category": "patterns",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "design-patterns"
+   ],
+   "prompt": "Explain the repository pattern and the observer pattern and give a use for each.",
+   "ideal_answer": "A repository hides how data is stored behind a simple interface so business code does not depend on the database. The observer pattern lets objects subscribe to changes of another object, such as UI parts updating when data changes.",
+   "key_points": [
+    "Repository abstracts storage",
+    "Observer: subscribe to changes",
+    "A use for each"
+   ],
+   "follow_ups": [
+    "How does the repository help testing?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-20",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "unit-testing"
+   ],
+   "prompt": "What makes a good unit test and how do you test code that uses the current time or a random number?",
+   "ideal_answer": "A good test is fast, isolated, repeatable and checks one behaviour with a clear name. Inject the clock or random source as a dependency so tests can supply fixed values.",
+   "key_points": [
+    "Fast, isolated, repeatable",
+    "One behaviour each",
+    "Inject time and randomness"
+   ],
+   "follow_ups": [
+    "What is a test double?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-21",
+   "kind": "scenario",
+   "category": "nb-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "debugging"
+   ],
+   "prompt": "Scenario: a production job processes orders twice after a server restart. How do you find and fix it?",
+   "ideal_answer": "Check logs for the restart and how the job decides what is processed. Likely the job state is saved after processing or not atomically, so make the processing idempotent with a status or unique key and save progress in the same transaction.",
+   "key_points": [
+    "Investigate restart behaviour",
+    "Idempotent processing",
+    "Atomic progress tracking"
+   ],
+   "follow_ups": [
+    "How would you clean up the duplicates?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-22",
+   "kind": "scenario",
+   "category": "nb-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: design an inventory system for a chain of stores that stays correct when stores sell items at the same time.",
+   "ideal_answer": "Keep stock changes as atomic updates or events per item and store, protect against overselling with constraints and conditional updates, sync stores asynchronously with conflict rules and reconcile regularly.",
+   "key_points": [
+    "Atomic stock updates",
+    "Prevent overselling",
+    "Sync and reconcile"
+   ],
+   "follow_ups": [
+    "How would you handle a store that is offline?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-23",
+   "kind": "scenario",
+   "category": "nb-scenario",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "teamwork"
+   ],
+   "prompt": "Scenario: you are asked to estimate a task you have never done. What do you do?",
+   "ideal_answer": "Break it into smaller parts, find similar work for reference, state your assumptions and risks, give a range and not a single number and update the estimate as you learn more.",
+   "key_points": [
+    "Break it down",
+    "State assumptions",
+    "Give a range and revise"
+   ],
+   "follow_ups": [
+    "What if the deadline is fixed regardless?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-24",
+   "kind": "technical",
+   "category": "api",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "rest"
+   ],
+   "prompt": "What makes an API RESTful and which HTTP status codes would you use for success, a missing item and a server error?",
+   "ideal_answer": "A RESTful API models resources with URLs, uses HTTP methods for actions, is stateless and returns standard status codes. Use 200 or 201 for success, 404 when the item is missing and 500 for an unexpected server error.",
+   "key_points": [
+    "Resources, methods, stateless",
+    "200/201, 404, 500",
+    "Consistent responses"
+   ],
+   "follow_ups": [
+    "What is the difference between 401 and 403?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "nextbridge-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "nextbridge"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe a project in Java, C# or a web or mobile stack that you built. What did you learn from a bug in it?",
+   "ideal_answer": "A strong answer names the project and your role, one specific bug with the cause and fix, and what you now do differently such as adding tests or validation.",
+   "key_points": [
+    "Specific project and role",
+    "Bug cause and fix",
+    "Lesson applied"
+   ],
+   "follow_ups": [
+    "What would you refactor?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

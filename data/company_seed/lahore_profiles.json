@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "note": "Rough focus families per candidate company, used ONLY to rank suggestions. Not verified facts."
+  },
+  "families": {
+    "arbisoft": [
+      "web",
+      "backend",
+      "ai-ml",
+      "data"
+    ],
+    "systems-limited": [
+      "backend",
+      "web",
+      "data",
+      "ai-ml"
+    ],
+    "netsol-technologies": [
+      "backend",
+      "web"
+    ],
+    "tkxel": [
+      "web",
+      "mobile",
+      "backend",
+      "ai-ml"
+    ],
+    "10pearls": [
+      "web",
+      "mobile",
+      "backend",
+      "ai-ml"
+    ],
+    "curemd": [
+      "web",
+      "backend",
+      "ai-ml"
+    ],
+    "folio3": [
+      "ai-ml",
+      "backend",
+      "mobile",
+      "data"
+    ],
+    "devsinc": [
+      "web",
+      "mobile",
+      "backend",
+      "ai-ml"
+    ],
+    "purelogics": [
+      "web",
+      "mobile",
+      "backend",
+      "ai-ml"
+    ],
+    "nextbridge": [
+      "web",
+      "backend",
+      "mobile"
+    ],
+    "northbay": [
+      "backend",
+      "data",
+      "ai-ml"
+    ],
+    "conrad-labs": [
+      "ai-ml",
+      "data",
+      "backend"
+    ],
+    "mindstorm-studios": [
+      "mobile"
+    ],
+    "xeven-solutions": [
+      "web",
+      "mobile",
+      "backend"
+    ],
+    "afiniti": [
+      "ai-ml",
+      "data",
+      "backend"
+    ],
+    "confiz": [
+      "web",
+      "backend",
+      "data"
+    ],
+    "cubix": [
+      "web",
+      "mobile",
+      "frontend"
+    ],
+    "techlogix": [
+      "backend",
+      "web",
+      "data"
+    ],
+    "contour-software": [
+      "backend",
+      "web"
+    ],
+    "kualitatem": [
+      "web",
+      "backend"
+    ],
+    "vteams": [
+      "web",
+      "mobile",
+      "backend"
+    ]
+  }
+}

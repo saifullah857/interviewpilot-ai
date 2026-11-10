@@ -1,0 +1,783 @@
+{
+ "company": "northbay",
+ "questions": [
+  {
+   "slug": "northbay-tech-01",
+   "kind": "technical",
+   "category": "aws",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "iam"
+   ],
+   "prompt": "What is IAM in AWS and why is least privilege important?",
+   "ideal_answer": "IAM controls who or what can do which actions on which AWS resources through users, roles and policies. Least privilege means granting only the permissions needed, so a leaked credential or a bug can do limited damage.",
+   "key_points": [
+    "Users, roles, policies",
+    "Grant only what is needed",
+    "Limits damage of leaks"
+   ],
+   "follow_ups": [
+    "Why prefer roles over long-lived access keys?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-02",
+   "kind": "technical",
+   "category": "aws",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "storage"
+   ],
+   "prompt": "When would you choose S3, EBS or a database such as RDS for storing data?",
+   "ideal_answer": "S3 stores objects such as files, images and backups cheaply and durably, EBS is a disk attached to one EC2 instance, and RDS is a managed relational database for structured data with queries and transactions. Choose by access pattern.",
+   "key_points": [
+    "Objects vs disks vs relational data",
+    "Match storage to access pattern",
+    "Durability and cost"
+   ],
+   "follow_ups": [
+    "How do you control access to a private S3 bucket?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-03",
+   "kind": "technical",
+   "category": "aws",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "lambda",
+    "events"
+   ],
+   "prompt": "How would you build a pipeline where uploading a file to S3 triggers processing automatically?",
+   "ideal_answer": "Configure an S3 event notification to invoke a Lambda function or send a message to a queue, process the file there, write results to storage or a database and handle failures with retries and a dead-letter queue. Make processing idempotent because events can repeat.",
+   "key_points": [
+    "S3 event triggers Lambda or queue",
+    "Retries and dead-letter queue",
+    "Idempotent processing"
+   ],
+   "follow_ups": [
+    "What if the file is larger than Lambda can handle?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-04",
+   "kind": "technical",
+   "category": "aws",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "reliability"
+   ],
+   "prompt": "How would you design a web application on AWS so that it keeps working if one availability zone fails?",
+   "ideal_answer": "Run instances in at least two availability zones behind a load balancer with auto scaling, use a multi-AZ managed database with automatic failover, keep state out of the instances and use health checks. Test failover and monitor.",
+   "key_points": [
+    "Multi-AZ everywhere",
+    "Load balancer and auto scaling",
+    "Test failover"
+   ],
+   "follow_ups": [
+    "What would a multi-region design add and cost?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-05",
+   "kind": "technical",
+   "category": "aws",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "monitoring"
+   ],
+   "prompt": "What would you monitor for a production service and how would you be alerted?",
+   "ideal_answer": "Track request rate, errors, latency and resource use plus business metrics, collect logs centrally and set alarms with sensible thresholds that notify the team. Alerts should be actionable to avoid fatigue.",
+   "key_points": [
+    "Errors, latency, saturation",
+    "Central logs",
+    "Actionable alerts"
+   ],
+   "follow_ups": [
+    "How do you pick a threshold?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-06",
+   "kind": "technical",
+   "category": "cloud",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "infrastructure-as-code"
+   ],
+   "prompt": "What is infrastructure as code and why is it better than creating resources by hand?",
+   "ideal_answer": "It describes infrastructure in files, with tools such as Terraform or CloudFormation, so environments can be created repeatably, reviewed and versioned. Manual changes drift and cannot be reproduced reliably.",
+   "key_points": [
+    "Infrastructure in version-controlled files",
+    "Repeatable environments",
+    "Avoids drift"
+   ],
+   "follow_ups": [
+    "How do you manage the state file safely?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-07",
+   "kind": "technical",
+   "category": "data",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "etl"
+   ],
+   "prompt": "Explain the difference between ETL and ELT and when each is used.",
+   "ideal_answer": "ETL transforms data before loading it into the warehouse, while ELT loads raw data first and transforms it inside the warehouse. ELT suits modern warehouses with strong compute and keeps raw data for reprocessing.",
+   "key_points": [
+    "Order of transform and load",
+    "ELT keeps raw data",
+    "Choose by tooling and volume"
+   ],
+   "follow_ups": [
+    "What is a data lake?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-08",
+   "kind": "technical",
+   "category": "data",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "data-quality"
+   ],
+   "prompt": "How would you make sure a daily data pipeline produces trustworthy data?",
+   "ideal_answer": "Validate inputs and outputs with checks such as row counts, nulls, ranges and duplicates, make loads idempotent, log run metadata, alert on failures and keep the raw data so runs can be repeated.",
+   "key_points": [
+    "Automated quality checks",
+    "Idempotent loads",
+    "Alerts and raw data kept"
+   ],
+   "follow_ups": [
+    "What would you do when the source data is wrong?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-09",
+   "kind": "technical",
+   "category": "data",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "warehouse"
+   ],
+   "prompt": "What is a star schema and why is it used in analytics?",
+   "ideal_answer": "A star schema has a central fact table of measurable events, such as sales, linked to dimension tables such as customer, product and date. It makes analytical queries simple and fast to aggregate, at the cost of some duplication.",
+   "key_points": [
+    "Fact and dimension tables",
+    "Simple aggregation queries",
+    "Denormalised on purpose"
+   ],
+   "follow_ups": [
+    "How do you handle a dimension that changes over time?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-10",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "window-functions"
+   ],
+   "prompt": "How would you find the month-over-month growth of sales per product in SQL?",
+   "ideal_answer": "Aggregate sales per product and month, then use LAG over a partition by product ordered by month to get the previous month and compute the difference divided by the previous value, handling nulls and zero.",
+   "key_points": [
+    "Aggregate by month",
+    "LAG window function",
+    "Handle zero and null"
+   ],
+   "follow_ups": [
+    "How do you handle months with no sales?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-11",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "optimisation"
+   ],
+   "prompt": "A report query takes ten minutes on a table with 200 million rows. How do you speed it up?",
+   "ideal_answer": "Check the query plan, filter early, select only needed columns, use partitioning or indexes that match the filters, pre-aggregate into summary tables and consider columnar storage. Verify results are still correct.",
+   "key_points": [
+    "Read the plan",
+    "Partition and index for the filters",
+    "Pre-aggregate"
+   ],
+   "follow_ups": [
+    "When is a materialised view a good idea?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-12",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "python"
+   ],
+   "prompt": "What are list comprehensions and generator expressions, and how do they differ?",
+   "ideal_answer": "A list comprehension builds the whole list in memory immediately, while a generator expression produces items lazily one at a time. Use a generator for large or streaming data.",
+   "key_points": [
+    "Eager vs lazy",
+    "Memory difference",
+    "Square brackets vs parentheses"
+   ],
+   "follow_ups": [
+    "Can you iterate over a generator twice?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-13",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "pandas",
+    "performance"
+   ],
+   "prompt": "Why is a Python for loop over DataFrame rows slow and what do you use instead?",
+   "ideal_answer": "Row loops run Python code per row, which is slow. Use vectorised column operations, built-in aggregations, apply only as a last resort and chunked processing or a faster engine for large data.",
+   "key_points": [
+    "Per-row Python is slow",
+    "Vectorised operations",
+    "Chunking or faster engines"
+   ],
+   "follow_ups": [
+    "How would you profile a slow pandas script?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-14",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "boto3",
+    "automation"
+   ],
+   "prompt": "How would you write a Python script that lists files in an S3 bucket and downloads the ones modified today?",
+   "ideal_answer": "Use boto3 with credentials from a role or environment, list objects with pagination, filter by last modified date and download each with error handling and logging. Never hard-code keys.",
+   "key_points": [
+    "boto3 with a role",
+    "Pagination",
+    "Filter, download, handle errors"
+   ],
+   "follow_ups": [
+    "Why is pagination needed?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-15",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "ml-pipeline"
+   ],
+   "prompt": "How would you take a model from a notebook to a service that other applications can use?",
+   "ideal_answer": "Move preprocessing and prediction into tested code, package the model with its version, serve it behind an API with validation, containerise it, deploy with monitoring and plan retraining.",
+   "key_points": [
+    "Clean, tested code",
+    "Versioned model behind an API",
+    "Monitoring and retraining"
+   ],
+   "follow_ups": [
+    "What is the difference between batch and real-time prediction?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-16",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "metrics"
+   ],
+   "prompt": "Which metrics would you use for a regression model predicting delivery time and how do you explain them to a business user?",
+   "ideal_answer": "Use MAE, which is the average error in minutes and easy to explain, and RMSE, which punishes large errors more, and compare against a simple baseline. Show errors by segment.",
+   "key_points": [
+    "MAE and RMSE",
+    "Compare with a baseline",
+    "Explain in business units"
+   ],
+   "follow_ups": [
+    "When is MAPE a bad choice?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-17",
+   "kind": "technical",
+   "category": "ai",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "rag"
+   ],
+   "prompt": "How would you build a question-answering assistant over a company's documents stored in S3?",
+   "ideal_answer": "Extract and chunk the documents, create embeddings, store them in a vector database, retrieve the most relevant chunks for each question and have an LLM answer with citations, with access control matching document permissions.",
+   "key_points": [
+    "Extract, chunk, embed",
+    "Retrieve then answer with citations",
+    "Respect permissions"
+   ],
+   "follow_ups": [
+    "How would you keep the index up to date?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-18",
+   "kind": "technical",
+   "category": "ai",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "llm-ops"
+   ],
+   "prompt": "What would you track and control when running an LLM feature in production?",
+   "ideal_answer": "Track cost, latency, error rates, quality scores and user feedback, version prompts and models, log inputs safely, set rate limits and budgets and add fallbacks if the provider fails.",
+   "key_points": [
+    "Cost, latency, quality",
+    "Versioning",
+    "Limits and fallbacks"
+   ],
+   "follow_ups": [
+    "How would you test a prompt change?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-19",
+   "kind": "technical",
+   "category": "devops",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "ci-cd"
+   ],
+   "prompt": "How would you set up automated deployment for a Python service on AWS?",
+   "ideal_answer": "On each merge run tests, build a container image, push it to a registry and deploy to a staging environment, run checks and then promote to production with a rollback option. Keep secrets in a manager.",
+   "key_points": [
+    "Test, build, push, deploy",
+    "Staging then production",
+    "Rollback and secrets"
+   ],
+   "follow_ups": [
+    "How do you do a zero-downtime deployment?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-20",
+   "kind": "technical",
+   "category": "security",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "cloud-security"
+   ],
+   "prompt": "What are common cloud security mistakes and how do you avoid them?",
+   "ideal_answer": "Public buckets, over-broad permissions, secrets in code, unpatched systems and no logging are common. Avoid them with least privilege, private defaults, a secrets manager, patching and audit logs.",
+   "key_points": [
+    "Public storage and wide permissions",
+    "Secrets in code",
+    "Logging and patching"
+   ],
+   "follow_ups": [
+    "How would you find a public bucket?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-21",
+   "kind": "scenario",
+   "category": "nb-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "debugging"
+   ],
+   "prompt": "Scenario: a nightly data job that normally takes 20 minutes now takes 4 hours. How do you investigate?",
+   "ideal_answer": "Compare with earlier runs, check input volume and shape, look at logs for the slow step, check database locks, missing indexes or resource limits, fix the cause and add timing metrics and alerts.",
+   "key_points": [
+    "Compare with normal runs",
+    "Find the slow step",
+    "Add timing and alerts"
+   ],
+   "follow_ups": [
+    "How would you avoid reprocessing everything next time?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-22",
+   "kind": "scenario",
+   "category": "nb-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: design a system that ingests millions of sensor readings per hour and lets analysts query them by device and time.",
+   "ideal_answer": "Ingest through a streaming service or queue, write to partitioned storage by time and device, aggregate into summaries for fast queries and keep raw data cheaply. Handle late and duplicate data.",
+   "key_points": [
+    "Streaming ingestion",
+    "Time-partitioned storage",
+    "Summaries and late data"
+   ],
+   "follow_ups": [
+    "How do you handle a device that sends wrong values?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-23",
+   "kind": "scenario",
+   "category": "nb-scenario",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "teamwork"
+   ],
+   "prompt": "Scenario: a stakeholder wants a report by tomorrow but the data has known quality issues. What do you do?",
+   "ideal_answer": "Tell them about the issues, show what can be reported reliably, mark uncertain numbers clearly and agree on a plan to fix the data. Do not present doubtful figures as certain.",
+   "key_points": [
+    "Be transparent",
+    "Report what is reliable",
+    "Plan the fix"
+   ],
+   "follow_ups": [
+    "How do you document known data issues?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-24",
+   "kind": "technical",
+   "category": "git",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "git"
+   ],
+   "prompt": "What is the difference between git fetch and git pull, and how do you undo a commit that is already pushed?",
+   "ideal_answer": "Fetch downloads remote changes without merging, while pull fetches and merges them. To undo a pushed commit safely use git revert, which creates a new commit that reverses it, instead of rewriting shared history.",
+   "key_points": [
+    "fetch vs pull",
+    "revert for shared history",
+    "Avoid force-pushing shared branches"
+   ],
+   "follow_ups": [
+    "When is git reset acceptable?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "northbay-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "junior-ai-engineer",
+    "data-scientist"
+   ],
+   "companies": [
+    "northbay"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe a cloud, data or Python automation project of yours. What problem did it solve and what would you improve?",
+   "ideal_answer": "A strong answer names the problem, tools and your own part, describes a measurable result or lesson and an honest improvement such as monitoring or tests.",
+   "key_points": [
+    "Problem and own part",
+    "Result or lesson",
+    "Honest improvement"
+   ],
+   "follow_ups": [
+    "How did you test it?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

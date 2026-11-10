@@ -1,0 +1,791 @@
+{
+ "company": "xeven-solutions",
+ "questions": [
+  {
+   "slug": "xeven-solutions-tech-01",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "easy",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "oop"
+   ],
+   "prompt": "Why do AI projects usually wrap logic in classes? Show how you would structure a Chatbot class that holds a model name and a conversation history.",
+   "ideal_answer": "A class keeps related state and behaviour together: the model name and history are attributes, and methods such as add_message and ask use them. This makes the code reusable, testable and easy to swap models without changing callers.",
+   "key_points": [
+    "State and behaviour together",
+    "History as an attribute, ask as a method",
+    "Easy to test and swap models"
+   ],
+   "follow_ups": [
+    "How would you stop the history from growing without limit?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-02",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "type-hints",
+    "pydantic"
+   ],
+   "prompt": "What problem do type hints and Pydantic models solve when your code receives JSON from users or from an LLM?",
+   "ideal_answer": "Type hints document expected shapes, and Pydantic validates incoming data against them at runtime, rejecting or converting wrong types with clear errors. This is especially useful for LLM output, which can be malformed.",
+   "key_points": [
+    "Hints document, Pydantic enforces",
+    "Clear validation errors",
+    "Validate LLM JSON before using it"
+   ],
+   "follow_ups": [
+    "What would you do when LLM output fails validation?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-03",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "async"
+   ],
+   "prompt": "When would you use async/await in a FastAPI service that calls an LLM API, and what mistake blocks the event loop?",
+   "ideal_answer": "Use async for I/O waits such as HTTP calls so one worker serves many requests. Calling a blocking function, like a synchronous library or a long computation, inside an async route freezes the loop, so run it in a thread pool or use an async client.",
+   "key_points": [
+    "Async helps I/O-bound waiting",
+    "Blocking calls freeze the event loop",
+    "Use async clients or a thread pool"
+   ],
+   "follow_ups": [
+    "How do you run several LLM calls at the same time?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-04",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "easy",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "lists",
+    "dictionaries"
+   ],
+   "prompt": "Given a list of documents as strings, how would you count how often each word appears across all of them?",
+   "ideal_answer": "Loop over the documents, split into lowercase words, and update a dictionary of counts, or use collections.Counter. It takes O(total words) time and memory proportional to the vocabulary.",
+   "key_points": [
+    "Normalise case and split",
+    "Dictionary or Counter",
+    "O(total words)"
+   ],
+   "follow_ups": [
+    "How would you ignore very common words?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-05",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "heaps",
+    "sorting"
+   ],
+   "prompt": "How would you find the top 5 most similar documents out of a million without sorting all of them?",
+   "ideal_answer": "Keep a min-heap of size 5 while scanning the scores, replacing the smallest when a better one appears. This costs O(n log 5) instead of O(n log n) for a full sort.",
+   "key_points": [
+    "Min-heap of fixed size k",
+    "One pass over the data",
+    "O(n log k)"
+   ],
+   "follow_ups": [
+    "Which library function does this for you?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-06",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "sql",
+    "analytics"
+   ],
+   "prompt": "A table stores chat messages with user_id and created_at. How would you find users with more than 10 messages in the last 7 days?",
+   "ideal_answer": "Filter rows where created_at is within the last 7 days, group by user_id and keep groups with COUNT(*) greater than 10 using HAVING. An index on created_at helps the filter.",
+   "key_points": [
+    "WHERE on date range",
+    "GROUP BY user_id",
+    "HAVING COUNT(*) > 10"
+   ],
+   "follow_ups": [
+    "How would you also return each user's latest message time?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-07",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "easy",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "supervised"
+   ],
+   "prompt": "Explain supervised, unsupervised and reinforcement learning with one real example of each.",
+   "ideal_answer": "Supervised learning trains on labelled examples, such as spam detection. Unsupervised learning finds structure without labels, such as customer clustering. Reinforcement learning learns from rewards by acting, such as a game-playing agent.",
+   "key_points": [
+    "Labels vs no labels vs rewards",
+    "Spam, clustering, game agent",
+    "Different data needs"
+   ],
+   "follow_ups": [
+    "Which one would you use to group support tickets with no labels?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-08",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "easy",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "overfitting"
+   ],
+   "prompt": "What is overfitting, how can you detect it and how do you reduce it?",
+   "ideal_answer": "Overfitting means the model memorises training data and performs worse on new data. You detect it when training score is high but validation score is low, and reduce it with more data, simpler models, regularisation, dropout or early stopping.",
+   "key_points": [
+    "High train, low validation score",
+    "Detect with a validation set",
+    "Regularise, simplify, add data"
+   ],
+   "follow_ups": [
+    "What does cross-validation add?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-09",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "metrics"
+   ],
+   "prompt": "A fraud model is 99 percent accurate but fraud is only 1 percent of cases. Why is accuracy misleading and which metrics do you use?",
+   "ideal_answer": "A model that always predicts not fraud also scores 99 percent. Use precision, recall, F1 and the precision-recall curve, and pick the trade-off based on the cost of missed fraud versus false alarms.",
+   "key_points": [
+    "Accuracy hides class imbalance",
+    "Precision, recall, F1",
+    "Choose based on error costs"
+   ],
+   "follow_ups": [
+    "How would you handle the imbalance during training?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-10",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "data-leakage"
+   ],
+   "prompt": "What is data leakage and give one example of how it can make a model look better than it is.",
+   "ideal_answer": "Leakage is when information from outside the training data, often from the future or the test set, reaches the model. For example, scaling using the whole dataset before splitting lets test statistics leak into training and inflates the score.",
+   "key_points": [
+    "Test or future information reaches training",
+    "Split before preprocessing",
+    "Scores look falsely good"
+   ],
+   "follow_ups": [
+    "How do pipelines help prevent leakage?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-11",
+   "kind": "technical",
+   "category": "deep-learning",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "neural-networks"
+   ],
+   "prompt": "Explain what backpropagation and a learning rate do when training a neural network.",
+   "ideal_answer": "Backpropagation computes how much each weight contributed to the loss using the chain rule, and gradient descent updates the weights in the opposite direction. The learning rate sets the step size: too large diverges, too small trains very slowly.",
+   "key_points": [
+    "Gradients via the chain rule",
+    "Weights updated against the gradient",
+    "Learning rate controls step size"
+   ],
+   "follow_ups": [
+    "What does an optimizer such as Adam add?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-12",
+   "kind": "technical",
+   "category": "nlp",
+   "difficulty": "easy",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "tokenization",
+    "embeddings"
+   ],
+   "prompt": "What is tokenization and what is an embedding in NLP?",
+   "ideal_answer": "Tokenization splits text into units such as words or sub-words that the model can process. An embedding maps each token or text to a vector of numbers so that similar meanings end up close together.",
+   "key_points": [
+    "Text split into tokens",
+    "Embedding is a vector",
+    "Similar meaning gives close vectors"
+   ],
+   "follow_ups": [
+    "Why do models use sub-word tokens instead of whole words?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-13",
+   "kind": "technical",
+   "category": "nlp",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "transformers"
+   ],
+   "prompt": "In simple terms, how does the attention mechanism in a transformer work and why did it replace RNNs for most language tasks?",
+   "ideal_answer": "Attention lets each token look at all other tokens and weight how relevant each is, so context is captured directly and in parallel. RNNs read tokens one by one, which is slow to train and weak on long-range context.",
+   "key_points": [
+    "Each token weighs all others",
+    "Parallel training",
+    "Better long-range context than RNNs"
+   ],
+   "follow_ups": [
+    "What limits the context length of a transformer?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-14",
+   "kind": "technical",
+   "category": "llm",
+   "difficulty": "easy",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "prompting"
+   ],
+   "prompt": "What makes a good prompt for an LLM? Give an example of improving a vague prompt.",
+   "ideal_answer": "A good prompt states the task, gives context, specifies the output format and may include examples. For instance, change 'summarise this' into 'summarise this support email in 3 bullet points for a manager, in plain English'.",
+   "key_points": [
+    "Clear task and context",
+    "Specify output format",
+    "Examples help"
+   ],
+   "follow_ups": [
+    "How would you test whether the new prompt is really better?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-15",
+   "kind": "technical",
+   "category": "llm",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "hallucination"
+   ],
+   "prompt": "Why do LLMs hallucinate and what practical steps reduce it in a product?",
+   "ideal_answer": "An LLM predicts likely text, not verified facts, so it can sound confident while wrong. Reduce it by grounding answers in retrieved documents, asking for citations, lowering temperature, validating outputs and saying I do not know when sources are missing.",
+   "key_points": [
+    "Predicts text, not truth",
+    "Ground with retrieval",
+    "Validate and allow I don't know"
+   ],
+   "follow_ups": [
+    "How would you measure hallucination in your app?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-16",
+   "kind": "technical",
+   "category": "llm",
+   "difficulty": "hard",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "fine-tuning"
+   ],
+   "prompt": "When would you choose fine-tuning over prompting or RAG, and what are the risks?",
+   "ideal_answer": "Fine-tune when you need a consistent style, format or narrow behaviour that prompting cannot deliver reliably. RAG suits changing factual knowledge. Fine-tuning needs good data and costs time and money, and it can forget general ability or bake in stale facts.",
+   "key_points": [
+    "Fine-tune for style and behaviour",
+    "RAG for changing knowledge",
+    "Needs data and risks forgetting"
+   ],
+   "follow_ups": [
+    "How would you check that fine-tuning did not make the model worse?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-17",
+   "kind": "technical",
+   "category": "rag",
+   "difficulty": "easy",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "rag"
+   ],
+   "prompt": "What is RAG and what problem does it solve?",
+   "ideal_answer": "Retrieval-augmented generation fetches relevant documents for a question and gives them to the LLM as context. It lets the model answer from your own, up-to-date data and reduces made-up answers.",
+   "key_points": [
+    "Retrieve then generate",
+    "Uses your own data",
+    "Fewer hallucinations"
+   ],
+   "follow_ups": [
+    "What are the main steps from document to answer?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-18",
+   "kind": "technical",
+   "category": "rag",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "chunking",
+    "vector-search"
+   ],
+   "prompt": "How do chunk size and overlap affect a RAG system, and how does vector search find relevant chunks?",
+   "ideal_answer": "Chunks that are too large add noise and cost, and chunks that are too small lose context; overlap keeps sentences from being cut at boundaries. Vector search embeds the question and returns the chunks whose embeddings are nearest by cosine similarity.",
+   "key_points": [
+    "Trade-off between noise and lost context",
+    "Overlap protects boundaries",
+    "Nearest embeddings by similarity"
+   ],
+   "follow_ups": [
+    "When would you add keyword search to vector search?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-19",
+   "kind": "technical",
+   "category": "rag",
+   "difficulty": "hard",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "evaluation"
+   ],
+   "prompt": "How would you evaluate a RAG chatbot to know whether retrieval or generation is the problem?",
+   "ideal_answer": "Check retrieval separately by testing whether the right chunk appears in the top results for a set of known questions, and check generation by judging whether the answer is faithful to the retrieved text. A failure with good retrieval points to the prompt or model; a failure with bad retrieval points to chunking or embeddings.",
+   "key_points": [
+    "Evaluate retrieval and generation separately",
+    "Known question set",
+    "Faithfulness to the sources"
+   ],
+   "follow_ups": [
+    "What would you track in production?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-20",
+   "kind": "technical",
+   "category": "agents",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "langchain",
+    "agents"
+   ],
+   "prompt": "What is an AI agent compared with a simple LLM call, and what role do tools and LangChain play?",
+   "ideal_answer": "An agent lets the LLM decide steps and call tools, such as search or a database, then use the results to continue. LangChain gives building blocks for prompts, tools, memory and chains, but an agent needs limits on steps and permissions to stay safe.",
+   "key_points": [
+    "LLM chooses actions and tools",
+    "LangChain provides components",
+    "Limit steps and permissions"
+   ],
+   "follow_ups": [
+    "What can go wrong when an agent loops?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-21",
+   "kind": "technical",
+   "category": "fastapi",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "fastapi",
+    "apis"
+   ],
+   "prompt": "How would you expose a trained model as an API with FastAPI, including input validation and error handling?",
+   "ideal_answer": "Load the model once at startup, define a Pydantic request model for validation, write a POST endpoint that calls the model, and return a typed response. Return clear 422 or 400 errors for bad input, add timeouts and log failures.",
+   "key_points": [
+    "Load the model once",
+    "Pydantic request and response models",
+    "Clear errors, timeouts, logging"
+   ],
+   "follow_ups": [
+    "How would you handle many requests at once?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-22",
+   "kind": "scenario",
+   "category": "ai-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "rag",
+    "debugging"
+   ],
+   "prompt": "Scenario: your document chatbot gives wrong answers for questions about a newly uploaded PDF. How do you investigate?",
+   "ideal_answer": "First check that the PDF text was extracted properly, then that it was chunked and embedded, and that the right chunk is retrieved for the question. Fix the weakest step, for example the extraction of tables or the chunk size, and re-run a test set.",
+   "key_points": [
+    "Check extraction first",
+    "Check chunking and retrieval",
+    "Re-test after the fix"
+   ],
+   "follow_ups": [
+    "How would you handle scanned PDFs?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-23",
+   "kind": "scenario",
+   "category": "ai-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "safety",
+    "privacy"
+   ],
+   "prompt": "Scenario: a client wants an LLM assistant over customer emails. What privacy and safety risks do you raise before building it?",
+   "ideal_answer": "Raise personal data exposure to third-party APIs, prompt injection from email content, leaking one customer's data to another, logging sensitive text and wrong answers acted on without review. Propose access control, redaction, no training on their data and human review for risky actions.",
+   "key_points": [
+    "Personal data and third-party APIs",
+    "Prompt injection",
+    "Access control and human review"
+   ],
+   "follow_ups": [
+    "What is prompt injection and how would you reduce it?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-24",
+   "kind": "scenario",
+   "category": "ai-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "data"
+   ],
+   "prompt": "Scenario: you receive a CSV with 30 percent missing values in one column. What do you do before training a model?",
+   "ideal_answer": "Find out why values are missing, then decide whether to drop the column, drop rows or impute with a sensible method, possibly adding a missing-indicator feature. Fit the imputation on training data only and check the effect on validation results.",
+   "key_points": [
+    "Understand why it is missing",
+    "Drop or impute deliberately",
+    "Fit on training data only"
+   ],
+   "follow_ups": [
+    "When is missingness itself useful information?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "xeven-solutions-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "data-scientist",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "xeven-solutions"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe an AI or ML project of yours. What data did you use, how did you measure success and what failed first?",
+   "ideal_answer": "A strong answer states the problem and data source, the model and metric, one honest failure such as leakage or poor labels and what you changed, and what you built yourself versus what a library did.",
+   "key_points": [
+    "Problem, data and metric",
+    "One honest failure",
+    "Own contribution"
+   ],
+   "follow_ups": [
+    "How would you improve it with another month?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

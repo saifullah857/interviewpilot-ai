@@ -1,0 +1,228 @@
+{
+  "_meta": {
+    "purpose": "Lahore research CANDIDATES. Names came from the project brief and public knowledge of Pakistan's software industry. NOTHING here is verified.",
+    "rules": "Every company is imported with status 'candidate'. 'tech_focus' is a rough project note used only to suggest companies; it is NOT a verified fact. The Research Agent (or an admin) must confirm the Lahore presence and hiring details from official sources before anything is shown as verified.",
+    "generated": "2026-11-02"
+  },
+  "companies": [
+    {
+      "name": "Arbisoft",
+      "slug": "arbisoft",
+      "tech_focus": [
+        "Python",
+        "Django",
+        "React",
+        "Machine Learning",
+        "Data Engineering"
+      ]
+    },
+    {
+      "name": "Systems Limited",
+      "slug": "systems-limited",
+      "tech_focus": [
+        ".NET",
+        "Java",
+        "Cloud",
+        "Data",
+        "QA"
+      ]
+    },
+    {
+      "name": "NETSOL Technologies",
+      "slug": "netsol-technologies",
+      "tech_focus": [
+        "Java",
+        ".NET",
+        "Fintech",
+        "Cloud"
+      ]
+    },
+    {
+      "name": "Tkxel",
+      "slug": "tkxel",
+      "tech_focus": [
+        "React",
+        "Node.js",
+        "Mobile",
+        "Python",
+        "AI/ML"
+      ]
+    },
+    {
+      "name": "10Pearls",
+      "slug": "10pearls",
+      "tech_focus": [
+        "React",
+        "Node.js",
+        "Mobile",
+        "Cloud",
+        "AI/ML"
+      ]
+    },
+    {
+      "name": "CureMD",
+      "slug": "curemd",
+      "tech_focus": [
+        "Healthcare IT",
+        ".NET",
+        "Web",
+        "AI"
+      ]
+    },
+    {
+      "name": "Folio3",
+      "slug": "folio3",
+      "tech_focus": [
+        "Python",
+        "Machine Learning",
+        "Computer Vision",
+        "Mobile",
+        "Cloud"
+      ]
+    },
+    {
+      "name": "Devsinc",
+      "slug": "devsinc",
+      "tech_focus": [
+        "React",
+        "Node.js",
+        "Mobile",
+        "Python",
+        "AI"
+      ]
+    },
+    {
+      "name": "PureLogics",
+      "slug": "purelogics",
+      "tech_focus": [
+        "Web",
+        "Mobile",
+        "AI",
+        "Cloud"
+      ]
+    },
+    {
+      "name": "Nextbridge",
+      "slug": "nextbridge",
+      "tech_focus": [
+        "Web",
+        ".NET",
+        "Mobile",
+        "Java"
+      ]
+    },
+    {
+      "name": "NorthBay",
+      "slug": "northbay",
+      "tech_focus": [
+        "AWS",
+        "Cloud",
+        "Data",
+        "AI/ML",
+        "Python"
+      ]
+    },
+    {
+      "name": "Conrad Labs",
+      "slug": "conrad-labs",
+      "tech_focus": [
+        "AI",
+        "Machine Learning",
+        "Python",
+        "Data"
+      ]
+    },
+    {
+      "name": "Mindstorm Studios",
+      "slug": "mindstorm-studios",
+      "tech_focus": [
+        "Game Development",
+        "Unity",
+        "Mobile",
+        "C#"
+      ]
+    },
+    {
+      "name": "Xeven Solutions",
+      "slug": "xeven-solutions",
+      "tech_focus": [
+        "Web",
+        "Mobile",
+        "Cloud",
+        "AI"
+      ]
+    },
+    {
+      "name": "Afiniti",
+      "slug": "afiniti",
+      "tech_focus": [
+        "AI",
+        "Machine Learning",
+        "Data Science",
+        "Python"
+      ]
+    },
+    {
+      "name": "Confiz",
+      "slug": "confiz",
+      "tech_focus": [
+        "Microsoft Stack",
+        ".NET",
+        "Data",
+        "Retail Tech",
+        "Cloud"
+      ]
+    },
+    {
+      "name": "Cubix",
+      "slug": "cubix",
+      "tech_focus": [
+        "Mobile",
+        "Web",
+        "React",
+        "Flutter",
+        "Blockchain"
+      ]
+    },
+    {
+      "name": "Techlogix",
+      "slug": "techlogix",
+      "tech_focus": [
+        "Enterprise Software",
+        "Microsoft Stack",
+        "Data",
+        "Cloud"
+      ]
+    },
+    {
+      "name": "Contour Software",
+      "slug": "contour-software",
+      "tech_focus": [
+        "Java",
+        ".NET",
+        "SaaS",
+        "Cloud"
+      ]
+    },
+    {
+      "name": "Kualitatem",
+      "slug": "kualitatem",
+      "tech_focus": [
+        "QA",
+        "Testing",
+        "Cybersecurity",
+        "Automation"
+      ]
+    },
+    {
+      "name": "vTeams",
+      "slug": "vteams",
+      "tech_focus": [
+        "Web",
+        "Mobile",
+        "Cloud",
+        "Python"
+      ]
+    }
+  ]
+}

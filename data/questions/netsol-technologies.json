@@ -1,0 +1,760 @@
+{
+ "company": "netsol-technologies",
+ "questions": [
+  {
+   "slug": "netsol-technologies-tech-01",
+   "kind": "technical",
+   "category": "fintech",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "transactions"
+   ],
+   "prompt": "Why must a money transfer between two accounts be a single database transaction?",
+   "ideal_answer": "A transfer has two steps, debit and credit. If only one succeeds the money is lost or created, so both must commit together or both roll back, which is the atomicity guarantee of a transaction.",
+   "key_points": [
+    "Debit and credit are one unit",
+    "Atomicity: all or nothing",
+    "Rollback on any failure"
+   ],
+   "follow_ups": [
+    "What should happen if the server crashes between the two steps?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-02",
+   "kind": "technical",
+   "category": "fintech",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "idempotency"
+   ],
+   "prompt": "A mobile app retries a payment request after a timeout. How do you make sure the customer is not charged twice?",
+   "ideal_answer": "Require an idempotency key with each payment request, store the key with the result, and when the same key arrives again return the saved result instead of charging again. Use a unique constraint so two simultaneous retries cannot both succeed.",
+   "key_points": [
+    "Idempotency key per payment",
+    "Store and return the first result",
+    "Unique constraint for concurrent retries"
+   ],
+   "follow_ups": [
+    "How long should you keep idempotency keys?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-03",
+   "kind": "technical",
+   "category": "fintech",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "money-handling"
+   ],
+   "prompt": "Why should money never be stored in floating point numbers, and what do you use instead?",
+   "ideal_answer": "Binary floating point cannot represent many decimals exactly, so rounding errors accumulate, for example 0.1 plus 0.2 is not exactly 0.3. Store amounts as integers of the smallest unit, such as cents, or use a decimal type with a defined rounding rule.",
+   "key_points": [
+    "Floats are inexact",
+    "Integers of the smallest unit or Decimal",
+    "Define rounding rules"
+   ],
+   "follow_ups": [
+    "How would you split 100.00 among three people fairly?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-04",
+   "kind": "technical",
+   "category": "fintech",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "ledger",
+    "design"
+   ],
+   "prompt": "Design the data model for a simple ledger that records deposits, withdrawals and transfers and can always prove a balance is correct.",
+   "ideal_answer": "Use an append-only table of ledger entries with account, amount, direction and timestamp, never editing past rows. A balance is the sum of entries, optionally cached and checkable against the sum, and every transfer creates balanced debit and credit entries inside one transaction.",
+   "key_points": [
+    "Append-only entries",
+    "Balance derived from entries",
+    "Balanced debit and credit in one transaction"
+   ],
+   "follow_ups": [
+    "How would you correct a wrong entry without deleting it?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-05",
+   "kind": "technical",
+   "category": "fintech",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "concurrency"
+   ],
+   "prompt": "Two requests withdraw from the same account at the same time and both read a balance of 100. How do you stop an overdraft?",
+   "ideal_answer": "Make the check and the update one atomic step using a row lock such as SELECT FOR UPDATE, or a conditional update that only runs when the balance is large enough and then check the affected row count. Optimistic locking with a version column is an alternative.",
+   "key_points": [
+    "Read then write is a race condition",
+    "Row lock or conditional update",
+    "Check affected row count"
+   ],
+   "follow_ups": [
+    "What are the costs of locking rows for a long time?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-06",
+   "kind": "technical",
+   "category": "security",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "encryption",
+    "pci"
+   ],
+   "prompt": "How would you protect sensitive customer data such as card numbers and national ID numbers in a system?",
+   "ideal_answer": "Collect only what you need, encrypt data in transit with TLS and at rest, keep keys in a secrets manager and not in code, mask values in logs and screens, and restrict access by role. For card data use a payment provider's tokenisation instead of storing the number yourself.",
+   "key_points": [
+    "Collect the minimum",
+    "Encrypt in transit and at rest",
+    "Tokenise cards, keep keys separate"
+   ],
+   "follow_ups": [
+    "What is the difference between hashing and encryption?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-07",
+   "kind": "technical",
+   "category": "security",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "owasp"
+   ],
+   "prompt": "What is SQL injection and how do you prevent it? Name one more common web vulnerability.",
+   "ideal_answer": "SQL injection is when user input changes the meaning of a query. Prevent it with parameterised queries or an ORM and never by building SQL strings from input. Another common issue is cross-site scripting, prevented by escaping output and a content security policy.",
+   "key_points": [
+    "Input becomes part of the query",
+    "Parameterised queries",
+    "XSS: escape output"
+   ],
+   "follow_ups": [
+    "Why is input validation not enough on its own?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-08",
+   "kind": "technical",
+   "category": "security",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "authentication"
+   ],
+   "prompt": "Why should a bank application use multi-factor authentication and lock accounts after repeated failed logins?",
+   "ideal_answer": "A password alone can be guessed or stolen, so a second factor means a stolen password is not enough. Rate limiting or locking after repeated failures slows brute force attempts, though the lock itself needs a safe recovery path.",
+   "key_points": [
+    "Second factor beats stolen passwords",
+    "Limit repeated failures",
+    "Safe account recovery"
+   ],
+   "follow_ups": [
+    "How can an attacker abuse account lockout?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-09",
+   "kind": "technical",
+   "category": "oop",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "abstraction"
+   ],
+   "prompt": "What is an interface or abstract class and why would a payment system define one for payment methods?",
+   "ideal_answer": "An interface defines what a payment method must do, such as authorise and refund, without saying how. Card, bank transfer and wallet classes implement it, so the checkout code works with any method and new ones are added without changing it.",
+   "key_points": [
+    "Contract without implementation",
+    "Different payment classes implement it",
+    "Add methods without changing checkout"
+   ],
+   "follow_ups": [
+    "How is an abstract class different from an interface?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-10",
+   "kind": "technical",
+   "category": "oop",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "design-patterns"
+   ],
+   "prompt": "Explain the strategy pattern and where it fits in calculating different loan interest rules.",
+   "ideal_answer": "The strategy pattern puts each algorithm in its own class behind a shared interface and lets the caller pick one at runtime. Each loan type gets its own interest calculation, so adding a new rule means adding a class, not editing a long if-else.",
+   "key_points": [
+    "Algorithms behind one interface",
+    "Chosen at runtime",
+    "Add rules without long conditionals"
+   ],
+   "follow_ups": [
+    "How does this relate to the open/closed principle?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-11",
+   "kind": "technical",
+   "category": "oop",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "exceptions"
+   ],
+   "prompt": "How should a banking application handle exceptions, and what is wrong with catching everything and ignoring it?",
+   "ideal_answer": "Catch specific exceptions you can handle, let others propagate to a central handler, log with enough context and return safe messages to users. Swallowing every error hides bugs and can leave money operations half finished.",
+   "key_points": [
+    "Catch specific exceptions",
+    "Central handling and logging",
+    "Never silently swallow errors"
+   ],
+   "follow_ups": [
+    "When should an operation be retried and when not?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-12",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "queries"
+   ],
+   "prompt": "Write the idea of a query that returns the total deposits per customer in the last 30 days, highest first.",
+   "ideal_answer": "Filter the transactions to deposits in the last 30 days, group by customer, sum the amount and order by the total descending.",
+   "key_points": [
+    "WHERE on type and date",
+    "GROUP BY customer, SUM(amount)",
+    "ORDER BY total DESC"
+   ],
+   "follow_ups": [
+    "How would you include customers with no deposits?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-13",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "window-functions"
+   ],
+   "prompt": "How would you show each transaction together with the running balance of its account using SQL?",
+   "ideal_answer": "Use a window function: SUM(amount) OVER (PARTITION BY account ORDER BY date, id) gives a running total per account without collapsing the rows. Ordering by a unique tie-breaker keeps the result stable.",
+   "key_points": [
+    "Window function SUM OVER",
+    "PARTITION BY account",
+    "Order with a unique tie-breaker"
+   ],
+   "follow_ups": [
+    "What does ROWS BETWEEN change?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-14",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "isolation"
+   ],
+   "prompt": "Explain transaction isolation levels and the problems of dirty reads, non-repeatable reads and phantom reads.",
+   "ideal_answer": "Lower levels allow more anomalies for speed. A dirty read sees uncommitted data, a non-repeatable read sees a row change between two reads, and a phantom read sees new rows appear. Read committed prevents dirty reads, repeatable read prevents non-repeatable reads, and serializable also prevents phantoms at a cost.",
+   "key_points": [
+    "Three anomalies",
+    "Higher level means fewer anomalies",
+    "Cost in concurrency"
+   ],
+   "follow_ups": [
+    "Which level would you choose for a balance check and why?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-15",
+   "kind": "technical",
+   "category": "api",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "rest",
+    "versioning"
+   ],
+   "prompt": "How would you design a REST API for payments so that clients and partner banks are not broken by changes?",
+   "ideal_answer": "Use clear resources and status codes, validate input strictly, make changes additive, version breaking changes and keep old versions running during a notice period. Document the contract and test it so changes do not slip through.",
+   "key_points": [
+    "Strict contract and validation",
+    "Additive changes, version when breaking",
+    "Contract tests and deprecation notice"
+   ],
+   "follow_ups": [
+    "How do you handle a partner that is slow to upgrade?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-16",
+   "kind": "technical",
+   "category": "api",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "integration"
+   ],
+   "prompt": "A partner bank API is slow and sometimes fails. How do you keep your system reliable?",
+   "ideal_answer": "Set timeouts, retry transient errors with backoff, use a circuit breaker to stop hammering a failing service, queue work that can wait and record every request and response for reconciliation.",
+   "key_points": [
+    "Timeouts and backoff retries",
+    "Circuit breaker",
+    "Queue and reconcile"
+   ],
+   "follow_ups": [
+    "How do you reconcile your records with the partner's records?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-17",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "arrays"
+   ],
+   "prompt": "Given a list of daily transaction amounts, how would you find the highest single amount and the average?",
+   "ideal_answer": "Loop once while tracking the maximum and a running sum, then divide by the count, which is O(n) time and O(1) space. Handle an empty list explicitly.",
+   "key_points": [
+    "Single pass",
+    "Track max and sum",
+    "Handle empty input"
+   ],
+   "follow_ups": [
+    "How would you also find the second highest?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-18",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "hash-maps"
+   ],
+   "prompt": "How would you detect duplicate transactions in a stream of one million records?",
+   "ideal_answer": "Build a key from the fields that define a duplicate, such as account, amount, reference and time window, and keep seen keys in a hash set, expiring old ones. This is O(1) per record on average with memory limited to the window.",
+   "key_points": [
+    "Key from identifying fields",
+    "Hash set of seen keys",
+    "Expire old keys"
+   ],
+   "follow_ups": [
+    "What if the data does not fit in memory?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-19",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "sorting",
+    "intervals"
+   ],
+   "prompt": "You have a list of time intervals when a service was down. How do you compute the total downtime without double counting overlaps?",
+   "ideal_answer": "Sort the intervals by start, then sweep: merge an interval into the current one when it overlaps, otherwise close the current one and start a new one, and add up the merged lengths. Sorting makes it O(n log n).",
+   "key_points": [
+    "Sort by start time",
+    "Merge overlapping intervals",
+    "Sum merged lengths"
+   ],
+   "follow_ups": [
+    "How would you handle intervals that arrive live?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-20",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "quality"
+   ],
+   "prompt": "What would you test for a function that calculates a loan instalment, beyond one normal example?",
+   "ideal_answer": "Test boundaries such as zero or tiny amounts, zero interest, the longest term, rounding of the last instalment, invalid input and known values checked against an independent calculation. Add tests for each bug found.",
+   "key_points": [
+    "Boundaries and invalid input",
+    "Rounding behaviour",
+    "Compare with known values"
+   ],
+   "follow_ups": [
+    "What are property-based tests and could they help here?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-21",
+   "kind": "scenario",
+   "category": "fintech-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "incidents"
+   ],
+   "prompt": "Scenario: at month end the totals in your report do not match the bank statement by a few thousand rupees. How do you find the cause?",
+   "ideal_answer": "Reconcile at transaction level: match each record on reference and amount to find missing, duplicated or differing entries, then look for patterns such as timing at the cut-off, rounding or failed callbacks. Fix the cause, correct the data with an auditable entry and add an automatic reconciliation check.",
+   "key_points": [
+    "Reconcile record by record",
+    "Look for patterns like cut-off and rounding",
+    "Auditable correction and a permanent check"
+   ],
+   "follow_ups": [
+    "How would you present the finding to the finance team?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-22",
+   "kind": "scenario",
+   "category": "fintech-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: design a service that sends SMS alerts for every transaction without ever blocking the payment itself.",
+   "ideal_answer": "Publish an event after the transaction commits and let a separate worker send SMS from a queue, so a slow provider cannot delay payments. Make sending idempotent, retry with backoff, store delivery status and alert when the queue grows.",
+   "key_points": [
+    "Decouple with a queue",
+    "Idempotent sends with retries",
+    "Delivery status and monitoring"
+   ],
+   "follow_ups": [
+    "What if the event is lost after the commit?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-23",
+   "kind": "scenario",
+   "category": "fintech-scenario",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "teamwork"
+   ],
+   "prompt": "Scenario: you find a bug in production that affects a few customers' balances on a Friday evening. What do you do first?",
+   "ideal_answer": "Stop the damage if possible, tell your lead and the right stakeholders immediately, collect facts about who is affected, and avoid rushed changes without review. Then fix, verify and write up what happened and how to prevent it.",
+   "key_points": [
+    "Contain and escalate quickly",
+    "Gather facts on impact",
+    "Fix carefully and write it up"
+   ],
+   "follow_ups": [
+    "How would you decide between a hotfix and a rollback?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-24",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "decimal"
+   ],
+   "prompt": "In Python, how would you use the decimal module for money and why is it safer than float?",
+   "ideal_answer": "decimal.Decimal stores exact base-10 values, so 0.10 plus 0.20 equals 0.30 exactly. Create Decimals from strings and not floats, and set rounding explicitly with quantize, for example ROUND_HALF_UP to two places.",
+   "key_points": [
+    "Exact base-10 arithmetic",
+    "Create from strings",
+    "Explicit rounding with quantize"
+   ],
+   "follow_ups": [
+    "What happens if you build Decimal from the float 0.1?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "netsol-technologies-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "netsol-technologies"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Tell me about a project in which you handled sensitive or important data. How did you protect it and test it?",
+   "ideal_answer": "A strong answer describes the data and risk, concrete protection steps such as validation, access control and encryption, how you tested edge cases and what you would harden next, without exaggerating your part.",
+   "key_points": [
+    "Concrete protections",
+    "Testing of edge cases",
+    "Honest scope and next steps"
+   ],
+   "follow_ups": [
+    "What would you add with more time?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

@@ -1,0 +1,780 @@
+{
+ "company": "contour-software",
+ "questions": [
+  {
+   "slug": "contour-software-tech-01",
+   "kind": "technical",
+   "category": "java",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "jvm"
+   ],
+   "prompt": "What are the JDK, JRE and JVM, and what does the garbage collector do?",
+   "ideal_answer": "The JVM runs compiled bytecode, the JRE is the JVM with the standard libraries and the JDK adds development tools such as the compiler. The garbage collector frees objects that are no longer reachable so the programmer does not free memory manually.",
+   "key_points": [
+    "JDK contains JRE contains JVM",
+    "Bytecode portability",
+    "Automatic memory reclaim"
+   ],
+   "follow_ups": [
+    "Can you force garbage collection?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-02",
+   "kind": "technical",
+   "category": "java",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "collections"
+   ],
+   "prompt": "How does HashMap work internally and why must you implement equals and hashCode together?",
+   "ideal_answer": "HashMap uses the key's hashCode to choose a bucket and equals to find the matching key inside it. If equal objects have different hash codes, lookups fail, so the two methods must agree, and keys should be immutable.",
+   "key_points": [
+    "Buckets by hash code",
+    "equals resolves collisions",
+    "Consistent contract"
+   ],
+   "follow_ups": [
+    "What happens when many keys collide?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-03",
+   "kind": "technical",
+   "category": "java",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "streams"
+   ],
+   "prompt": "What are Java streams and how would you group a list of orders by customer and sum their amounts?",
+   "ideal_answer": "Streams process collections with a pipeline of operations such as filter, map and collect. Use Collectors.groupingBy on the customer with Collectors.summingDouble or summingInt on the amount.",
+   "key_points": [
+    "Pipeline of operations",
+    "groupingBy collector",
+    "Downstream summing"
+   ],
+   "follow_ups": [
+    "When is a plain loop clearer?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-04",
+   "kind": "technical",
+   "category": "java",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "concurrency"
+   ],
+   "prompt": "What is the difference between synchronized, volatile and the java.util.concurrent classes and when do you use each?",
+   "ideal_answer": "synchronized gives mutual exclusion and visibility for a block, volatile only guarantees visibility of a single variable, and the concurrent package provides tested tools such as ConcurrentHashMap, atomic classes and executors. Prefer the higher-level tools.",
+   "key_points": [
+    "Mutual exclusion vs visibility",
+    "Atomic classes and concurrent collections",
+    "Prefer high-level tools"
+   ],
+   "follow_ups": [
+    "Why is count++ not thread-safe even on a volatile field?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-05",
+   "kind": "technical",
+   "category": "java",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "spring"
+   ],
+   "prompt": "What is the difference between Spring and Spring Boot and what does @Transactional do?",
+   "ideal_answer": "Spring is the core framework with dependency injection and many modules, while Spring Boot adds auto-configuration, an embedded server and starters so applications run with little setup. @Transactional wraps a method in a database transaction that commits on success and rolls back on a runtime exception.",
+   "key_points": [
+    "Boot simplifies setup",
+    "Dependency injection",
+    "Transaction boundaries and rollback"
+   ],
+   "follow_ups": [
+    "Why can a self-call bypass @Transactional?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-06",
+   "kind": "technical",
+   "category": "java",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "jpa"
+   ],
+   "prompt": "What is the N+1 problem in JPA or Hibernate and how do you fix it?",
+   "ideal_answer": "Loading a list of entities and then touching a lazy relation runs one query per row. Fix it with join fetch, entity graphs or batch fetching, or by selecting a projection that contains only what is needed.",
+   "key_points": [
+    "One query per row",
+    "Join fetch or entity graph",
+    "Projections"
+   ],
+   "follow_ups": [
+    "How do you detect it?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-07",
+   "kind": "technical",
+   "category": "csharp",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "dotnet"
+   ],
+   "prompt": "What are the main differences between Java and C# that a developer moving between them would notice?",
+   "ideal_answer": "Both are object-oriented, garbage collected and strongly typed. C# adds features such as properties, LINQ, async/await built into the language and value-type structs, while Java emphasises the JVM ecosystem, checked exceptions and a large framework landscape such as Spring.",
+   "key_points": [
+    "Shared concepts",
+    "Properties, LINQ, async in C#",
+    "Checked exceptions and Spring in Java"
+   ],
+   "follow_ups": [
+    "Which would you choose for a new SaaS backend and why?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-08",
+   "kind": "technical",
+   "category": "csharp",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "dotnet"
+   ],
+   "prompt": "How would you implement authentication and authorisation in an ASP.NET Core SaaS application with several tenants?",
+   "ideal_answer": "Authenticate users with tokens or an identity provider, store the tenant id in the claims, filter every query by the tenant and check roles and policies on endpoints. Test that one tenant can never read another's data.",
+   "key_points": [
+    "Tokens and claims",
+    "Tenant filter on every query",
+    "Tests for isolation"
+   ],
+   "follow_ups": [
+    "Where would you enforce the tenant filter to avoid mistakes?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-09",
+   "kind": "technical",
+   "category": "saas",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "multi-tenancy"
+   ],
+   "prompt": "What are the ways to separate customers' data in a multi-tenant SaaS database and what are their trade-offs?",
+   "ideal_answer": "Options are a separate database per tenant, a schema per tenant or a shared schema with a tenant column. Separate databases give the strongest isolation at higher cost and management effort, while a shared schema is cheapest but needs strict filtering.",
+   "key_points": [
+    "Three isolation models",
+    "Isolation vs cost",
+    "Strict filtering for shared tables"
+   ],
+   "follow_ups": [
+    "How would you migrate one big customer to its own database?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-10",
+   "kind": "technical",
+   "category": "saas",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "scalability"
+   ],
+   "prompt": "A SaaS product's reports slow down as customers grow. How do you scale without rewriting everything?",
+   "ideal_answer": "Measure to find the bottleneck, add indexes and caching, move reports to read replicas or a separate analytics store, pre-aggregate data, run heavy jobs asynchronously and scale stateless services horizontally.",
+   "key_points": [
+    "Measure first",
+    "Replicas and pre-aggregation",
+    "Asynchronous heavy jobs"
+   ],
+   "follow_ups": [
+    "How do you stop one customer slowing others?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-11",
+   "kind": "technical",
+   "category": "saas",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "billing"
+   ],
+   "prompt": "What would you consider when building subscription billing and usage limits?",
+   "ideal_answer": "Store plans, prices with effective dates and usage records, handle upgrades and prorating, make charging idempotent, keep invoices immutable, reconcile with the payment provider and enforce limits on the server.",
+   "key_points": [
+    "Plans and usage records",
+    "Idempotent charging",
+    "Reconcile and enforce on the server"
+   ],
+   "follow_ups": [
+    "How do you handle a failed payment?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-12",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "sql"
+   ],
+   "prompt": "What is the difference between WHERE and HAVING and between COUNT(*) and COUNT(column)?",
+   "ideal_answer": "WHERE filters rows before grouping and HAVING filters groups after aggregation. COUNT(*) counts all rows and COUNT(column) counts only rows where the column is not null.",
+   "key_points": [
+    "Before vs after grouping",
+    "Nulls in COUNT",
+    "Aggregation order"
+   ],
+   "follow_ups": [
+    "Write a query using both."
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-13",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "indexes"
+   ],
+   "prompt": "How do you choose the order of columns in a composite index?",
+   "ideal_answer": "Put columns used in equality filters first and the range or sort column last, and put the most selective columns early when they are used together. The index only helps queries that use its leading columns.",
+   "key_points": [
+    "Equality before range",
+    "Leading columns matter",
+    "Check with the query plan"
+   ],
+   "follow_ups": [
+    "Why does an index on (a, b) not help a filter on b alone?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-14",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "transactions"
+   ],
+   "prompt": "How do isolation levels and locking affect a busy SaaS application and what would you use by default?",
+   "ideal_answer": "Higher isolation prevents anomalies but increases blocking and deadlocks. Read committed is a common default, with row-level locks or optimistic concurrency for specific critical updates, and keeping transactions short.",
+   "key_points": [
+    "Anomalies vs concurrency",
+    "Read committed default",
+    "Short transactions and optimistic locking"
+   ],
+   "follow_ups": [
+    "When would you use serializable?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-15",
+   "kind": "technical",
+   "category": "api",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "rest"
+   ],
+   "prompt": "How do you version a public REST API and deprecate old versions without losing customers?",
+   "ideal_answer": "Use a version in the URL or header, make changes additive when possible, announce deprecations with dates, give migration guides, monitor who still uses old versions and contact them before retiring it.",
+   "key_points": [
+    "Versioning scheme",
+    "Additive changes and notice",
+    "Monitor usage"
+   ],
+   "follow_ups": [
+    "How do webhooks change this problem?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-16",
+   "kind": "technical",
+   "category": "api",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "reliability"
+   ],
+   "prompt": "How would you make webhook delivery to customers reliable?",
+   "ideal_answer": "Send events from a queue with signed payloads, retry failures with exponential backoff, record delivery attempts, let customers see and replay failed events and make receivers idempotent with event ids. Disable endpoints that fail for too long.",
+   "key_points": [
+    "Queue, retries and backoff",
+    "Signed payloads",
+    "Idempotency and replay"
+   ],
+   "follow_ups": [
+    "How does the customer verify the signature?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-17",
+   "kind": "technical",
+   "category": "cloud",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "deployment"
+   ],
+   "prompt": "How would you deploy a Java or .NET service with zero downtime?",
+   "ideal_answer": "Run several instances behind a load balancer and update them gradually with rolling or blue-green deployment, use health checks, keep database changes backward compatible and have a rollback plan.",
+   "key_points": [
+    "Rolling or blue-green",
+    "Health checks",
+    "Backward-compatible database changes"
+   ],
+   "follow_ups": [
+    "How do you handle a long-running request during deployment?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-18",
+   "kind": "technical",
+   "category": "cloud",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "observability"
+   ],
+   "prompt": "How would you monitor a SaaS service and find a problem before customers report it?",
+   "ideal_answer": "Collect logs, metrics and traces, define service level indicators such as error rate and latency with alerts, add synthetic checks that call key endpoints and review dashboards and incidents regularly.",
+   "key_points": [
+    "Logs, metrics, traces",
+    "Alerts on SLIs",
+    "Synthetic checks"
+   ],
+   "follow_ups": [
+    "How do you avoid alert fatigue?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-19",
+   "kind": "technical",
+   "category": "oop",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "solid"
+   ],
+   "prompt": "How do the single responsibility and open/closed principles help a product that adds many customer-specific features?",
+   "ideal_answer": "A class with one responsibility is easy to change safely, and an open/closed design adds customer-specific behaviour through new classes or configuration instead of editing core code. This avoids a tangle of conditions for each customer.",
+   "key_points": [
+    "One reason to change",
+    "Extend by adding",
+    "Avoid per-customer conditionals"
+   ],
+   "follow_ups": [
+    "How would feature flags help?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-20",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "testing"
+   ],
+   "prompt": "How do you test a feature that behaves differently for each customer's configuration?",
+   "ideal_answer": "Test the core logic with parameterised tests across representative configurations, add integration tests for the riskiest ones and use contract tests for integrations, keeping configuration data in test fixtures.",
+   "key_points": [
+    "Parameterised tests",
+    "Representative configurations",
+    "Integration and contract tests"
+   ],
+   "follow_ups": [
+    "How do you pick representative configurations?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-21",
+   "kind": "scenario",
+   "category": "cs-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "debugging"
+   ],
+   "prompt": "Scenario: one customer reports that a page is very slow while others are fine. How do you investigate?",
+   "ideal_answer": "Compare their data size and settings with others, check slow queries and logs for their tenant, reproduce with similar data, fix the cause such as a missing index or heavy configuration, and add monitoring per tenant.",
+   "key_points": [
+    "Compare data and configuration",
+    "Slow queries for that tenant",
+    "Fix and monitor per tenant"
+   ],
+   "follow_ups": [
+    "How would you protect other customers meanwhile?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-22",
+   "kind": "scenario",
+   "category": "cs-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: design an import feature that lets customers upload a 500,000-row CSV safely.",
+   "ideal_answer": "Upload the file to storage, validate the structure, process in the background in batches with progress, reject bad rows with a downloadable error report, make the import idempotent and limit size and rate per tenant.",
+   "key_points": [
+    "Background batch processing",
+    "Error report",
+    "Idempotent and limited"
+   ],
+   "follow_ups": [
+    "How do you handle a file that is half processed when a server restarts?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-23",
+   "kind": "scenario",
+   "category": "cs-scenario",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "teamwork"
+   ],
+   "prompt": "Scenario: support asks you for an urgent fix that touches code you do not know. How do you proceed?",
+   "ideal_answer": "Read the code and its tests, ask the owner or teammates, make the smallest safe change with a test, have it reviewed even when urgent and deploy carefully with monitoring.",
+   "key_points": [
+    "Understand before changing",
+    "Small change with a test",
+    "Review and monitor"
+   ],
+   "follow_ups": [
+    "When would you refuse a quick fix?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-24",
+   "kind": "technical",
+   "category": "git",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "git"
+   ],
+   "prompt": "What is the difference between merge and rebase and how do you handle a conflict in a long-running feature branch?",
+   "ideal_answer": "Merge keeps both histories with a merge commit and rebase replays your commits on the updated base for a linear history. For a long branch, integrate the main branch often, resolve conflicts by understanding both changes, run tests and avoid rebasing shared branches.",
+   "key_points": [
+    "Merge vs rebase",
+    "Integrate often",
+    "Test after resolving"
+   ],
+   "follow_ups": [
+    "When would you squash commits?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "contour-software-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "contour-software"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe a project in Java, .NET or a web stack. What did you build yourself, how did you test it and what would you improve?",
+   "ideal_answer": "A strong answer names the project, your exact part and the technologies, how you tested and handled errors, and an honest improvement such as performance or structure.",
+   "key_points": [
+    "Own part and stack",
+    "Testing and errors",
+    "Honest improvement"
+   ],
+   "follow_ups": [
+    "How is it deployed?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

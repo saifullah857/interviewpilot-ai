@@ -1,0 +1,807 @@
+{
+ "company": "purelogics",
+ "questions": [
+  {
+   "slug": "purelogics-tech-01",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "python"
+   ],
+   "prompt": "What are *args and **kwargs in Python and when are they useful?",
+   "ideal_answer": "*args collects extra positional arguments into a tuple and **kwargs collects extra keyword arguments into a dictionary. They are useful for flexible functions, wrappers and forwarding arguments to another function.",
+   "key_points": [
+    "Positional vs keyword extras",
+    "Tuple and dictionary",
+    "Wrappers and forwarding"
+   ],
+   "follow_ups": [
+    "How do you unpack a list into arguments when calling?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-02",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "exceptions"
+   ],
+   "prompt": "How do try, except, else and finally work in Python and what is wrong with a bare except?",
+   "ideal_answer": "Code in try runs first, except handles a matching error, else runs when no error happened and finally always runs for cleanup. A bare except hides all errors, including ones you did not expect, so catch specific exceptions.",
+   "key_points": [
+    "Four blocks and their order",
+    "finally always runs",
+    "Catch specific exceptions"
+   ],
+   "follow_ups": [
+    "How do you create your own exception class?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-03",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "django"
+   ],
+   "prompt": "Explain Django models, migrations and the admin site, and how a typical view returns JSON.",
+   "ideal_answer": "Models define tables as classes, migrations apply model changes to the database, and the admin site gives a ready management interface. A view reads request data, queries models and returns a JsonResponse or a Django REST Framework response.",
+   "key_points": [
+    "Models and migrations",
+    "Admin site",
+    "JSON responses"
+   ],
+   "follow_ups": [
+    "How do you add a field to an existing table safely?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-04",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "performance"
+   ],
+   "prompt": "A Python endpoint that processes a large list is slow. How do you find and improve the bottleneck?",
+   "ideal_answer": "Profile with cProfile or a similar tool to find where time goes, then use better data structures such as sets or dictionaries for lookups, avoid repeated work, use generators or vectorised libraries and move heavy work to a background job.",
+   "key_points": [
+    "Profile first",
+    "Better data structures",
+    "Background jobs for heavy work"
+   ],
+   "follow_ups": [
+    "When is multiprocessing worth it?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-05",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "strings"
+   ],
+   "prompt": "How would you check whether two strings are anagrams and what is the complexity?",
+   "ideal_answer": "Count the characters of each string with a dictionary or Counter and compare the counts, which is O(n); sorting both strings is simpler but O(n log n). Normalise case and spaces first if required.",
+   "key_points": [
+    "Count characters",
+    "O(n) vs sorting O(n log n)",
+    "Normalise the input"
+   ],
+   "follow_ups": [
+    "How would you group a list of words by anagram?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-06",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "two-pointers"
+   ],
+   "prompt": "Given a sorted list, how would you find a pair that adds up to a target without extra memory?",
+   "ideal_answer": "Use two pointers at both ends, move the left one up when the sum is too small and the right one down when it is too large, stopping when they meet. It is O(n) time and O(1) space.",
+   "key_points": [
+    "Two pointers on sorted data",
+    "Move based on the sum",
+    "O(n) time, O(1) space"
+   ],
+   "follow_ups": [
+    "Why does this need sorted input?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-07",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "linked-list"
+   ],
+   "prompt": "What is a linked list and how do you reverse one?",
+   "ideal_answer": "A linked list stores items in nodes that each point to the next. To reverse it, walk through it while pointing each node back at the previous one, keeping track of previous, current and next, in O(n) time and O(1) space.",
+   "key_points": [
+    "Nodes with next pointers",
+    "Track previous, current, next",
+    "O(n) time, O(1) space"
+   ],
+   "follow_ups": [
+    "How do you detect a cycle?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-08",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Design the tables for an online shop with customers, products and orders. How do you represent the items in one order?",
+   "ideal_answer": "Use customers, products and orders tables, plus an order_items table linking an order to products with quantity and the price at purchase time, because it is a many-to-many relationship. Add foreign keys and indexes on them.",
+   "key_points": [
+    "Many-to-many needs a link table",
+    "Store price at purchase",
+    "Foreign keys and indexes"
+   ],
+   "follow_ups": [
+    "Why not store the product price only in the products table?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-09",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "aggregation"
+   ],
+   "prompt": "Write the idea of a query that finds the top 3 best-selling products last month.",
+   "ideal_answer": "Join order items to orders, filter orders to last month, group by product, sum the quantity, order by the sum descending and limit to 3. Decide how to handle ties.",
+   "key_points": [
+    "Join and filter by date",
+    "GROUP BY with SUM",
+    "ORDER BY and LIMIT"
+   ],
+   "follow_ups": [
+    "How would you do this per category?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-10",
+   "kind": "technical",
+   "category": "api",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "security"
+   ],
+   "prompt": "How would you secure an API that a mobile app uses?",
+   "ideal_answer": "Use HTTPS, authenticate with short-lived tokens, check permissions on the server, validate input, rate limit and avoid trusting data from the app because it can be modified. Keep secrets out of the app because they can be extracted.",
+   "key_points": [
+    "HTTPS and tokens",
+    "Server-side permission checks",
+    "Do not trust the client or store secrets in it"
+   ],
+   "follow_ups": [
+    "How does a refresh token help?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-11",
+   "kind": "technical",
+   "category": "flutter-mobile",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "mobile"
+   ],
+   "prompt": "What is state management in a mobile app and how would you organise it for a shopping cart?",
+   "ideal_answer": "State management decides where app data lives and how screens update when it changes. For a cart, keep it in one shared place, such as a provider, bloc or store, so every screen sees the same data, persist it locally and sync with the server.",
+   "key_points": [
+    "Shared state for shared data",
+    "Update screens on change",
+    "Persist and sync"
+   ],
+   "follow_ups": [
+    "What goes wrong if each screen keeps its own copy?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-12",
+   "kind": "technical",
+   "category": "flutter-mobile",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "mobile"
+   ],
+   "prompt": "What is the difference between stateless and stateful widgets in Flutter?",
+   "ideal_answer": "A stateless widget does not change after it is built, while a stateful widget holds data that can change and rebuilds when setState is called. Choose stateless unless the widget owns changing data.",
+   "key_points": [
+    "Immutable vs changing",
+    "setState triggers rebuild",
+    "Prefer stateless"
+   ],
+   "follow_ups": [
+    "Where should shared state live instead of a widget?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-13",
+   "kind": "technical",
+   "category": "ai",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "chatbot"
+   ],
+   "prompt": "How does a basic customer support chatbot using an LLM work and what are its limits?",
+   "ideal_answer": "The app sends the user's message and some context to an LLM and returns the reply. Its limits are wrong answers, no knowledge of private data without retrieval, cost and the need for a handover to a human.",
+   "key_points": [
+    "Message plus context to an LLM",
+    "Can be wrong or lack private data",
+    "Human handover"
+   ],
+   "follow_ups": [
+    "How would you stop it answering off-topic questions?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-14",
+   "kind": "technical",
+   "category": "ai",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "prompting",
+    "validation"
+   ],
+   "prompt": "How would you make an LLM return data in a fixed JSON format your code can rely on?",
+   "ideal_answer": "Ask for the exact schema in the prompt, use the provider's structured output feature if available, parse and validate the result, and retry or fall back when it does not match.",
+   "key_points": [
+    "Describe the schema",
+    "Parse and validate",
+    "Retry or fall back"
+   ],
+   "follow_ups": [
+    "What happens to your app if you skip validation?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-15",
+   "kind": "technical",
+   "category": "ai",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "evaluation"
+   ],
+   "prompt": "How would you evaluate and monitor an LLM feature after it is released?",
+   "ideal_answer": "Build a test set of real questions with expected behaviour, score answers with rules, human review and cautious model-based grading, track failures, cost and latency in production and review user feedback. Re-run the tests whenever the prompt or model changes.",
+   "key_points": [
+    "Test set and scoring",
+    "Production monitoring",
+    "Re-test on every change"
+   ],
+   "follow_ups": [
+    "How would you detect a drop in quality?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-16",
+   "kind": "technical",
+   "category": "cloud",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "serverless"
+   ],
+   "prompt": "What is serverless computing, for example AWS Lambda, and when is it a good or poor fit?",
+   "ideal_answer": "Serverless runs your function on demand and charges per use without managing servers. It fits spiky or event-driven work, but cold starts, time limits and hard-to-debug distributed behaviour make it a poor fit for long-running or latency-critical tasks.",
+   "key_points": [
+    "Functions on demand",
+    "Good for spiky, event-driven work",
+    "Cold starts and limits"
+   ],
+   "follow_ups": [
+    "How do you manage secrets in Lambda?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-17",
+   "kind": "technical",
+   "category": "cloud",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "deployment"
+   ],
+   "prompt": "How would you deploy a Python web app to the cloud with a database, and what do you need for it to survive a server failure?",
+   "ideal_answer": "Run the app in a managed service or container behind a load balancer with at least two instances, use a managed database with backups and automatic failover, keep sessions and files outside the instance and add health checks and monitoring.",
+   "key_points": [
+    "Two or more instances",
+    "Managed database with backups",
+    "Stateless app and health checks"
+   ],
+   "follow_ups": [
+    "How would you test your recovery plan?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-18",
+   "kind": "technical",
+   "category": "cloud",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "cost"
+   ],
+   "prompt": "Your cloud bill doubled this month. How do you investigate and reduce it?",
+   "ideal_answer": "Break the bill down by service and tag to find the growth, check for idle or oversized resources, unbounded logs or storage and heavy data transfer, then right-size, set lifecycle rules and add budgets and alerts.",
+   "key_points": [
+    "Break down the bill",
+    "Find idle and oversized resources",
+    "Budgets and alerts"
+   ],
+   "follow_ups": [
+    "How would you prevent a surprise next time?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-19",
+   "kind": "technical",
+   "category": "security",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "passwords"
+   ],
+   "prompt": "How should an application store user passwords and what is a salt?",
+   "ideal_answer": "Store a slow salted hash made with bcrypt or argon2, never the password itself. A salt is random data added to each password before hashing so identical passwords give different hashes and precomputed tables are useless.",
+   "key_points": [
+    "Slow salted hash",
+    "Never reversible storage",
+    "Salt defeats precomputed tables"
+   ],
+   "follow_ups": [
+    "Why is plain SHA-256 a poor choice?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-20",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "testing"
+   ],
+   "prompt": "What should you test in a new API endpoint before you call it finished?",
+   "ideal_answer": "Test the normal case, invalid input, missing authentication or permissions, edge values and error responses, check database results and add the tests to the pipeline. A regression test goes with every bug fix.",
+   "key_points": [
+    "Normal and invalid cases",
+    "Permissions",
+    "Automated in the pipeline"
+   ],
+   "follow_ups": [
+    "How do you decide when you have tested enough?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-21",
+   "kind": "scenario",
+   "category": "pl-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "debugging"
+   ],
+   "prompt": "Scenario: the mobile app shows old data after a user updates their profile. How do you find the cause?",
+   "ideal_answer": "Check whether the update request succeeded, whether the server stores it, and whether the app or an API cache returns an old copy. Fix cache invalidation or refresh the local state after the update and add a test.",
+   "key_points": [
+    "Trace the request end to end",
+    "Look at caches",
+    "Refresh state after update"
+   ],
+   "follow_ups": [
+    "How would you tell a server problem from an app problem?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-22",
+   "kind": "scenario",
+   "category": "pl-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: design a notification system that sends email and push messages for orders and must not send the same message twice.",
+   "ideal_answer": "Create a notification record per event and channel with a unique key, process records from a queue with retries, mark them sent atomically and keep per-user preferences. Monitor failures and handle provider outages with backoff.",
+   "key_points": [
+    "Unique key per notification",
+    "Queue and retries",
+    "Preferences and monitoring"
+   ],
+   "follow_ups": [
+    "What if the provider sends it but the response is lost?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-23",
+   "kind": "scenario",
+   "category": "pl-scenario",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "teamwork"
+   ],
+   "prompt": "Scenario: a teammate's pull request has a bug but they are senior to you. What do you do?",
+   "ideal_answer": "Review it on the facts, explain the bug with an example or a failing test, ask a question rather than accuse and stay open to being wrong. If it is serious, raise it so it is fixed before merging.",
+   "key_points": [
+    "Be factual and polite",
+    "Show evidence",
+    "Do not stay silent on serious bugs"
+   ],
+   "follow_ups": [
+    "How do you take feedback on your own code?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-24",
+   "kind": "technical",
+   "category": "git",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "git"
+   ],
+   "prompt": "What do git clone, branch, commit, push and pull request each do in a normal team workflow?",
+   "ideal_answer": "Clone copies a repository, branch creates a separate line of work, commit saves a snapshot, push uploads commits and a pull request asks teammates to review and merge the branch. Small commits with clear messages help reviews.",
+   "key_points": [
+    "Each command's role",
+    "Branch per feature",
+    "Review before merge"
+   ],
+   "follow_ups": [
+    "How do you undo your last local commit?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "purelogics-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "junior-ai-engineer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "purelogics"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe a web, mobile or AI project you completed. What did you build yourself, what failed and how did you fix it?",
+   "ideal_answer": "A strong answer is specific about the goal, stack and your own part, names a real failure and the fix, and says how you tested and shared it.",
+   "key_points": [
+    "Specific goal and own part",
+    "A real failure and fix",
+    "Testing and delivery"
+   ],
+   "follow_ups": [
+    "What would you do differently?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

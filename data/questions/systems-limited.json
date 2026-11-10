@@ -1,0 +1,770 @@
+{
+ "company": "systems-limited",
+ "questions": [
+  {
+   "slug": "systems-limited-tech-01",
+   "kind": "technical",
+   "category": "oop",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "oop-pillars"
+   ],
+   "prompt": "Explain abstraction and encapsulation and how they differ, using an ATM or bank account as the example.",
+   "ideal_answer": "Abstraction shows only what a user needs, such as withdraw and check balance, and hides how it works. Encapsulation bundles data with the methods that protect it, so the balance cannot be changed except through valid operations.",
+   "key_points": [
+    "Abstraction hides complexity",
+    "Encapsulation protects state",
+    "Different goals, work together"
+   ],
+   "follow_ups": [
+    "Which access modifiers support encapsulation in your language?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-02",
+   "kind": "technical",
+   "category": "oop",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "solid"
+   ],
+   "prompt": "What do the SOLID principles stand for, and give a practical example of the single responsibility principle.",
+   "ideal_answer": "SOLID is single responsibility, open/closed, Liskov substitution, interface segregation and dependency inversion. Single responsibility means a class has one reason to change, so an invoice class should calculate totals while a separate class prints or emails it.",
+   "key_points": [
+    "Name the five principles",
+    "One reason to change",
+    "Split calculation from printing"
+   ],
+   "follow_ups": [
+    "How does dependency inversion make testing easier?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-03",
+   "kind": "technical",
+   "category": "oop",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "design-patterns"
+   ],
+   "prompt": "Explain the singleton and factory patterns and one risk of overusing a singleton.",
+   "ideal_answer": "A singleton ensures one shared instance, such as a configuration object. A factory creates objects without the caller naming the concrete class. Singletons act like global state, which makes code harder to test and can hide dependencies.",
+   "key_points": [
+    "Singleton: one instance",
+    "Factory: hides the concrete class",
+    "Singleton is hidden global state"
+   ],
+   "follow_ups": [
+    "How would you test code that depends on a singleton?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-04",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "keys",
+    "normalisation"
+   ],
+   "prompt": "What are primary keys and foreign keys, and what is normalisation for?",
+   "ideal_answer": "A primary key uniquely identifies each row and a foreign key points to a primary key in another table to link records. Normalisation splits data into related tables to avoid duplicate data and update anomalies.",
+   "key_points": [
+    "Primary key is unique and not null",
+    "Foreign key enforces links",
+    "Normalisation removes duplication"
+   ],
+   "follow_ups": [
+    "When might you deliberately denormalise?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-05",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "transactions",
+    "acid"
+   ],
+   "prompt": "What does ACID mean and what is a transaction rollback used for?",
+   "ideal_answer": "ACID is atomicity, consistency, isolation and durability. A transaction groups steps so they all succeed or none do, and a rollback undoes the whole group when a step fails, for example when a transfer debits one account but cannot credit the other.",
+   "key_points": [
+    "Four ACID properties",
+    "All or nothing",
+    "Rollback on failure"
+   ],
+   "follow_ups": [
+    "What is a dirty read and which isolation level prevents it?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-06",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "joins",
+    "subqueries"
+   ],
+   "prompt": "Write the idea of a query to list employees who earn more than the average salary of their own department.",
+   "ideal_answer": "Compute each department's average, either with a correlated subquery or by joining to a grouped subquery, and keep employees whose salary is greater than that value. A window function AVG(salary) OVER (PARTITION BY department) is another clean option.",
+   "key_points": [
+    "Per-department average",
+    "Subquery or join or window function",
+    "Compare each employee salary"
+   ],
+   "follow_ups": [
+    "Which version would you prefer for a large table and why?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-07",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "indexes",
+    "query-plans"
+   ],
+   "prompt": "Why might a query not use an existing index, and how would you confirm and fix it?",
+   "ideal_answer": "An index can be ignored when a function or type conversion wraps the column, when the filter returns most rows, or when statistics are outdated. Check the plan with EXPLAIN, rewrite the condition so the column is bare, and update statistics or adjust the index.",
+   "key_points": [
+    "Functions on the column block the index",
+    "Low selectivity",
+    "Check EXPLAIN and rewrite"
+   ],
+   "follow_ups": [
+    "What is a covering index?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-08",
+   "kind": "technical",
+   "category": "os",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "processes",
+    "threads"
+   ],
+   "prompt": "What is the difference between a process and a thread?",
+   "ideal_answer": "A process is a running program with its own memory space, while threads are lighter units inside a process that share its memory. Threads communicate easily but need care with shared data; processes are isolated but heavier.",
+   "key_points": [
+    "Own memory vs shared memory",
+    "Threads are lighter",
+    "Isolation vs easy sharing"
+   ],
+   "follow_ups": [
+    "What problems can shared memory between threads cause?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-09",
+   "kind": "technical",
+   "category": "os",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "deadlock"
+   ],
+   "prompt": "What is a deadlock, what conditions cause it and how can you avoid it?",
+   "ideal_answer": "A deadlock is when processes wait on each other's resources forever. It needs mutual exclusion, hold and wait, no preemption and circular wait; avoid it by always acquiring locks in the same order, using timeouts or avoiding holding one lock while waiting for another.",
+   "key_points": [
+    "Circular waiting forever",
+    "Four necessary conditions",
+    "Lock ordering and timeouts"
+   ],
+   "follow_ups": [
+    "Give a real example of two threads deadlocking."
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-10",
+   "kind": "technical",
+   "category": "os",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "memory"
+   ],
+   "prompt": "Explain virtual memory and paging in simple terms.",
+   "ideal_answer": "Virtual memory gives each process its own address space that the operating system maps to physical memory in fixed-size pages, moving rarely used pages to disk when memory is short. This isolates processes and lets programs use more memory than physically installed, at the cost of slowdowns when swapping.",
+   "key_points": [
+    "Own address space per process",
+    "Pages mapped to frames",
+    "Swapping to disk is slow"
+   ],
+   "follow_ups": [
+    "What is thrashing?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-11",
+   "kind": "technical",
+   "category": "networks",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "http",
+    "tcp"
+   ],
+   "prompt": "What happens, step by step, when you type a URL into a browser and press Enter?",
+   "ideal_answer": "The browser resolves the domain through DNS, opens a TCP connection and a TLS session for HTTPS, sends an HTTP request, receives the response, then parses the HTML and loads further resources such as scripts and images.",
+   "key_points": [
+    "DNS lookup",
+    "TCP and TLS connection",
+    "HTTP request and rendering"
+   ],
+   "follow_ups": [
+    "Where could caching speed this up?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-12",
+   "kind": "technical",
+   "category": "networks",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "tcp-udp"
+   ],
+   "prompt": "Compare TCP and UDP and give a use case for each.",
+   "ideal_answer": "TCP is connection-based, reliable and ordered, suitable for web pages and file transfer. UDP is connectionless with no delivery guarantee but lower delay, suitable for live video, voice and games where late data is useless.",
+   "key_points": [
+    "TCP reliable and ordered",
+    "UDP fast, no guarantee",
+    "Use cases for each"
+   ],
+   "follow_ups": [
+    "How does TCP detect and recover lost packets?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-13",
+   "kind": "technical",
+   "category": "software-engineering",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "sdlc"
+   ],
+   "prompt": "Explain the software development life cycle and how Agile differs from the waterfall model.",
+   "ideal_answer": "The cycle covers requirements, design, development, testing, deployment and maintenance. Waterfall completes each phase in order before the next, while Agile delivers in short iterations with regular feedback and changing requirements.",
+   "key_points": [
+    "Phases of the cycle",
+    "Waterfall is sequential",
+    "Agile is iterative with feedback"
+   ],
+   "follow_ups": [
+    "Which would you choose when requirements are unclear?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-14",
+   "kind": "technical",
+   "category": "software-engineering",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "testing"
+   ],
+   "prompt": "What is the difference between unit, integration and system testing and what is regression testing?",
+   "ideal_answer": "Unit tests check one small piece in isolation, integration tests check that parts work together, and system tests check the whole application against requirements. Regression testing reruns tests after a change to confirm old behaviour still works.",
+   "key_points": [
+    "Three levels of testing",
+    "Scope grows at each level",
+    "Regression guards old behaviour"
+   ],
+   "follow_ups": [
+    "Which tests should you automate first?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-15",
+   "kind": "technical",
+   "category": "software-engineering",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "code-quality"
+   ],
+   "prompt": "What makes code maintainable? How do code reviews and refactoring help?",
+   "ideal_answer": "Maintainable code is readable, consistent, modular, tested and documented where needed. Code reviews catch bugs and spread knowledge, and refactoring improves structure without changing behaviour, safely backed by tests.",
+   "key_points": [
+    "Readable, modular, tested",
+    "Reviews catch bugs and share knowledge",
+    "Refactor with tests"
+   ],
+   "follow_ups": [
+    "What would you check first when reviewing a pull request?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-16",
+   "kind": "technical",
+   "category": "rest-api",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "rest",
+    "authentication"
+   ],
+   "prompt": "How would you secure a REST API using tokens, and what is the difference between authentication and authorisation?",
+   "ideal_answer": "The client logs in and receives a signed token such as a JWT that it sends with each request over HTTPS, and the server verifies the signature and expiry. Authentication proves who you are, authorisation decides what you may do, so each endpoint must also check permissions.",
+   "key_points": [
+    "Signed token over HTTPS",
+    "Verify signature and expiry",
+    "Authentication vs authorisation"
+   ],
+   "follow_ups": [
+    "How do you handle token expiry and revocation?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-17",
+   "kind": "technical",
+   "category": "rest-api",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "api-design",
+    "versioning"
+   ],
+   "prompt": "How do you evolve a public API without breaking existing clients?",
+   "ideal_answer": "Add fields instead of removing or renaming them, version the API when a breaking change is needed, deprecate old versions with notice and keep tests for old contracts. Communicate changes and monitor usage before retiring anything.",
+   "key_points": [
+    "Prefer additive changes",
+    "Versioning for breaking changes",
+    "Deprecation with notice"
+   ],
+   "follow_ups": [
+    "Where would you put the version: URL or header?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-18",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "arrays",
+    "searching"
+   ],
+   "prompt": "Explain linear search and binary search, and what must be true before binary search works.",
+   "ideal_answer": "Linear search checks items one by one in O(n). Binary search repeatedly halves a sorted list in O(log n), so the data must be sorted and support fast indexed access.",
+   "key_points": [
+    "Linear O(n)",
+    "Binary O(log n)",
+    "Requires sorted data"
+   ],
+   "follow_ups": [
+    "What happens to binary search if the list has duplicates?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-19",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "stack",
+    "queue"
+   ],
+   "prompt": "What is the difference between a stack and a queue? Give a real use for each.",
+   "ideal_answer": "A stack is last in first out, used for undo history and function calls. A queue is first in first out, used for print jobs, task scheduling and breadth-first search.",
+   "key_points": [
+    "LIFO vs FIFO",
+    "Stack: undo, call stack",
+    "Queue: scheduling, BFS"
+   ],
+   "follow_ups": [
+    "How would you build a queue using two stacks?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-20",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "trees",
+    "recursion"
+   ],
+   "prompt": "How would you check whether a binary tree is a valid binary search tree?",
+   "ideal_answer": "Recursively check each node against a valid range: all values in the left subtree must be below the node and all in the right above it. Pass narrowing minimum and maximum bounds down the tree, or check that an in-order traversal is strictly increasing.",
+   "key_points": [
+    "Check against ranges, not just children",
+    "Pass min and max bounds",
+    "In-order must be increasing"
+   ],
+   "follow_ups": [
+    "What is the time and space complexity?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-21",
+   "kind": "technical",
+   "category": "devops",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "git",
+    "ci"
+   ],
+   "prompt": "What is continuous integration and why do teams use it with Git?",
+   "ideal_answer": "Continuous integration builds and tests every change automatically when it is pushed. It finds integration bugs early, keeps the main branch working and makes releases less risky.",
+   "key_points": [
+    "Automatic build and test on push",
+    "Find bugs early",
+    "Keep main stable"
+   ],
+   "follow_ups": [
+    "What would you put in a minimal pipeline?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-22",
+   "kind": "scenario",
+   "category": "enterprise-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "performance"
+   ],
+   "prompt": "Scenario: a report page that worked in testing takes 40 seconds in production with real data. How do you approach it?",
+   "ideal_answer": "Measure first to find whether time goes to the database, the application or the network, check the query plan and indexes, avoid loading unnecessary rows and fix the biggest bottleneck. Consider pagination, caching or precomputed summaries and verify the improvement.",
+   "key_points": [
+    "Measure before changing",
+    "Check the query and indexes",
+    "Paginate, cache or precompute"
+   ],
+   "follow_ups": [
+    "How would you stop this regression returning?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-23",
+   "kind": "scenario",
+   "category": "enterprise-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "requirements"
+   ],
+   "prompt": "Scenario: a client keeps changing requirements in the middle of a sprint. What do you do?",
+   "ideal_answer": "Clarify the business need, estimate the impact of the change, discuss trade-offs with the product owner and either schedule it for the next sprint or swap it for something of equal size. Record the decision so the team and client agree.",
+   "key_points": [
+    "Clarify and estimate impact",
+    "Trade off with the owner",
+    "Record the decision"
+   ],
+   "follow_ups": [
+    "How do you keep the team's commitment realistic?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-24",
+   "kind": "scenario",
+   "category": "enterprise-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "data-migration"
+   ],
+   "prompt": "Scenario: you must move a live customer database to a new schema with minimal downtime. How do you plan it?",
+   "ideal_answer": "Plan the mapping, take a backup, rehearse the migration on a copy, make changes backward compatible where possible and run old and new schemas side by side if needed. Prepare a rollback, validate counts and samples after migrating and choose a low-traffic window.",
+   "key_points": [
+    "Backup and rehearsal",
+    "Backward compatible steps and rollback",
+    "Validate after migration"
+   ],
+   "follow_ups": [
+    "How would you migrate data that keeps changing during the move?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "systems-limited-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "systems-limited"
+   ],
+   "topics": [
+    "projects",
+    "teamwork"
+   ],
+   "prompt": "Tell me about a project you worked on, ideally in a team. What was your role, how did you use Git and how did you handle a disagreement or a bug?",
+   "ideal_answer": "A strong answer names the project and your exact role, explains how the team used branches and pull requests, and gives one concrete bug or disagreement with how it was resolved and what you learned.",
+   "key_points": [
+    "Clear role and contribution",
+    "Real use of Git workflow",
+    "A concrete problem and its resolution"
+   ],
+   "follow_ups": [
+    "What would you do differently next time?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

@@ -1,0 +1,781 @@
+{
+ "company": "afiniti",
+ "questions": [
+  {
+   "slug": "afiniti-tech-01",
+   "kind": "technical",
+   "category": "statistics",
+   "difficulty": "easy",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "probability"
+   ],
+   "prompt": "If you roll two fair dice, what is the probability that the sum is 7, and how would you check it in Python?",
+   "ideal_answer": "There are 36 equally likely outcomes and 6 of them sum to 7, so the probability is 1/6. Check by enumerating all pairs with a double loop or by simulating many rolls and comparing the frequency.",
+   "key_points": [
+    "6 out of 36 outcomes",
+    "Enumerate or simulate",
+    "Result 1/6"
+   ],
+   "follow_ups": [
+    "How many rolls would you simulate for a stable estimate?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-02",
+   "kind": "technical",
+   "category": "statistics",
+   "difficulty": "medium",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "hypothesis-testing"
+   ],
+   "prompt": "What is a p-value and what does it not tell you?",
+   "ideal_answer": "A p-value is the probability of seeing results at least as extreme as the observed ones if the null hypothesis is true. It is not the probability that the hypothesis is true, nor the size or importance of the effect.",
+   "key_points": [
+    "Probability under the null",
+    "Not the chance the hypothesis is true",
+    "Does not measure effect size"
+   ],
+   "follow_ups": [
+    "What is multiple testing and why is it a problem?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-03",
+   "kind": "technical",
+   "category": "statistics",
+   "difficulty": "medium",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "ab-testing"
+   ],
+   "prompt": "How would you design and read an A/B test for a new button colour?",
+   "ideal_answer": "Define one primary metric, randomise users, decide the sample size and duration in advance, run the test without peeking and stopping early, then compare the metric with a suitable test and confidence interval. Check practical significance as well.",
+   "key_points": [
+    "Metric and randomisation",
+    "Sample size in advance",
+    "Confidence interval and practical impact"
+   ],
+   "follow_ups": [
+    "What is the problem with stopping the test as soon as it looks significant?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-04",
+   "kind": "technical",
+   "category": "statistics",
+   "difficulty": "hard",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "bayes"
+   ],
+   "prompt": "A test for a disease is 99 percent accurate and the disease affects 1 in 1000 people. If you test positive, why is the chance you are sick still low?",
+   "ideal_answer": "Using Bayes' rule, out of 1000 people about 1 is sick and tests positive, while about 10 healthy people also test positive, so only about 1 in 11 positives is sick. The low base rate dominates.",
+   "key_points": [
+    "Base rate matters",
+    "False positives outnumber true ones",
+    "Bayes' rule calculation"
+   ],
+   "follow_ups": [
+    "How would a second independent test change the answer?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-05",
+   "kind": "technical",
+   "category": "statistics",
+   "difficulty": "easy",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "distributions"
+   ],
+   "prompt": "What is the normal distribution and what does the 68-95-99.7 rule say?",
+   "ideal_answer": "The normal distribution is the symmetric bell curve defined by mean and standard deviation. About 68 percent of values lie within one standard deviation, 95 percent within two and 99.7 percent within three.",
+   "key_points": [
+    "Bell curve with mean and spread",
+    "68-95-99.7",
+    "Many natural measures are roughly normal"
+   ],
+   "follow_ups": [
+    "Which data is clearly not normal?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-06",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "easy",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "arrays"
+   ],
+   "prompt": "Given a list of integers, how would you find the second largest distinct value in one pass?",
+   "ideal_answer": "Keep two variables for the largest and the second largest, update them as you scan, ignore duplicates of the largest and handle lists with fewer than two distinct values. It is O(n) time and O(1) space.",
+   "key_points": [
+    "One pass, two variables",
+    "Handle duplicates",
+    "O(n) time, O(1) space"
+   ],
+   "follow_ups": [
+    "How would you find the kth largest?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-07",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "medium",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "hashing"
+   ],
+   "prompt": "How would you find the first repeated element in a stream of numbers using little time per element?",
+   "ideal_answer": "Keep a set of seen values and return the first number already in the set, which is O(1) per element on average. Memory grows with the distinct values seen.",
+   "key_points": [
+    "Set of seen values",
+    "O(1) per item",
+    "Memory trade-off"
+   ],
+   "follow_ups": [
+    "What if memory is limited and you accept some error?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-08",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "medium",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "sorting"
+   ],
+   "prompt": "How would you sort a list of records by two keys, such as score descending and then name ascending, in Python?",
+   "ideal_answer": "Use sorted with a key that returns a tuple, negating the numeric key for descending order, such as key=lambda r: (-r.score, r.name). Python's sort is stable, so you could also sort twice.",
+   "key_points": [
+    "Tuple keys",
+    "Negate for descending",
+    "Stable sort"
+   ],
+   "follow_ups": [
+    "What is the complexity of Python's sort?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-09",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "hard",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "dynamic-programming"
+   ],
+   "prompt": "Explain how you would count the number of ways to climb n stairs taking 1 or 2 steps at a time, and the complexity.",
+   "ideal_answer": "The ways to reach step n are the ways to reach n-1 plus n-2, so keep just the last two values and iterate, giving O(n) time and O(1) space. Plain recursion repeats work and is exponential.",
+   "key_points": [
+    "Recurrence f(n)=f(n-1)+f(n-2)",
+    "Iterate with two variables",
+    "Plain recursion is exponential"
+   ],
+   "follow_ups": [
+    "How does memoisation help?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-10",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "hard",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "graphs"
+   ],
+   "prompt": "How would you find the shortest path between two nodes in an unweighted graph?",
+   "ideal_answer": "Use breadth-first search from the start node with a queue and a visited set, stopping when you reach the target, and keep parents to rebuild the path. It runs in O(V plus E).",
+   "key_points": [
+    "BFS with a queue",
+    "Visited set",
+    "O(V+E)"
+   ],
+   "follow_ups": [
+    "What changes when edges have weights?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-11",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "medium",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "linear-models"
+   ],
+   "prompt": "Explain linear regression, its assumptions and what R-squared tells you.",
+   "ideal_answer": "Linear regression fits a line or plane that minimises squared error. Key assumptions include a linear relationship, independent errors with constant variance and no strong multicollinearity. R-squared is the share of variance explained, but it always rises with more features and says nothing about causation.",
+   "key_points": [
+    "Least squares fit",
+    "Main assumptions",
+    "R-squared limits"
+   ],
+   "follow_ups": [
+    "How do you detect multicollinearity?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-12",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "medium",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "feature-selection"
+   ],
+   "prompt": "How would you decide which features to keep in a model with 300 features?",
+   "ideal_answer": "Remove constant and highly correlated features, use model-based importance or L1 regularisation, test with cross-validation that removing features does not hurt and consider domain knowledge. Avoid selecting features using the test set.",
+   "key_points": [
+    "Remove redundant features",
+    "Importance or L1",
+    "Validate without leakage"
+   ],
+   "follow_ups": [
+    "Why can feature importance be misleading?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-13",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "hard",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "ensembles"
+   ],
+   "prompt": "How does gradient boosting differ from bagging and why does it often win on tabular data?",
+   "ideal_answer": "Bagging trains models independently on resampled data and averages them to reduce variance, while boosting trains models sequentially so each corrects the errors of the previous ones, reducing bias. With tuning, boosted trees capture complex interactions well.",
+   "key_points": [
+    "Parallel vs sequential",
+    "Variance vs bias",
+    "Tuning needed"
+   ],
+   "follow_ups": [
+    "Which parameters control overfitting in boosting?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-14",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "medium",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "recommendation"
+   ],
+   "prompt": "How would you build a simple recommendation system for products and what is the cold-start problem?",
+   "ideal_answer": "Start with popularity and then collaborative filtering that uses similar users or items, or content-based features. Cold start is when a new user or item has no history, handled with popularity, content features or asking for preferences.",
+   "key_points": [
+    "Popularity baseline",
+    "Collaborative vs content-based",
+    "Cold start handling"
+   ],
+   "follow_ups": [
+    "How do you evaluate a recommender offline?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-15",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "hard",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "causal"
+   ],
+   "prompt": "Why is correlation not causation and how could you estimate whether a discount actually increases sales?",
+   "ideal_answer": "Two variables can move together because of a third factor. A randomised experiment is best, assigning discounts at random, and without one you need careful observational methods and awareness of confounders such as seasonality.",
+   "key_points": [
+    "Confounders",
+    "Randomised experiments",
+    "Observational methods are weaker"
+   ],
+   "follow_ups": [
+    "What if you cannot run an experiment?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-16",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "analytics"
+   ],
+   "prompt": "Write the idea of a query to compute the 7-day rolling average of daily active users.",
+   "ideal_answer": "Count distinct users per day, then use AVG over a window of the current day and the 6 preceding days ordered by date, taking care of days with no activity.",
+   "key_points": [
+    "Daily counts first",
+    "Window of 7 days",
+    "Handle missing days"
+   ],
+   "follow_ups": [
+    "How would you do this in pandas?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-17",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "hard",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "retention"
+   ],
+   "prompt": "How would you compute monthly user retention with SQL?",
+   "ideal_answer": "Assign each user a cohort month from their first activity, join to their later activity months, count distinct active users per cohort and month offset and divide by the cohort size.",
+   "key_points": [
+    "Cohort month",
+    "Month offset",
+    "Active users over cohort size"
+   ],
+   "follow_ups": [
+    "Why might retention numbers be misleading for new cohorts?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-18",
+   "kind": "technical",
+   "category": "pandas",
+   "difficulty": "medium",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "pandas"
+   ],
+   "prompt": "How do you detect and treat outliers in a numeric column and when should you keep them?",
+   "ideal_answer": "Use summary statistics, box plots, the IQR rule or z-scores to find them, then investigate whether they are errors or real. Fix or remove errors, cap or transform genuine extremes if needed, and keep them when they carry the signal, such as fraud.",
+   "key_points": [
+    "Detect with IQR or z-score",
+    "Investigate the cause",
+    "Keep real signal"
+   ],
+   "follow_ups": [
+    "How do outliers affect different models?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-19",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "python"
+   ],
+   "prompt": "How would you speed up a Python function that computes similarity between every pair of 10,000 vectors?",
+   "ideal_answer": "Use NumPy matrix operations instead of loops, normalise vectors and use a matrix product for cosine similarity, process in blocks to limit memory and consider approximate nearest neighbour search if exact results are not needed.",
+   "key_points": [
+    "Vectorise with matrix products",
+    "Block processing",
+    "Approximate search"
+   ],
+   "follow_ups": [
+    "How much memory does the full matrix need?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-20",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "easy",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "overfitting"
+   ],
+   "prompt": "What is the difference between parameters and hyperparameters, with an example of each?",
+   "ideal_answer": "Parameters are learned from data, such as regression weights, while hyperparameters are set before training, such as the learning rate or tree depth, and tuned with validation.",
+   "key_points": [
+    "Learned vs chosen",
+    "Weights vs depth",
+    "Tuned with validation data"
+   ],
+   "follow_ups": [
+    "Which would you tune first for a random forest?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-21",
+   "kind": "scenario",
+   "category": "afiniti-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "modelling"
+   ],
+   "prompt": "Scenario: you are asked to predict which customers will call support again. What do you ask first and how do you start?",
+   "ideal_answer": "Ask what action the prediction will drive and what window counts as again, check what data exists and when it is available, build a simple baseline with time-based validation and measure improvement against the current process.",
+   "key_points": [
+    "Clarify the goal and definition",
+    "Check data availability",
+    "Baseline and time-based validation"
+   ],
+   "follow_ups": [
+    "What would make the prediction unusable in practice?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-22",
+   "kind": "scenario",
+   "category": "afiniti-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: design a system that pairs incoming callers with the best-suited agents in real time.",
+   "ideal_answer": "Define the outcome to optimise, build a model that scores caller and agent pairs from features, decide pairings in milliseconds with fairness and capacity constraints, log decisions and outcomes for retraining and use experiments to prove real impact.",
+   "key_points": [
+    "Define the outcome",
+    "Score pairs under constraints",
+    "Experiment and retrain"
+   ],
+   "follow_ups": [
+    "How do you avoid unfair treatment of callers or agents?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-23",
+   "kind": "scenario",
+   "category": "afiniti-scenario",
+   "difficulty": "easy",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "communication"
+   ],
+   "prompt": "Scenario: your analysis shows the opposite of what your manager expected. How do you present it?",
+   "ideal_answer": "Check the work again, then present the evidence plainly with the method, limits and what the numbers do and do not show, and discuss possible reasons without defensiveness.",
+   "key_points": [
+    "Recheck first",
+    "Present evidence clearly",
+    "Discuss limits openly"
+   ],
+   "follow_ups": [
+    "How do you handle pressure to change the result?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-24",
+   "kind": "technical",
+   "category": "pandas",
+   "difficulty": "easy",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "pandas"
+   ],
+   "prompt": "What is the difference between loc and iloc in pandas, and what does a boolean mask do?",
+   "ideal_answer": "loc selects by label and iloc by integer position. A boolean mask is a True/False series used inside brackets or loc to keep only the rows where the condition is true.",
+   "key_points": [
+    "Label vs position",
+    "Boolean mask filters rows",
+    "Combine conditions with & and |"
+   ],
+   "follow_ups": [
+    "Why do you need parentheses around each condition?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "afiniti-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "data-scientist",
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "afiniti"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe a data science project of yours. What question did it answer, what did you find and how sure were you?",
+   "ideal_answer": "A strong answer states the question, data and method, the finding with its uncertainty, one limitation and what decision it could support.",
+   "key_points": [
+    "Clear question and method",
+    "Finding with uncertainty",
+    "Limits and decision"
+   ],
+   "follow_ups": [
+    "What would you check next?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

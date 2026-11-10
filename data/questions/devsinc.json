@@ -1,0 +1,807 @@
+{
+ "company": "devsinc",
+ "questions": [
+  {
+   "slug": "devsinc-tech-01",
+   "kind": "technical",
+   "category": "node",
+   "difficulty": "easy",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "node"
+   ],
+   "prompt": "What is Node.js and why is it good for I/O-heavy servers but weaker for heavy CPU work?",
+   "ideal_answer": "Node.js runs JavaScript on the server with a single-threaded event loop and non-blocking I/O, so one process can handle many waiting connections. A long CPU task blocks that loop and delays every request, so heavy work belongs in worker threads or another service.",
+   "key_points": [
+    "Event loop, non-blocking I/O",
+    "CPU work blocks the loop",
+    "Use workers or separate services"
+   ],
+   "follow_ups": [
+    "How would you find what is blocking the loop?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-02",
+   "kind": "technical",
+   "category": "node",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "express",
+    "middleware"
+   ],
+   "prompt": "What is middleware in Express and how would you add logging, authentication and error handling?",
+   "ideal_answer": "Middleware is a function that receives the request, response and next, and can change them or end the response. Register logging first, authentication on protected routes and an error-handling middleware with four arguments last so it catches thrown errors.",
+   "key_points": [
+    "Functions in a chain",
+    "Order matters",
+    "Error middleware has four arguments"
+   ],
+   "follow_ups": [
+    "How do async errors reach the error handler?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-03",
+   "kind": "technical",
+   "category": "node",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "streams"
+   ],
+   "prompt": "Why would you stream a large file download instead of reading it fully into memory?",
+   "ideal_answer": "Reading a whole file loads it all into memory, which fails for large files and under many users. A stream sends it in small chunks, keeping memory low and starting the response sooner, with back-pressure handling when the client is slow.",
+   "key_points": [
+    "Memory stays low",
+    "Chunks start sooner",
+    "Back-pressure"
+   ],
+   "follow_ups": [
+    "How do you handle an error halfway through the stream?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-04",
+   "kind": "technical",
+   "category": "node",
+   "difficulty": "hard",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "scaling"
+   ],
+   "prompt": "Your Node API on one server is at its limit. How do you scale it and what must change in the code?",
+   "ideal_answer": "Run several processes with a process manager or cluster and put a load balancer in front, which needs the server to be stateless, so sessions and uploads move to shared stores like Redis or object storage. Add caching and measure the real bottleneck first.",
+   "key_points": [
+    "Several processes behind a load balancer",
+    "Stateless design",
+    "Shared session store and caching"
+   ],
+   "follow_ups": [
+    "How do WebSocket connections complicate this?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-05",
+   "kind": "technical",
+   "category": "react",
+   "difficulty": "easy",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "react"
+   ],
+   "prompt": "What is the virtual DOM and why does React use it?",
+   "ideal_answer": "The virtual DOM is a lightweight copy of the UI in memory. When state changes React builds a new version, compares it with the old one and applies only the differences to the real DOM, which makes updates efficient and predictable.",
+   "key_points": [
+    "In-memory UI representation",
+    "Diffing",
+    "Minimal real DOM updates"
+   ],
+   "follow_ups": [
+    "Does the virtual DOM always make an app faster?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-06",
+   "kind": "technical",
+   "category": "react",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "hooks"
+   ],
+   "prompt": "What is the difference between useState and useReducer and when is useRef useful?",
+   "ideal_answer": "useState suits simple independent values, while useReducer suits state with several related fields and clear actions. useRef keeps a mutable value that survives renders without causing one, such as a DOM element or a timer id.",
+   "key_points": [
+    "Simple vs structured state",
+    "Actions with a reducer",
+    "Ref does not trigger re-render"
+   ],
+   "follow_ups": [
+    "How would you focus an input on mount?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-07",
+   "kind": "technical",
+   "category": "react",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "data-fetching"
+   ],
+   "prompt": "How do you fetch data in a React component and handle loading, error and stale responses?",
+   "ideal_answer": "Fetch inside an effect or with a data library, keep loading, error and data in state, show each state in the UI and ignore or abort an old response if the component unmounts or the query changes. A library such as React Query adds caching and retries.",
+   "key_points": [
+    "Loading, error, data states",
+    "Abort or ignore stale responses",
+    "Libraries add caching"
+   ],
+   "follow_ups": [
+    "What bug appears when two requests return out of order?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-08",
+   "kind": "technical",
+   "category": "react-native",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "mobile"
+   ],
+   "prompt": "What are the main differences between building with React Native and building fully native apps?",
+   "ideal_answer": "React Native shares most code across iOS and Android using JavaScript and renders native components, which saves time. Fully native gives the best performance and immediate access to new platform features, while React Native may need native modules for some features.",
+   "key_points": [
+    "Shared code, native components",
+    "Native for best performance",
+    "Native modules when needed"
+   ],
+   "follow_ups": [
+    "When would you recommend going native?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-09",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "easy",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "python"
+   ],
+   "prompt": "What is the difference between a Python module, a package and a virtual environment?",
+   "ideal_answer": "A module is one Python file, a package is a folder of modules, and a virtual environment is an isolated set of installed libraries for one project so versions do not clash.",
+   "key_points": [
+    "Module, package, environment",
+    "Isolation of dependencies",
+    "requirements file"
+   ],
+   "follow_ups": [
+    "How do you record the exact versions you used?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-10",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "fastapi",
+    "flask"
+   ],
+   "prompt": "Compare Flask and FastAPI and say when you would choose each.",
+   "ideal_answer": "Flask is a small, flexible framework with a huge ecosystem, while FastAPI is built on type hints and gives automatic validation, async support and generated API documentation. FastAPI fits new APIs, and Flask suits small apps or existing projects.",
+   "key_points": [
+    "Flexible vs typed and async",
+    "Automatic validation and docs",
+    "Choose by project needs"
+   ],
+   "follow_ups": [
+    "How does FastAPI validate a request body?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-11",
+   "kind": "technical",
+   "category": "api",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "websockets"
+   ],
+   "prompt": "When would you use WebSockets instead of normal HTTP requests, and what are the challenges?",
+   "ideal_answer": "Use WebSockets for continuous two-way updates such as chat or live tracking. Challenges are connection limits, reconnection and authentication, scaling across servers with a pub/sub layer and handling lost messages.",
+   "key_points": [
+    "Two-way live connection",
+    "Reconnect and authenticate",
+    "Scale with pub/sub"
+   ],
+   "follow_ups": [
+    "How do server-sent events compare?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-12",
+   "kind": "technical",
+   "category": "api",
+   "difficulty": "hard",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "rate-limiting"
+   ],
+   "prompt": "How would you implement rate limiting for a public API?",
+   "ideal_answer": "Count requests per key, such as user or IP, in a fast store like Redis using a fixed window, sliding window or token bucket, return 429 with a Retry-After header and apply stricter limits to costly endpoints. Share the counter across servers.",
+   "key_points": [
+    "Counters per key",
+    "Token bucket or window",
+    "429 and Retry-After"
+   ],
+   "follow_ups": [
+    "How would you avoid blocking a whole office behind one IP?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-13",
+   "kind": "technical",
+   "category": "database",
+   "difficulty": "easy",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "sql-nosql"
+   ],
+   "prompt": "When would you choose PostgreSQL over MongoDB for a project?",
+   "ideal_answer": "Choose PostgreSQL when data is relational, consistency and transactions matter and you need joins and reports. Choose MongoDB when data is document-shaped, changes shape often and is mostly read or written as a whole.",
+   "key_points": [
+    "Relational vs document",
+    "Transactions and joins",
+    "Choose by access pattern"
+   ],
+   "follow_ups": [
+    "Can PostgreSQL store JSON?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-14",
+   "kind": "technical",
+   "category": "database",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "caching"
+   ],
+   "prompt": "How would you use Redis in a web application, and what is cache invalidation?",
+   "ideal_answer": "Redis is a fast in-memory store used for caching query results, sessions, rate limits and queues. Invalidation means removing or updating cached data when the source changes; expiries and explicit deletes on writes keep it from going stale.",
+   "key_points": [
+    "Fast in-memory store",
+    "Typical uses",
+    "Invalidate on change or expiry"
+   ],
+   "follow_ups": [
+    "What is a cache stampede?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-15",
+   "kind": "technical",
+   "category": "security",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "auth"
+   ],
+   "prompt": "Compare session cookies and JWT for authentication and explain how you would protect against XSS and CSRF.",
+   "ideal_answer": "Sessions keep state on the server and send an id in a cookie, while JWTs carry signed claims the client sends. Escape output and use a content security policy against XSS, and use SameSite cookies and CSRF tokens against CSRF; httpOnly cookies keep tokens from scripts.",
+   "key_points": [
+    "Server state vs signed token",
+    "XSS: escape and CSP",
+    "CSRF: SameSite and tokens"
+   ],
+   "follow_ups": [
+    "How would you log a user out of a JWT system?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-16",
+   "kind": "technical",
+   "category": "ai",
+   "difficulty": "easy",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "llm-api"
+   ],
+   "prompt": "How would you add an LLM-powered feature, such as summarising text, to an existing web app?",
+   "ideal_answer": "Call the LLM provider from your server, never from the browser with a secret key, send a clear prompt with the text, handle timeouts and errors, limit input length and cost, and show the result as an assistant draft.",
+   "key_points": [
+    "Call from the server",
+    "Handle errors and cost",
+    "Clear prompt and limits"
+   ],
+   "follow_ups": [
+    "How would you test the prompt?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-17",
+   "kind": "technical",
+   "category": "ai",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "rag"
+   ],
+   "prompt": "What is a chatbot built on retrieval over company documents and what are its main parts?",
+   "ideal_answer": "It splits documents into chunks, turns them into embeddings stored in a vector database, retrieves the chunks nearest to a question and gives them to the LLM to answer, ideally with citations. Quality depends on chunking, retrieval and the prompt.",
+   "key_points": [
+    "Chunks and embeddings",
+    "Retrieve then generate",
+    "Citations and evaluation"
+   ],
+   "follow_ups": [
+    "How would you handle documents that change daily?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-18",
+   "kind": "technical",
+   "category": "ai",
+   "difficulty": "hard",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "cost-latency"
+   ],
+   "prompt": "Your LLM feature is slow and expensive in production. What can you do?",
+   "ideal_answer": "Reduce prompt size, cache repeated answers, use a smaller model where it is good enough, stream responses so users see progress, batch or queue non-urgent work and set limits per user. Measure cost and quality together.",
+   "key_points": [
+    "Shorter prompts and caching",
+    "Smaller models and streaming",
+    "Limits and measurement"
+   ],
+   "follow_ups": [
+    "How would you check that a cheaper model is good enough?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-19",
+   "kind": "technical",
+   "category": "devops",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "docker"
+   ],
+   "prompt": "How do you deploy a Node or Python app with Docker and keep configuration and secrets safe?",
+   "ideal_answer": "Build an image with only what the app needs, run it with environment variables or a secrets manager for configuration, never bake secrets into the image or commit them, and use a health check and a restart policy.",
+   "key_points": [
+    "Small image",
+    "Secrets outside the image",
+    "Health checks"
+   ],
+   "follow_ups": [
+    "How do you handle database migrations at deploy time?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-20",
+   "kind": "technical",
+   "category": "git",
+   "difficulty": "easy",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "workflow"
+   ],
+   "prompt": "Describe a Git workflow your team could use for features, reviews and releases.",
+   "ideal_answer": "Create a short-lived branch per feature, open a pull request for review and automated checks, merge to main when approved and tag releases. Small pull requests and clear commit messages make review easier.",
+   "key_points": [
+    "Branch per feature",
+    "Pull request review and checks",
+    "Small changes"
+   ],
+   "follow_ups": [
+    "How do you handle a hotfix?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-21",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "api-testing"
+   ],
+   "prompt": "How would you test a REST API endpoint that creates a user?",
+   "ideal_answer": "Test the success case, validation errors, duplicate emails, authorisation and the stored result, with a clean test database for each run. Check status codes and response shape.",
+   "key_points": [
+    "Success and failure paths",
+    "Authorisation and duplicates",
+    "Clean test data"
+   ],
+   "follow_ups": [
+    "How do you test an endpoint that sends an email?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-22",
+   "kind": "scenario",
+   "category": "dev-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "performance"
+   ],
+   "prompt": "Scenario: your Node API response time grows from 100 ms to 3 seconds after a new release. How do you find the cause?",
+   "ideal_answer": "Compare metrics before and after the release, look at slow query logs and traces, check for a new N+1 query, missing index or blocking code, reproduce with a profile and fix, then add a performance check.",
+   "key_points": [
+    "Compare before and after",
+    "Traces and slow queries",
+    "Fix and add a check"
+   ],
+   "follow_ups": [
+    "How could you detect this before release?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-23",
+   "kind": "scenario",
+   "category": "dev-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: design the backend for a ride tracking app that shows a driver's live location to a customer.",
+   "ideal_answer": "Drivers send location updates to the server, which publishes them to subscribed customers through WebSockets using pub/sub, stores recent points in a fast store and writes history asynchronously. Limit update frequency and protect access so only the booked customer sees the driver.",
+   "key_points": [
+    "Updates via WebSocket and pub/sub",
+    "Fast store for latest position",
+    "Privacy and update limits"
+   ],
+   "follow_ups": [
+    "How would you cope with weak mobile connections?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-24",
+   "kind": "technical",
+   "category": "javascript",
+   "difficulty": "medium",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "javascript"
+   ],
+   "prompt": "What are debounce and throttle and when would you use each in a search box and a scroll handler?",
+   "ideal_answer": "Debounce waits until the user stops triggering the event for a set time before running, which suits a search box so you do not call the API on every key press. Throttle runs at most once per interval, which suits scroll or resize handlers.",
+   "key_points": [
+    "Debounce waits for a pause",
+    "Throttle limits the rate",
+    "Search box vs scroll"
+   ],
+   "follow_ups": [
+    "How would you implement debounce with a timer?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "devsinc-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "full-stack-developer",
+    "backend-developer",
+    "frontend-developer",
+    "mobile-app-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "devsinc"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe a project you built with React, Node or Python. Which part was hardest and how did you deploy it?",
+   "ideal_answer": "A strong answer states what the app does, your role, the hardest problem and its fix, and how it was deployed and tested.",
+   "key_points": [
+    "Clear purpose and role",
+    "Hardest problem and fix",
+    "Deployment and testing"
+   ],
+   "follow_ups": [
+    "What would you improve first?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

@@ -1,0 +1,805 @@
+{
+ "company": "vteams",
+ "questions": [
+  {
+   "slug": "vteams-tech-01",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "python"
+   ],
+   "prompt": "What is the difference between a shallow copy and a deep copy in Python and when does it matter?",
+   "ideal_answer": "A shallow copy creates a new container that still references the same inner objects, while a deep copy also copies the inner objects. It matters with nested lists or dictionaries, where changing an inner item through a shallow copy changes the original too.",
+   "key_points": [
+    "Shared inner objects",
+    "copy vs deepcopy",
+    "Nested data"
+   ],
+   "follow_ups": [
+    "How would you copy a list of dictionaries safely?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-02",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "django"
+   ],
+   "prompt": "How do Django's ORM, migrations and class-based views fit together in a simple CRUD application?",
+   "ideal_answer": "Models describe tables, migrations apply model changes to the database, and class-based views such as ListView and CreateView provide ready-made list and form behaviour using those models and templates or serializers. URLs map paths to views.",
+   "key_points": [
+    "Models and migrations",
+    "Generic class-based views",
+    "URL routing"
+   ],
+   "follow_ups": [
+    "How would you add permissions to a view?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-03",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "fastapi"
+   ],
+   "prompt": "What advantages does FastAPI give for building APIs and how do you structure a growing project?",
+   "ideal_answer": "FastAPI gives type-based validation, automatic documentation and async support. Structure a growing project with routers per feature, schemas, services and a database layer, with dependencies for authentication and configuration.",
+   "key_points": [
+    "Typed validation and docs",
+    "Routers per feature",
+    "Dependencies for shared logic"
+   ],
+   "follow_ups": [
+    "How do you test a FastAPI route?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-04",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "concurrency"
+   ],
+   "prompt": "How would you speed up a Python program that downloads 5,000 web pages?",
+   "ideal_answer": "The work is I/O-bound, so use asyncio with an async HTTP client or a thread pool with limited concurrency, respect rate limits, add timeouts and retries and process results as they arrive. Multiprocessing is not needed for waiting.",
+   "key_points": [
+    "I/O-bound concurrency",
+    "Limit concurrency and add timeouts",
+    "Retries"
+   ],
+   "follow_ups": [
+    "What would change for CPU-heavy parsing?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-05",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "strings"
+   ],
+   "prompt": "How would you check whether a string is a palindrome ignoring case and punctuation?",
+   "ideal_answer": "Clean the string by keeping only letters and digits in lowercase and compare it with its reverse, or use two pointers moving inward, which is O(n) time. Treat an empty cleaned string as a defined case.",
+   "key_points": [
+    "Normalise first",
+    "Compare with reverse or two pointers",
+    "O(n)"
+   ],
+   "follow_ups": [
+    "Which approach uses less memory?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-06",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "stack"
+   ],
+   "prompt": "How would you check whether a string of brackets such as ({[]}) is balanced?",
+   "ideal_answer": "Scan the string, push opening brackets on a stack and when you see a closing bracket check that the top of the stack matches, popping it, and at the end the stack must be empty. It is O(n).",
+   "key_points": [
+    "Stack of opening brackets",
+    "Match on closing",
+    "Empty at the end"
+   ],
+   "follow_ups": [
+    "What breaks if you only count brackets?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-07",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "hashing"
+   ],
+   "prompt": "How would you find the most frequent word in a large text and what is the complexity?",
+   "ideal_answer": "Count words in a dictionary or Counter while scanning once and then take the maximum count, which is O(n) time with memory proportional to the number of distinct words. Normalise case and punctuation first.",
+   "key_points": [
+    "Dictionary counts",
+    "One pass",
+    "Normalise first"
+   ],
+   "follow_ups": [
+    "How would you get the top 10 words?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-08",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "recursion"
+   ],
+   "prompt": "How would you generate all subsets of a list and what is the complexity?",
+   "ideal_answer": "Use recursion or iteration where each element is either included or not, building subsets step by step, which produces 2 to the power n subsets, so time and output size are exponential. Backtracking models this cleanly.",
+   "key_points": [
+    "Include or exclude each item",
+    "2^n results",
+    "Backtracking"
+   ],
+   "follow_ups": [
+    "How would you avoid duplicates when the list has repeats?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-09",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "joins"
+   ],
+   "prompt": "What are the different types of SQL joins and when would you use a LEFT JOIN?",
+   "ideal_answer": "INNER JOIN returns matching rows, LEFT JOIN returns all rows from the left table and matches from the right, RIGHT JOIN the reverse and FULL JOIN all rows from both. Use LEFT JOIN when you want to keep rows even when there is no match, such as users without orders.",
+   "key_points": [
+    "Four join types",
+    "LEFT keeps unmatched left rows",
+    "Example with orders"
+   ],
+   "follow_ups": [
+    "How do you find rows with no match?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-10",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "aggregation"
+   ],
+   "prompt": "Write the idea of a query that returns customers who placed more than 3 orders and spent over 10,000 in total.",
+   "ideal_answer": "Join customers to orders, group by customer, compute COUNT of orders and SUM of the amount and use HAVING with both conditions.",
+   "key_points": [
+    "GROUP BY customer",
+    "COUNT and SUM",
+    "HAVING for both conditions"
+   ],
+   "follow_ups": [
+    "How would you order by total spent?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-11",
+   "kind": "technical",
+   "category": "web",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "javascript"
+   ],
+   "prompt": "How do you debounce a search input and why is it needed?",
+   "ideal_answer": "Debouncing delays calling the search until the user has stopped typing for a short time, using a timer that resets on each keystroke. This avoids sending a request for every key press and reduces load and flicker.",
+   "key_points": [
+    "Timer that resets",
+    "Fewer requests",
+    "Better responsiveness"
+   ],
+   "follow_ups": [
+    "What is the difference from throttling?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-12",
+   "kind": "technical",
+   "category": "web",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "react"
+   ],
+   "prompt": "How would you manage a form with validation and server errors in React?",
+   "ideal_answer": "Keep field values in state or use a form library, validate on submit and on blur, show messages next to the fields, disable the submit button while sending and display errors returned by the server. Also validate on the server.",
+   "key_points": [
+    "Controlled fields and validation",
+    "Show field-level errors",
+    "Server validation too"
+   ],
+   "follow_ups": [
+    "How do you keep the form accessible?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-13",
+   "kind": "technical",
+   "category": "web",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "security"
+   ],
+   "prompt": "How do you protect a web application against XSS, CSRF and SQL injection?",
+   "ideal_answer": "Escape output and use a content security policy against XSS, use SameSite cookies and CSRF tokens against CSRF, and parameterised queries or an ORM against SQL injection. Validate input and keep dependencies updated.",
+   "key_points": [
+    "Escape, CSP",
+    "SameSite and tokens",
+    "Parameterised queries"
+   ],
+   "follow_ups": [
+    "Which of these can a front end alone stop?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-14",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "cross-platform"
+   ],
+   "prompt": "What factors would make you choose a cross-platform framework over native development for a client app?",
+   "ideal_answer": "Budget, timeline and team skills favour cross-platform because one code base serves both platforms, while heavy graphics, advanced device features and top performance favour native. Consider long-term maintenance.",
+   "key_points": [
+    "Cost and speed",
+    "Performance and device features",
+    "Maintenance"
+   ],
+   "follow_ups": [
+    "How do you handle a platform-specific feature?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-15",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "api"
+   ],
+   "prompt": "How should a mobile app handle API errors, retries and expired logins?",
+   "ideal_answer": "Show clear messages, retry transient failures with backoff, avoid retrying unsafe requests blindly, refresh an expired token once and send the user to login when refresh fails. Cache data to work offline when possible.",
+   "key_points": [
+    "Clear messages",
+    "Backoff for transient failures",
+    "Token refresh"
+   ],
+   "follow_ups": [
+    "Why is retrying a payment request risky?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-16",
+   "kind": "technical",
+   "category": "cloud",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "cloud"
+   ],
+   "prompt": "What are virtual machines, containers and serverless functions, and how do they differ?",
+   "ideal_answer": "A virtual machine includes a whole operating system, a container packages an app with its dependencies and shares the host kernel, and a serverless function runs code on demand without managing servers. They trade control for simplicity.",
+   "key_points": [
+    "Three compute models",
+    "Control vs convenience",
+    "Cost and startup differences"
+   ],
+   "follow_ups": [
+    "Which would you choose for a small API?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-17",
+   "kind": "technical",
+   "category": "cloud",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "deployment"
+   ],
+   "prompt": "How would you deploy a Django or FastAPI application to the cloud with a managed database?",
+   "ideal_answer": "Containerise the app, run it on a managed service behind a load balancer, use a managed database with backups, keep configuration and secrets in environment variables or a secrets manager and set up logs, health checks and CI/CD.",
+   "key_points": [
+    "Container and managed hosting",
+    "Managed database and backups",
+    "Secrets, logs, CI/CD"
+   ],
+   "follow_ups": [
+    "How do you run migrations on deploy?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-18",
+   "kind": "technical",
+   "category": "cloud",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "cost"
+   ],
+   "prompt": "How would you keep cloud costs under control for a growing product?",
+   "ideal_answer": "Tag resources and review the bill by service, right-size and shut down idle resources, use autoscaling, set lifecycle rules on storage, cache to reduce load and set budgets and alerts.",
+   "key_points": [
+    "Visibility by tag",
+    "Right-size and autoscale",
+    "Budgets and alerts"
+   ],
+   "follow_ups": [
+    "How do you balance cost against reliability?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-19",
+   "kind": "technical",
+   "category": "devops",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "ci-cd"
+   ],
+   "prompt": "What does a good CI/CD pipeline contain for a web project?",
+   "ideal_answer": "Linting and tests on every push, a build, security checks for dependencies, deployment to a staging environment with smoke tests, then a controlled release to production with rollback. Pipelines should be fast and repeatable.",
+   "key_points": [
+    "Lint and test",
+    "Staging and smoke tests",
+    "Controlled release and rollback"
+   ],
+   "follow_ups": [
+    "How do you keep a pipeline fast?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-20",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "testing"
+   ],
+   "prompt": "How do you decide what to automate and what to test manually?",
+   "ideal_answer": "Automate stable, repeated and high-risk checks such as regression and API tests, and keep new features, usability and exploratory testing manual at first. Review the suite so it stays reliable and cheap to maintain.",
+   "key_points": [
+    "Automate repeated stable checks",
+    "Manual for exploration",
+    "Maintain the suite"
+   ],
+   "follow_ups": [
+    "What do you do with a flaky automated test?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-21",
+   "kind": "scenario",
+   "category": "vt-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "debugging"
+   ],
+   "prompt": "Scenario: a client says the site is slow every afternoon. How do you investigate?",
+   "ideal_answer": "Check monitoring and logs for that time window, look for traffic peaks, scheduled jobs, slow queries or resource limits, reproduce with a load test, fix the cause such as an index or a job schedule, and add alerts.",
+   "key_points": [
+    "Correlate with the time window",
+    "Traffic, jobs, queries",
+    "Fix and alert"
+   ],
+   "follow_ups": [
+    "How would you explain it to the client?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-22",
+   "kind": "scenario",
+   "category": "vt-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: design an appointment booking system for clinics that prevents double booking and sends reminders.",
+   "ideal_answer": "Model slots with a unique constraint on clinic, practitioner and time so only one booking succeeds, reserve in a transaction, send reminders from a scheduled job through a queue with idempotent messages and let users reschedule and cancel.",
+   "key_points": [
+    "Unique slot constraint",
+    "Transactional booking",
+    "Queued idempotent reminders"
+   ],
+   "follow_ups": [
+    "How do you handle time zones?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-23",
+   "kind": "scenario",
+   "category": "vt-scenario",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "teamwork"
+   ],
+   "prompt": "Scenario: a new teammate struggles with your code base. How do you help?",
+   "ideal_answer": "Pair with them on a small task, point them to documentation and tests, explain the structure and decisions, welcome questions and improve the README based on what confused them.",
+   "key_points": [
+    "Pair on a small task",
+    "Documentation and tests",
+    "Improve the README"
+   ],
+   "follow_ups": [
+    "How do you give review feedback kindly?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-24",
+   "kind": "technical",
+   "category": "git",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "git"
+   ],
+   "prompt": "What do git stash, git cherry-pick and git revert do and when would you use each?",
+   "ideal_answer": "Stash saves uncommitted changes temporarily, cherry-pick applies one specific commit to another branch and revert creates a new commit that undoes an earlier one without rewriting history. Use revert for shared branches.",
+   "key_points": [
+    "Temporary save",
+    "Copy one commit",
+    "Safe undo for shared history"
+   ],
+   "follow_ups": [
+    "How do you recover a deleted branch?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "vteams-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer",
+    "frontend-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "vteams"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe a project you built with Python, a web framework or mobile tools. What did you build yourself, what failed and how did you fix it?",
+   "ideal_answer": "A strong answer is specific about the goal, stack and your own part, names a real failure and the fix and says how you tested and deployed it.",
+   "key_points": [
+    "Own part and stack",
+    "A real failure and fix",
+    "Testing and deployment"
+   ],
+   "follow_ups": [
+    "What would you improve first?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

@@ -1,0 +1,350 @@
+{
+  "_meta": {
+    "note": "Maps the project's rough tech-focus notes (data/company_seed) and resume skills to coding-problem focus tags. This is PRACTICE EMPHASIS chosen by this project. It is NOT verified information about what any company asks in interviews, and no company publishes its question list. Edit freely."
+  },
+  "tech_to_tags": {
+    "python": [
+      "basics",
+      "strings",
+      "hashing",
+      "two-pointers"
+    ],
+    "django": [
+      "api-logic",
+      "grouping"
+    ],
+    "react": [
+      "strings",
+      "grouping",
+      "api-logic",
+      "stacks",
+      "trees"
+    ],
+    "node.js": [
+      "api-logic",
+      "grouping",
+      "strings",
+      "stacks"
+    ],
+    "web": [
+      "api-logic",
+      "strings",
+      "grouping",
+      "stacks",
+      "trees"
+    ],
+    "mobile": [
+      "strings",
+      "business-rules",
+      "basics",
+      "stacks"
+    ],
+    "flutter": [
+      "strings",
+      "business-rules",
+      "stacks"
+    ],
+    "machine learning": [
+      "data-cleaning",
+      "math-basics",
+      "grouping",
+      "dp",
+      "matrix"
+    ],
+    "ai": [
+      "data-cleaning",
+      "math-basics",
+      "grouping",
+      "dp",
+      "matrix"
+    ],
+    "ai/ml": [
+      "data-cleaning",
+      "math-basics",
+      "grouping",
+      "dp",
+      "matrix"
+    ],
+    "data": [
+      "data-cleaning",
+      "grouping",
+      "set-ops",
+      "dp",
+      "matrix"
+    ],
+    "data engineering": [
+      "data-cleaning",
+      "grouping",
+      "hashing",
+      "dp",
+      "matrix"
+    ],
+    "data science": [
+      "data-cleaning",
+      "math-basics",
+      "grouping",
+      "dp",
+      "matrix"
+    ],
+    "computer vision": [
+      "matrix",
+      "math-basics",
+      "simulation",
+      "dp"
+    ],
+    "java": [
+      "business-rules",
+      "sorting",
+      "basics",
+      "trees",
+      "linked-lists"
+    ],
+    ".net": [
+      "business-rules",
+      "sorting",
+      "basics",
+      "trees",
+      "linked-lists"
+    ],
+    "c#": [
+      "business-rules",
+      "sorting",
+      "basics",
+      "trees",
+      "linked-lists"
+    ],
+    "microsoft stack": [
+      "business-rules",
+      "sorting",
+      "grouping",
+      "trees",
+      "linked-lists"
+    ],
+    "enterprise software": [
+      "business-rules",
+      "grouping",
+      "sorting",
+      "trees",
+      "linked-lists"
+    ],
+    "saas": [
+      "business-rules",
+      "api-logic",
+      "grouping"
+    ],
+    "retail tech": [
+      "business-rules",
+      "grouping",
+      "sorting"
+    ],
+    "fintech": [
+      "fintech",
+      "business-rules",
+      "math-basics",
+      "dp"
+    ],
+    "healthcare it": [
+      "business-rules",
+      "data-cleaning",
+      "grouping"
+    ],
+    "cloud": [
+      "api-logic",
+      "simulation",
+      "grouping",
+      "graphs"
+    ],
+    "aws": [
+      "api-logic",
+      "simulation",
+      "grouping",
+      "graphs"
+    ],
+    "qa": [
+      "strings",
+      "set-ops",
+      "business-rules",
+      "two-pointers",
+      "stacks"
+    ],
+    "testing": [
+      "strings",
+      "set-ops",
+      "business-rules",
+      "two-pointers",
+      "stacks"
+    ],
+    "automation": [
+      "strings",
+      "simulation",
+      "set-ops",
+      "two-pointers",
+      "stacks"
+    ],
+    "cybersecurity": [
+      "security",
+      "api-logic",
+      "strings",
+      "stacks"
+    ],
+    "blockchain": [
+      "hashing",
+      "fintech",
+      "sorting",
+      "trees"
+    ],
+    "unity": [
+      "simulation",
+      "matrix",
+      "math-basics",
+      "graphs",
+      "backtracking"
+    ],
+    "game development": [
+      "simulation",
+      "matrix",
+      "math-basics",
+      "graphs",
+      "backtracking"
+    ]
+  },
+  "skill_to_tags": {
+    "python": [
+      "basics",
+      "strings",
+      "hashing"
+    ],
+    "javascript": [
+      "strings",
+      "grouping",
+      "api-logic"
+    ],
+    "typescript": [
+      "strings",
+      "grouping",
+      "api-logic"
+    ],
+    "react": [
+      "strings",
+      "grouping",
+      "api-logic"
+    ],
+    "node.js": [
+      "api-logic",
+      "grouping"
+    ],
+    "express": [
+      "api-logic",
+      "grouping"
+    ],
+    "django": [
+      "api-logic",
+      "grouping",
+      "business-rules"
+    ],
+    "flask": [
+      "api-logic",
+      "grouping"
+    ],
+    "fastapi": [
+      "api-logic",
+      "grouping"
+    ],
+    "rest api": [
+      "api-logic",
+      "security",
+      "grouping"
+    ],
+    "sql": [
+      "grouping",
+      "business-rules",
+      "sorting"
+    ],
+    "pandas": [
+      "data-cleaning",
+      "grouping"
+    ],
+    "numpy": [
+      "math-basics",
+      "matrix",
+      "data-cleaning"
+    ],
+    "machine learning": [
+      "data-cleaning",
+      "math-basics"
+    ],
+    "deep learning": [
+      "math-basics",
+      "matrix"
+    ],
+    "scikit-learn": [
+      "data-cleaning",
+      "math-basics"
+    ],
+    "statistics": [
+      "math-basics",
+      "data-cleaning"
+    ],
+    "nlp": [
+      "strings",
+      "hashing",
+      "data-cleaning"
+    ],
+    "data visualization": [
+      "data-cleaning",
+      "grouping"
+    ],
+    "java": [
+      "business-rules",
+      "sorting",
+      "basics"
+    ],
+    "c#": [
+      "business-rules",
+      "sorting",
+      "basics"
+    ],
+    ".net": [
+      "business-rules",
+      "sorting",
+      "basics"
+    ],
+    "c++": [
+      "basics",
+      "sorting",
+      "matrix"
+    ],
+    "testing": [
+      "strings",
+      "set-ops"
+    ],
+    "html": [
+      "strings"
+    ],
+    "css": [
+      "strings"
+    ]
+  },
+  "languages": {
+    "executable": [
+      "python"
+    ],
+    "known": [
+      "python",
+      "javascript",
+      "typescript",
+      "java",
+      "c++",
+      "c#",
+      "c",
+      "go",
+      "php",
+      "kotlin",
+      "swift",
+      "dart",
+      "r",
+      "ruby",
+      "rust"
+    ]
+  }
+}

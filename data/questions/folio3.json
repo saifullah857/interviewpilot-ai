@@ -1,0 +1,783 @@
+{
+ "company": "folio3",
+ "questions": [
+  {
+   "slug": "folio3-tech-01",
+   "kind": "technical",
+   "category": "pandas",
+   "difficulty": "easy",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "pandas"
+   ],
+   "prompt": "How do you find and handle missing values in a pandas DataFrame?",
+   "ideal_answer": "Use isna().sum() to count missing values per column, then drop rows or columns, fill with a constant, median or forward fill, or model-based imputation, depending on why data is missing and how much there is.",
+   "key_points": [
+    "isna().sum() to inspect",
+    "dropna or fillna",
+    "Choice depends on why it is missing"
+   ],
+   "follow_ups": [
+    "Why can filling with the mean distort data?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-02",
+   "kind": "technical",
+   "category": "pandas",
+   "difficulty": "medium",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "pandas",
+    "groupby"
+   ],
+   "prompt": "Explain groupby in pandas and show how you would get the average and count of sales per region.",
+   "ideal_answer": "groupby splits the data by a key, applies an aggregation and combines the results. For example df.groupby('region')['sales'].agg(['mean','count']) returns both statistics for each region.",
+   "key_points": [
+    "Split, apply, combine",
+    "agg with several functions",
+    "Result indexed by group"
+   ],
+   "follow_ups": [
+    "How would you get the top product in each region?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-03",
+   "kind": "technical",
+   "category": "pandas",
+   "difficulty": "medium",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "merge"
+   ],
+   "prompt": "What are the differences between merge types in pandas and what happens with duplicate keys?",
+   "ideal_answer": "Inner keeps matching keys only, left keeps all left rows, right keeps all right rows and outer keeps everything. Duplicate keys multiply rows because each match combines, so check key uniqueness before merging.",
+   "key_points": [
+    "Inner, left, right, outer",
+    "Duplicate keys multiply rows",
+    "Validate keys"
+   ],
+   "follow_ups": [
+    "How can the validate argument help?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-04",
+   "kind": "technical",
+   "category": "numpy",
+   "difficulty": "easy",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "numpy"
+   ],
+   "prompt": "Why is NumPy faster than Python lists for numerical work, and what is broadcasting?",
+   "ideal_answer": "NumPy stores same-type values in contiguous memory and runs operations in compiled code on whole arrays, avoiding Python loops. Broadcasting lets arrays of different but compatible shapes operate together, such as adding a vector to every row.",
+   "key_points": [
+    "Contiguous typed arrays",
+    "Vectorised operations",
+    "Broadcasting rules"
+   ],
+   "follow_ups": [
+    "When does broadcasting fail?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-05",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "sql",
+    "analytics"
+   ],
+   "prompt": "Write the idea of a query that returns each customer's most recent order.",
+   "ideal_answer": "Use a window function such as ROW_NUMBER() OVER (PARTITION BY customer ORDER BY order_date DESC) and keep row number 1, or join to a subquery with the maximum date per customer.",
+   "key_points": [
+    "Window function with ROW_NUMBER",
+    "Partition by customer",
+    "Keep the first row"
+   ],
+   "follow_ups": [
+    "How do you handle two orders at the same time?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-06",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "easy",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "train-test"
+   ],
+   "prompt": "Why do we split data into training, validation and test sets?",
+   "ideal_answer": "The training set fits the model, the validation set is used to tune choices, and the test set is touched once at the end to estimate performance on new data. Using the test set for tuning makes the estimate too optimistic.",
+   "key_points": [
+    "Three purposes",
+    "Test set used once",
+    "Avoid optimistic estimates"
+   ],
+   "follow_ups": [
+    "When do you use cross-validation instead?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-07",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "medium",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "feature-engineering"
+   ],
+   "prompt": "What is feature engineering and give two examples for a house price model.",
+   "ideal_answer": "It means creating or transforming input variables so the model can use the signal, such as price per square metre, age of the house from build year or encoding the neighbourhood. Scale or encode features appropriately for the chosen model.",
+   "key_points": [
+    "Create useful inputs",
+    "Examples: ratios, age, encoding",
+    "Scale and encode correctly"
+   ],
+   "follow_ups": [
+    "How do you avoid leaking the target into a feature?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-08",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "medium",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "bias-variance"
+   ],
+   "prompt": "Explain the bias-variance trade-off and how it shows up in learning curves.",
+   "ideal_answer": "High bias means the model is too simple and underfits, so training and validation errors are both high. High variance means it is too flexible and overfits, so training error is low but validation error is high. More data helps variance, richer models help bias.",
+   "key_points": [
+    "Underfit vs overfit",
+    "Read learning curves",
+    "Different fixes for each"
+   ],
+   "follow_ups": [
+    "Which would you try first if both errors are high?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-09",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "medium",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "evaluation"
+   ],
+   "prompt": "How do you choose between precision and recall for a medical screening model and a spam filter?",
+   "ideal_answer": "For screening, missing a sick patient is costly so recall matters more, accepting some false alarms. For spam filtering, wrongly blocking a real email is costly so precision matters more. The right balance follows the cost of each error.",
+   "key_points": [
+    "Costs of each error",
+    "Recall for screening",
+    "Precision for spam"
+   ],
+   "follow_ups": [
+    "What is the ROC curve showing?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-10",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "hard",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "imbalance"
+   ],
+   "prompt": "A dataset has 2 percent positive cases. Describe how you would train and evaluate a model on it.",
+   "ideal_answer": "Use stratified splits, evaluate with precision, recall and PR-AUC, try class weights or resampling only on the training data, and tune the decision threshold for the business cost. Do not resample before splitting.",
+   "key_points": [
+    "Stratified splits",
+    "Appropriate metrics",
+    "Resample only the training data"
+   ],
+   "follow_ups": [
+    "Why is accuracy misleading here?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-11",
+   "kind": "technical",
+   "category": "ml",
+   "difficulty": "medium",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "algorithms"
+   ],
+   "prompt": "Compare a decision tree, a random forest and gradient boosting.",
+   "ideal_answer": "A single tree is easy to explain but overfits. A random forest averages many trees trained on random subsets, which lowers variance. Gradient boosting builds trees one after another to fix earlier errors, often more accurate but easier to overfit and slower to tune.",
+   "key_points": [
+    "Tree interpretability and overfitting",
+    "Bagging reduces variance",
+    "Boosting fixes errors sequentially"
+   ],
+   "follow_ups": [
+    "Which would you try first on tabular data?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-12",
+   "kind": "technical",
+   "category": "deep-learning",
+   "difficulty": "medium",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "cnn"
+   ],
+   "prompt": "How does a convolutional neural network work and why is it used for images?",
+   "ideal_answer": "Convolution layers slide small filters over the image to detect local patterns such as edges, and deeper layers combine them into shapes and objects. Sharing filters reduces parameters and makes detection work wherever a pattern appears.",
+   "key_points": [
+    "Filters detect local patterns",
+    "Layers build up complexity",
+    "Weight sharing"
+   ],
+   "follow_ups": [
+    "What does pooling do?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-13",
+   "kind": "technical",
+   "category": "computer-vision",
+   "difficulty": "medium",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "transfer-learning"
+   ],
+   "prompt": "You have only 500 labelled product images. How would you build a classifier?",
+   "ideal_answer": "Start from a pretrained network, replace the final layer, train it on your images and optionally fine-tune later layers with a small learning rate. Use augmentation such as flips and crops and a proper validation set.",
+   "key_points": [
+    "Pretrained model",
+    "Replace and fine-tune the head",
+    "Augmentation and validation"
+   ],
+   "follow_ups": [
+    "How would you know the model is not just memorising?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-14",
+   "kind": "technical",
+   "category": "computer-vision",
+   "difficulty": "hard",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "detection"
+   ],
+   "prompt": "What is the difference between image classification, object detection and segmentation?",
+   "ideal_answer": "Classification gives one label for the whole image, detection finds objects and draws boxes with labels, and segmentation labels each pixel. Each needs more detailed annotations and more computation than the one before.",
+   "key_points": [
+    "Label, boxes, pixels",
+    "Increasing annotation cost",
+    "Pick by the real need"
+   ],
+   "follow_ups": [
+    "Which metric evaluates detection?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-15",
+   "kind": "technical",
+   "category": "mlops",
+   "difficulty": "medium",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "deployment"
+   ],
+   "prompt": "How would you deploy a trained model as a service and keep it working over time?",
+   "ideal_answer": "Package the model and its preprocessing together, serve it behind an API with input validation, version models and data, monitor latency and prediction quality, and plan retraining when data drifts.",
+   "key_points": [
+    "Package model with preprocessing",
+    "Versioning and validation",
+    "Monitor and retrain"
+   ],
+   "follow_ups": [
+    "What is data drift?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-16",
+   "kind": "technical",
+   "category": "mlops",
+   "difficulty": "hard",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "pipelines"
+   ],
+   "prompt": "Why do ML projects use pipelines and experiment tracking?",
+   "ideal_answer": "Pipelines make preprocessing and training repeatable and prevent leakage by fitting steps only on training data. Experiment tracking records data version, parameters and metrics so results can be compared and reproduced.",
+   "key_points": [
+    "Repeatable steps, no leakage",
+    "Record parameters and metrics",
+    "Reproducibility"
+   ],
+   "follow_ups": [
+    "What would you log for every run?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-17",
+   "kind": "technical",
+   "category": "data-engineering",
+   "difficulty": "medium",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "etl"
+   ],
+   "prompt": "Explain ETL and describe how you would build a daily job that loads cleaned sales data into a database.",
+   "ideal_answer": "ETL extracts data from sources, transforms it by cleaning and validating, and loads it into a target. A daily job should be idempotent, so running it twice does not duplicate rows, log row counts, validate data quality and alert on failure.",
+   "key_points": [
+    "Extract, transform, load",
+    "Idempotent daily job",
+    "Validate, log, alert"
+   ],
+   "follow_ups": [
+    "How would you handle a source that changes its format?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-18",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "python"
+   ],
+   "prompt": "How do you read a 3 GB CSV file in Python when it does not fit in memory?",
+   "ideal_answer": "Read it in chunks with pandas read_csv(chunksize=...) or process rows with a generator, aggregate as you go and load only the needed columns with proper data types. Consider a columnar format such as Parquet for repeated use.",
+   "key_points": [
+    "Chunked reading",
+    "Select columns and dtypes",
+    "Better formats like Parquet"
+   ],
+   "follow_ups": [
+    "How would you combine the results of chunks?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-19",
+   "kind": "technical",
+   "category": "statistics",
+   "difficulty": "easy",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "statistics"
+   ],
+   "prompt": "What are mean, median and standard deviation and when is the median a better summary?",
+   "ideal_answer": "The mean is the average, the median is the middle value and standard deviation measures spread. The median is better with skewed data or outliers, such as salaries, because a few extreme values pull the mean.",
+   "key_points": [
+    "Centre and spread",
+    "Outliers affect the mean",
+    "Median for skewed data"
+   ],
+   "follow_ups": [
+    "How would you detect outliers?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-20",
+   "kind": "scenario",
+   "category": "data-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "debugging"
+   ],
+   "prompt": "Scenario: your model scored 95 percent in testing but performs poorly after deployment. What could be wrong and how do you check?",
+   "ideal_answer": "Check for leakage in training, differences between training and live data, different preprocessing in production, data drift and wrong metrics. Compare feature distributions, replay logged live data through the model and inspect errors.",
+   "key_points": [
+    "Leakage and preprocessing mismatch",
+    "Drift between train and live",
+    "Replay real data and inspect errors"
+   ],
+   "follow_ups": [
+    "How would you prevent a mismatch in preprocessing?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-21",
+   "kind": "scenario",
+   "category": "data-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: a retailer wants to predict which customers will stop buying. Describe the full approach from data to action.",
+   "ideal_answer": "Define churn clearly, build features from purchase history, split by time so the model predicts the future, train and compare models using suitable metrics and calibrate probabilities. Then connect scores to an action such as an offer and measure its effect with a test.",
+   "key_points": [
+    "Define the target clearly",
+    "Time-based split",
+    "Link prediction to an action and measure it"
+   ],
+   "follow_ups": [
+    "Why is a random split a mistake here?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-22",
+   "kind": "scenario",
+   "category": "data-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "communication"
+   ],
+   "prompt": "Scenario: a manager asks why a model rejected a customer. How do you explain it?",
+   "ideal_answer": "Use feature importance or local explanations to name the main factors, explain them in plain language, state the model's limits and uncertainty and check for unfair bias. Offer a way to review or appeal.",
+   "key_points": [
+    "Plain-language explanation",
+    "State limits and uncertainty",
+    "Check for bias, allow review"
+   ],
+   "follow_ups": [
+    "Which tools can explain a single prediction?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-23",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "easy",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "sql-basics"
+   ],
+   "prompt": "What is the difference between DELETE, TRUNCATE and DROP in SQL?",
+   "ideal_answer": "DELETE removes selected rows and can be rolled back, TRUNCATE quickly removes all rows and keeps the table structure, and DROP removes the entire table with its structure. TRUNCATE and DROP are bigger operations that need more care.",
+   "key_points": [
+    "Rows vs all rows vs the table",
+    "WHERE only works with DELETE",
+    "Take a backup before destructive commands"
+   ],
+   "follow_ups": [
+    "Can you roll back a TRUNCATE?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-24",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "easy",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "oop"
+   ],
+   "prompt": "How would you organise an ML project in Python using functions or classes for loading data, preprocessing and training?",
+   "ideal_answer": "Separate loading, preprocessing, training and evaluation into functions or small classes so each can be tested and reused. A preprocessing step fitted on training data should be saved and reused for predictions.",
+   "key_points": [
+    "Separate responsibilities",
+    "Reusable, testable pieces",
+    "Save fitted preprocessing"
+   ],
+   "follow_ups": [
+    "Why keep configuration outside the code?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "folio3-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "ai-ml-engineer-intern",
+    "junior-ai-engineer",
+    "data-scientist",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "folio3"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe a data or ML project of yours. What was the data quality like, which metric did you use and what did you try that failed?",
+   "ideal_answer": "A strong answer names the problem, data and metric, how the data was cleaned, one honest failure and what changed, and what was your own work versus library code.",
+   "key_points": [
+    "Problem, data, metric",
+    "Honest failure",
+    "Own contribution"
+   ],
+   "follow_ups": [
+    "What would you do with more data?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

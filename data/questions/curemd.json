@@ -1,0 +1,761 @@
+{
+ "company": "curemd",
+ "questions": [
+  {
+   "slug": "curemd-tech-01",
+   "kind": "technical",
+   "category": "healthcare-it",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "privacy"
+   ],
+   "prompt": "Why must a healthcare application treat patient records more carefully than an ordinary web app, and what are three basic protections?",
+   "ideal_answer": "Patient data is highly sensitive and leaking it harms people, so access must be limited and traceable. Basic protections are role-based access, encryption in transit and at rest, and audit logs of who viewed or changed a record. Follow the privacy rules of the country and the client.",
+   "key_points": [
+    "Highly sensitive data",
+    "Role-based access and encryption",
+    "Audit logs"
+   ],
+   "follow_ups": [
+    "What would you log, and what must you never log?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-02",
+   "kind": "technical",
+   "category": "healthcare-it",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "audit"
+   ],
+   "prompt": "How would you design audit logging so that every change to a patient record can be traced to a user and time?",
+   "ideal_answer": "Write an append-only audit entry for each create, update and delete with the user, time, record, action and the old and new values or a reference to them, in the same transaction as the change. Protect the log from edits and limit who can read it.",
+   "key_points": [
+    "Append-only entries",
+    "Written in the same transaction",
+    "Protect and restrict the log"
+   ],
+   "follow_ups": [
+    "How would you keep the log from growing without limit?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-03",
+   "kind": "technical",
+   "category": "healthcare-it",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "interoperability"
+   ],
+   "prompt": "Hospital systems exchange data in standard formats such as HL7 or FHIR. Why do standards matter and what problems arise when two systems disagree?",
+   "ideal_answer": "Standards let different systems exchange data without custom work for every pair. Problems appear with different code sets, missing or optional fields and mismatched units, so you validate incoming data, map codes explicitly and reject or flag records that cannot be trusted.",
+   "key_points": [
+    "Standard formats reduce custom work",
+    "Mapping codes and units",
+    "Validate and flag bad records"
+   ],
+   "follow_ups": [
+    "How would you test an integration with another hospital system?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-04",
+   "kind": "technical",
+   "category": "healthcare-it",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "data-integrity"
+   ],
+   "prompt": "Two receptionists edit the same appointment at the same time. How do you stop one change silently overwriting the other?",
+   "ideal_answer": "Use optimistic concurrency: store a version or timestamp, include it when saving and reject the update if it changed, then show the user the conflict. Pessimistic locking is an option for short critical edits.",
+   "key_points": [
+    "Version column",
+    "Reject stale updates",
+    "Show the conflict to the user"
+   ],
+   "follow_ups": [
+    "What are the trade-offs against locking?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-05",
+   "kind": "technical",
+   "category": "csharp",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "value-reference"
+   ],
+   "prompt": "What is the difference between value types and reference types in C#?",
+   "ideal_answer": "Value types such as int and struct hold their data directly and are copied on assignment, while reference types such as classes hold a reference to an object so two variables can point to the same object. This affects copying, nulls and performance.",
+   "key_points": [
+    "Copy vs shared reference",
+    "int, struct vs class",
+    "Effects on assignment"
+   ],
+   "follow_ups": [
+    "What does boxing mean?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-06",
+   "kind": "technical",
+   "category": "csharp",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "linq"
+   ],
+   "prompt": "What is LINQ and what is the difference between deferred and immediate execution?",
+   "ideal_answer": "LINQ lets you query collections with a consistent syntax such as Where and Select. Most queries are deferred, meaning they run when you iterate, while methods like ToList or Count run immediately; deferred queries re-run every time they are enumerated.",
+   "key_points": [
+    "Query syntax over collections",
+    "Deferred execution",
+    "ToList forces execution"
+   ],
+   "follow_ups": [
+    "How can deferred execution cause a bug?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-07",
+   "kind": "technical",
+   "category": "csharp",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "async"
+   ],
+   "prompt": "How do async and await work in C# and why should you avoid blocking on async code with .Result?",
+   "ideal_answer": "async methods return a Task and await releases the thread while waiting, so the thread can serve other work. Blocking with .Result or .Wait can deadlock in some contexts and wastes threads, so use await all the way up.",
+   "key_points": [
+    "Task and await",
+    "Thread is released while waiting",
+    "Avoid .Result and .Wait"
+   ],
+   "follow_ups": [
+    "When would you use Task.WhenAll?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-08",
+   "kind": "technical",
+   "category": "dotnet",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "dependency-injection"
+   ],
+   "prompt": "What is dependency injection in ASP.NET Core and what do transient, scoped and singleton lifetimes mean?",
+   "ideal_answer": "Dependency injection supplies a class with the objects it needs instead of creating them itself, which makes testing easy. Transient creates a new instance each time, scoped one per request and singleton one for the application's lifetime.",
+   "key_points": [
+    "Dependencies are supplied",
+    "Three lifetimes",
+    "Easier testing"
+   ],
+   "follow_ups": [
+    "What goes wrong if a singleton uses a scoped service?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-09",
+   "kind": "technical",
+   "category": "dotnet",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "entity-framework"
+   ],
+   "prompt": "What is Entity Framework and how do you avoid performance problems such as loading too much data?",
+   "ideal_answer": "Entity Framework maps database tables to classes and builds SQL from LINQ. Avoid loading too much by selecting only the needed columns, using AsNoTracking for read-only queries, loading related data deliberately and adding indexes.",
+   "key_points": [
+    "ORM mapping",
+    "Select only needed data",
+    "AsNoTracking and indexes"
+   ],
+   "follow_ups": [
+    "How can you see the SQL that EF generates?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-10",
+   "kind": "technical",
+   "category": "dotnet",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "middleware"
+   ],
+   "prompt": "Explain the ASP.NET Core request pipeline and where you would put authentication and error handling.",
+   "ideal_answer": "A request passes through a chain of middleware components in order, and each can handle it or call the next. Error handling goes first so it catches everything after it, and authentication comes before authorisation and the endpoints that need it.",
+   "key_points": [
+    "Ordered middleware chain",
+    "Error handling first",
+    "Authentication before authorisation"
+   ],
+   "follow_ups": [
+    "What happens if the order is wrong?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-11",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "joins"
+   ],
+   "prompt": "What is the difference between INNER JOIN and LEFT JOIN, and how would you list patients who have no appointments?",
+   "ideal_answer": "INNER JOIN returns only matching rows, LEFT JOIN keeps all left rows. To find patients without appointments, left join appointments and keep rows where the appointment key is NULL, or use NOT EXISTS.",
+   "key_points": [
+    "Matching vs all left rows",
+    "LEFT JOIN with IS NULL",
+    "NOT EXISTS alternative"
+   ],
+   "follow_ups": [
+    "Which is faster on a large table?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-12",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "stored-procedures"
+   ],
+   "prompt": "What are stored procedures and views and when would you use each?",
+   "ideal_answer": "A stored procedure is saved database code that can take parameters and change data, useful for repeated server-side logic. A view is a saved query that behaves like a table, useful for simplifying reads and limiting exposed columns. Keep business logic in one place to avoid duplication.",
+   "key_points": [
+    "Procedure: reusable logic",
+    "View: saved query",
+    "Avoid scattering logic"
+   ],
+   "follow_ups": [
+    "What are the downsides of heavy logic in procedures?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-13",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "performance"
+   ],
+   "prompt": "A patient search by name is slow. How do you speed it up?",
+   "ideal_answer": "Check the plan, then index the searched columns, avoid functions or leading wildcards that block the index, consider normalised search columns or full-text search and paginate results. Measure after the change.",
+   "key_points": [
+    "Query plan first",
+    "Index and avoid blocking patterns",
+    "Full-text search and paging"
+   ],
+   "follow_ups": [
+    "Why does LIKE '%name' not use a normal index?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-14",
+   "kind": "technical",
+   "category": "rest-api",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "How would you design API endpoints for patients and their appointments, including filtering and error responses?",
+   "ideal_answer": "Use resources such as /patients and /patients/{id}/appointments, support filters and pagination through query parameters, return consistent errors with proper status codes and never leak internal details. Protect each endpoint with authorisation checks.",
+   "key_points": [
+    "Resource-based URLs",
+    "Filtering and pagination",
+    "Consistent errors and authorisation"
+   ],
+   "follow_ups": [
+    "How do you version the API?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-15",
+   "kind": "technical",
+   "category": "rest-api",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "validation"
+   ],
+   "prompt": "Why must the server validate input even if the front end already does?",
+   "ideal_answer": "Client checks can be bypassed with direct requests, so the server is the only trusted place to enforce rules. Validate types, ranges and required fields and return clear errors, and sanitise output.",
+   "key_points": [
+    "Client checks can be bypassed",
+    "Server enforces rules",
+    "Clear validation errors"
+   ],
+   "follow_ups": [
+    "What is mass assignment and how do you prevent it?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-16",
+   "kind": "technical",
+   "category": "oop",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "solid"
+   ],
+   "prompt": "Explain the open/closed principle and the Liskov substitution principle with short examples.",
+   "ideal_answer": "Open/closed means code is open to extension but closed to modification, such as adding a new report type by adding a class. Liskov means a subclass must be usable wherever its parent is expected without breaking behaviour, so a subclass should not throw for operations the parent supports.",
+   "key_points": [
+    "Extend without editing",
+    "Subclasses honour the parent's contract",
+    "Examples for both"
+   ],
+   "follow_ups": [
+    "Give an example that breaks Liskov."
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-17",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "unit-testing"
+   ],
+   "prompt": "How do you unit test a service that depends on a database and an email provider?",
+   "ideal_answer": "Depend on interfaces and replace the database and email provider with fakes or mocks in tests, check the behaviour and results, and keep a few integration tests with a test database. Dependency injection makes the swap simple.",
+   "key_points": [
+    "Depend on interfaces",
+    "Fakes in unit tests",
+    "Few integration tests"
+   ],
+   "follow_ups": [
+    "When is a mock the wrong tool?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-18",
+   "kind": "technical",
+   "category": "ai-health",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "llm",
+    "safety"
+   ],
+   "prompt": "A client wants an AI feature to summarise doctors' notes. What risks do you raise and how do you reduce them?",
+   "ideal_answer": "Raise privacy of patient data sent to a model, wrong or invented details in summaries, and over-trust by staff. Reduce them with de-identification, a provider agreement, clear labelling as a draft, human review before anything is saved and tests on realistic notes.",
+   "key_points": [
+    "Privacy and third-party processing",
+    "Hallucination risk",
+    "Human review and labelling"
+   ],
+   "follow_ups": [
+    "How would you measure summary quality?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-19",
+   "kind": "technical",
+   "category": "ai-health",
+   "difficulty": "hard",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "ml-evaluation"
+   ],
+   "prompt": "How would you evaluate a model that predicts which patients will miss an appointment, and what could go wrong ethically?",
+   "ideal_answer": "Use a time-based split and metrics such as precision, recall and calibration, and compare with a simple baseline. Check performance across groups to avoid unfair treatment, and use predictions to help patients, for example with reminders, not to deny care.",
+   "key_points": [
+    "Time-based split and baseline",
+    "Per-group performance",
+    "Use to help, not to deny care"
+   ],
+   "follow_ups": [
+    "What data would you refuse to use?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-20",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "junior-ai-engineer",
+    "ai-ml-engineer-intern",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "python",
+    "data"
+   ],
+   "prompt": "How would you clean a CSV of patient visits with inconsistent dates and duplicate rows in Python?",
+   "ideal_answer": "Parse dates with explicit formats and flag failures, normalise text, drop exact duplicates and decide a rule for near duplicates, validate required fields and log what was changed. Keep the raw file untouched.",
+   "key_points": [
+    "Parse and flag bad dates",
+    "Duplicate rules",
+    "Log changes, keep raw data"
+   ],
+   "follow_ups": [
+    "How would you test the cleaning code?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-21",
+   "kind": "technical",
+   "category": "devops",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "deployment"
+   ],
+   "prompt": "How do you release a change to a system that hospitals use every day with minimal risk?",
+   "ideal_answer": "Test in a staging environment that mirrors production, release in a quiet window or gradually, use feature flags, have a rehearsed rollback and monitor errors right after release. Communicate with support teams.",
+   "key_points": [
+    "Staging and gradual release",
+    "Feature flags and rollback",
+    "Monitor and communicate"
+   ],
+   "follow_ups": [
+    "What would make you stop a release?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-22",
+   "kind": "scenario",
+   "category": "healthcare-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "incidents"
+   ],
+   "prompt": "Scenario: a nurse reports that a patient's allergy information is missing in the system. How do you respond?",
+   "ideal_answer": "Treat it as urgent: confirm the issue, help the nurse find the information through a safe backup channel, then investigate through audit logs and recent changes to see whether data was lost or hidden. Fix the cause, restore data and report the incident properly.",
+   "key_points": [
+    "Safety first",
+    "Use audit logs to investigate",
+    "Fix, restore, report"
+   ],
+   "follow_ups": [
+    "What would you add to prevent it happening again?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-23",
+   "kind": "scenario",
+   "category": "healthcare-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: design an appointment reminder system that sends messages to thousands of patients each morning without sending duplicates.",
+   "ideal_answer": "Select the day's appointments, create one reminder record per appointment with a unique constraint, send through a queue with retries and mark each as sent, so a rerun skips completed ones. Respect patients' contact preferences and log delivery.",
+   "key_points": [
+    "One reminder record per appointment",
+    "Queue with retries",
+    "Idempotent and respects preferences"
+   ],
+   "follow_ups": [
+    "What if the SMS provider is down for an hour?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-24",
+   "kind": "scenario",
+   "category": "healthcare-scenario",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "teamwork"
+   ],
+   "prompt": "Scenario: a client asks for a feature that conflicts with a privacy rule. How do you handle it?",
+   "ideal_answer": "Explain the rule and the risk politely, involve your lead or compliance contact and propose an alternative that meets the need without breaking the rule. Do not quietly ignore or implement it.",
+   "key_points": [
+    "Do not silently comply",
+    "Escalate to the right person",
+    "Offer an alternative"
+   ],
+   "follow_ups": [
+    "How do you document the decision?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "curemd-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "frontend-developer"
+   ],
+   "companies": [
+    "curemd"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe a project where correctness mattered. How did you check your data and logic?",
+   "ideal_answer": "A strong answer names the project and why mistakes were costly, the checks you added such as validation and tests, one bug you found and your own contribution.",
+   "key_points": [
+    "Why correctness mattered",
+    "Validation and tests",
+    "A real bug and fix"
+   ],
+   "follow_ups": [
+    "What would you test next?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

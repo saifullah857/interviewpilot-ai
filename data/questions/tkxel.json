@@ -1,0 +1,762 @@
+{
+ "company": "tkxel",
+ "questions": [
+  {
+   "slug": "tkxel-tech-01",
+   "kind": "technical",
+   "category": "javascript",
+   "difficulty": "easy",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "variables"
+   ],
+   "prompt": "What is the difference between var, let and const in JavaScript?",
+   "ideal_answer": "var is function scoped and hoisted with undefined, while let and const are block scoped and cannot be used before their declaration. const prevents reassignment of the binding, but an object stored in it can still be changed.",
+   "key_points": [
+    "Function vs block scope",
+    "Hoisting and the temporal dead zone",
+    "const blocks reassignment, not mutation"
+   ],
+   "follow_ups": [
+    "Why is const preferred by default?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-02",
+   "kind": "technical",
+   "category": "javascript",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "closures"
+   ],
+   "prompt": "Explain closures with a small example and one common bug they cause in loops.",
+   "ideal_answer": "A closure is a function that remembers variables from the scope where it was created. A counter factory returns a function that keeps incrementing a private variable. In a loop using var, all callbacks share one variable, while let creates a new binding per iteration.",
+   "key_points": [
+    "Function remembers outer scope",
+    "Counter or private state example",
+    "var in loops shares one binding"
+   ],
+   "follow_ups": [
+    "How would you fix the loop bug without let?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-03",
+   "kind": "technical",
+   "category": "javascript",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "event-loop"
+   ],
+   "prompt": "How does the JavaScript event loop work, and in what order do a setTimeout callback and a resolved promise run?",
+   "ideal_answer": "JavaScript runs one call stack and the event loop moves queued callbacks onto it when it is empty. Promise callbacks go into the microtask queue, which is drained before the next timer task, so a resolved promise runs before a setTimeout of zero.",
+   "key_points": [
+    "Single thread with a queue",
+    "Microtasks before macrotasks",
+    "Promise before setTimeout 0"
+   ],
+   "follow_ups": [
+    "Where do async/await continuations run?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-04",
+   "kind": "technical",
+   "category": "javascript",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "promises"
+   ],
+   "prompt": "What is the difference between Promise.all and Promise.allSettled, and how do you handle errors in async/await?",
+   "ideal_answer": "Promise.all rejects as soon as one promise rejects, while allSettled waits for all and reports each result. With async/await use try/catch around awaited calls, and remember that a missing await leaves a rejection unhandled.",
+   "key_points": [
+    "all fails fast, allSettled reports each",
+    "try/catch with await",
+    "Unhandled rejections"
+   ],
+   "follow_ups": [
+    "When would you run requests in parallel instead of in sequence?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-05",
+   "kind": "technical",
+   "category": "javascript",
+   "difficulty": "easy",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "equality"
+   ],
+   "prompt": "What is the difference between == and === and what does typeof null return?",
+   "ideal_answer": "== converts types before comparing, so 0 == '0' is true, while === compares without conversion and is safer. typeof null returns 'object', a long-standing quirk of the language.",
+   "key_points": [
+    "Type coercion vs strict equality",
+    "Prefer ===",
+    "typeof null is object"
+   ],
+   "follow_ups": [
+    "Name two falsy values besides false."
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-06",
+   "kind": "technical",
+   "category": "javascript",
+   "difficulty": "hard",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "this",
+    "prototypes"
+   ],
+   "prompt": "How does the value of this get decided in JavaScript and how do arrow functions differ?",
+   "ideal_answer": "For normal functions this depends on how the function is called: as a method it is the object, in a plain call it is undefined in strict mode, and call, apply or bind set it explicitly. Arrow functions have no own this and use the one from the surrounding scope.",
+   "key_points": [
+    "Decided at call time",
+    "call, apply, bind",
+    "Arrow functions inherit this"
+   ],
+   "follow_ups": [
+    "Why can passing a method as a callback lose its this?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-07",
+   "kind": "technical",
+   "category": "react",
+   "difficulty": "easy",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "components",
+    "props"
+   ],
+   "prompt": "What are components, props and state in React and how do they differ?",
+   "ideal_answer": "Components are reusable pieces of UI. Props are inputs passed from a parent and treated as read-only, while state is data owned by a component that triggers a re-render when it changes.",
+   "key_points": [
+    "Components build the UI",
+    "Props come from the parent",
+    "State changes cause re-render"
+   ],
+   "follow_ups": [
+    "Why must you not modify props?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-08",
+   "kind": "technical",
+   "category": "react",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "hooks"
+   ],
+   "prompt": "Explain useEffect, including the dependency array and cleanup function, with an example such as fetching data.",
+   "ideal_answer": "useEffect runs side effects after render. The dependency array controls when it re-runs, an empty array runs it once, and a returned cleanup function runs before the next effect or on unmount, for example to cancel a request or remove a listener.",
+   "key_points": [
+    "Effects run after render",
+    "Dependency array controls reruns",
+    "Cleanup function"
+   ],
+   "follow_ups": [
+    "What bug appears if a dependency is missing?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-09",
+   "kind": "technical",
+   "category": "react",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "keys",
+    "rendering"
+   ],
+   "prompt": "Why does React ask for a key when you render a list, and why is using the array index risky?",
+   "ideal_answer": "Keys let React match items between renders so it updates, moves or removes the right elements. An index changes when items are reordered or deleted, which can cause wrong state or input values to stay attached to the wrong row.",
+   "key_points": [
+    "Identify items between renders",
+    "Stable unique keys",
+    "Index breaks on reorder"
+   ],
+   "follow_ups": [
+    "What makes a good key?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-10",
+   "kind": "technical",
+   "category": "react",
+   "difficulty": "hard",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "performance"
+   ],
+   "prompt": "A React list screen feels slow with 5,000 rows. How do you find and fix the problem?",
+   "ideal_answer": "Profile with React DevTools to see what re-renders, then reduce work: virtualise the list so only visible rows render, memoise expensive rows and values, avoid creating new objects on every render and keep state close to where it is used. Measure again afterwards.",
+   "key_points": [
+    "Profile before optimising",
+    "Virtualise long lists",
+    "Memoise and localise state"
+   ],
+   "follow_ups": [
+    "When can useMemo make things worse?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-11",
+   "kind": "technical",
+   "category": "react",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "state-management"
+   ],
+   "prompt": "When would you use context or a state library instead of passing props, and what are the downsides of global state?",
+   "ideal_answer": "Use context or a store when many distant components need the same data, such as the current user or theme, to avoid long prop chains. The downsides are hidden dependencies, extra re-renders and harder testing, so keep most state local.",
+   "key_points": [
+    "Avoid prop drilling for shared data",
+    "Keep most state local",
+    "Costs: re-renders and coupling"
+   ],
+   "follow_ups": [
+    "How would you stop a context value from re-rendering everything?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-12",
+   "kind": "technical",
+   "category": "css-html",
+   "difficulty": "easy",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "layout"
+   ],
+   "prompt": "What is the difference between flexbox and grid and when would you use each?",
+   "ideal_answer": "Flexbox lays items out along one axis and suits rows or columns of controls. Grid handles rows and columns together, so it suits whole page or card layouts.",
+   "key_points": [
+    "Flexbox is one-dimensional",
+    "Grid is two-dimensional",
+    "Choose by layout"
+   ],
+   "follow_ups": [
+    "How would you make a layout responsive?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-13",
+   "kind": "technical",
+   "category": "css-html",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "accessibility"
+   ],
+   "prompt": "What does accessibility mean for a web page and what are three practical things you do to support it?",
+   "ideal_answer": "It means people with disabilities can use the page. Use semantic HTML, label form fields, give images alt text, keep colour contrast high and make everything usable with a keyboard and visible focus.",
+   "key_points": [
+    "Semantic HTML and labels",
+    "Alt text and contrast",
+    "Keyboard and focus"
+   ],
+   "follow_ups": [
+    "How would you test accessibility?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-14",
+   "kind": "technical",
+   "category": "node-api",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "node",
+    "express"
+   ],
+   "prompt": "How would you structure a Node.js and Express API with routes, validation and error handling?",
+   "ideal_answer": "Separate routes, controllers and services, validate input at the boundary, use a central error-handling middleware that returns consistent responses and log errors. Keep configuration in environment variables and add tests for each route.",
+   "key_points": [
+    "Layered structure",
+    "Validate at the boundary",
+    "Central error middleware"
+   ],
+   "follow_ups": [
+    "How do you avoid blocking the event loop in Node?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-15",
+   "kind": "technical",
+   "category": "node-api",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "rest",
+    "auth"
+   ],
+   "prompt": "How does a login with a JWT work and where would you store the token in a browser app?",
+   "ideal_answer": "The server verifies the credentials and returns a signed token that the client sends with each request. An httpOnly, secure cookie protects it from script access, while localStorage is easy to read if the page has an XSS flaw, so the choice involves security trade-offs.",
+   "key_points": [
+    "Signed token sent each request",
+    "httpOnly cookie vs localStorage",
+    "XSS and CSRF trade-off"
+   ],
+   "follow_ups": [
+    "How do refresh tokens help?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-16",
+   "kind": "technical",
+   "category": "node-api",
+   "difficulty": "hard",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "databases"
+   ],
+   "prompt": "When would you pick a document database such as MongoDB over a relational one, and what do you give up?",
+   "ideal_answer": "Pick a document store when data is nested, varies in shape and is read as a whole. You give up joins, strict schema and multi-table transactions, so relational data with many relationships usually fits SQL better.",
+   "key_points": [
+    "Flexible, nested data",
+    "Trade-off: joins and constraints",
+    "Choose by data shape and access"
+   ],
+   "follow_ups": [
+    "How would you model users and their orders in each?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-17",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "easy",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "react-native"
+   ],
+   "prompt": "What is the difference between a native app, a cross-platform app and a progressive web app?",
+   "ideal_answer": "A native app uses each platform's own tools and gets the best performance and device access. A cross-platform app shares most code between iOS and Android, and a progressive web app is a website installable on a phone with limited device access.",
+   "key_points": [
+    "Native, cross-platform, PWA",
+    "Performance and device access",
+    "Cost of maintaining code"
+   ],
+   "follow_ups": [
+    "Which would you choose for a simple internal tool?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-18",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "offline",
+    "performance"
+   ],
+   "prompt": "How would you make a mobile app usable on a slow or offline connection?",
+   "ideal_answer": "Cache data locally, show saved data first and sync in the background, queue user actions made offline and send them later, keep payloads small and show clear status and retry options. Resolve conflicts with a defined rule.",
+   "key_points": [
+    "Local cache first",
+    "Queue offline actions and sync",
+    "Conflict rules and clear status"
+   ],
+   "follow_ups": [
+    "How would you handle two devices editing the same record?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-19",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "lifecycle"
+   ],
+   "prompt": "What happens to an app's state when the user rotates the phone or the system kills it in the background, and how do you handle it?",
+   "ideal_answer": "The screen can be recreated and the process can be stopped, so state held only in memory is lost. Save important state in persistent storage or the platform's saved-state mechanism and restore it when the app returns.",
+   "key_points": [
+    "Screens and processes are recreated",
+    "Persist important state",
+    "Restore on return"
+   ],
+   "follow_ups": [
+    "What should you never keep only in memory?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-20",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "frontend-testing"
+   ],
+   "prompt": "How would you test a React login form?",
+   "ideal_answer": "Render the form and simulate typing and clicking as a user would, test validation messages, a successful login and a failed one with the network mocked, and check accessibility labels. Avoid testing implementation details.",
+   "key_points": [
+    "Test like a user",
+    "Mock the network",
+    "Success, failure, validation"
+   ],
+   "follow_ups": [
+    "What belongs in an end-to-end test instead?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-21",
+   "kind": "technical",
+   "category": "performance",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "web-vitals"
+   ],
+   "prompt": "A web page loads slowly on mobile. What do you check and what are quick wins?",
+   "ideal_answer": "Measure with Lighthouse or the network panel, then reduce image sizes and use modern formats, split and lazy-load JavaScript, remove unused code, cache assets and avoid blocking scripts. Compare before and after.",
+   "key_points": [
+    "Measure first",
+    "Images and bundle size",
+    "Lazy-load and cache"
+   ],
+   "follow_ups": [
+    "What is a Core Web Vital?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-22",
+   "kind": "scenario",
+   "category": "web-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "debugging"
+   ],
+   "prompt": "Scenario: a page works on your laptop but shows a blank screen for some users in production. How do you investigate?",
+   "ideal_answer": "Check browser console errors and error tracking, compare browser versions and the network responses, reproduce with the same data or device and look for environment differences such as missing variables or blocked requests. Fix, add a test and add error monitoring.",
+   "key_points": [
+    "Collect real error data",
+    "Find what differs from your setup",
+    "Fix with a test and monitoring"
+   ],
+   "follow_ups": [
+    "How would you see errors users never report?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-23",
+   "kind": "scenario",
+   "category": "web-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: design the front end of a chat screen that must show new messages instantly and stay fast with thousands of messages.",
+   "ideal_answer": "Use a WebSocket or similar for live updates, store messages in normalised state, virtualise the list, load older messages in pages and handle reconnects and sending status. Keep optimistic updates reversible if sending fails.",
+   "key_points": [
+    "Live connection with reconnect",
+    "Virtualised list and paging",
+    "Optimistic update with failure handling"
+   ],
+   "follow_ups": [
+    "How do you order messages that arrive out of order?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-24",
+   "kind": "technical",
+   "category": "typescript",
+   "difficulty": "medium",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "typescript"
+   ],
+   "prompt": "What does TypeScript add to JavaScript and when do its types stop protecting you?",
+   "ideal_answer": "TypeScript adds static types checked at build time, which catches mistakes early and improves editor help. The types are erased at runtime, so data from an API or user input is not checked unless you validate it, and any or unsafe casts remove the protection.",
+   "key_points": [
+    "Static types checked at build",
+    "Erased at runtime",
+    "Validate external data, avoid any"
+   ],
+   "follow_ups": [
+    "How would you type an API response safely?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "tkxel-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "frontend-developer",
+    "full-stack-developer",
+    "mobile-app-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "tkxel"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Show or describe a web or mobile app you built. Which part was hardest and how did you make it responsive and usable?",
+   "ideal_answer": "A strong answer explains what the app does, your exact role and one real difficulty such as state, an API or layout, how you solved it, and how you tested it on different screen sizes.",
+   "key_points": [
+    "Clear purpose and own role",
+    "One real difficulty and fix",
+    "Responsive and tested"
+   ],
+   "follow_ups": [
+    "What would you improve first?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

@@ -1,0 +1,756 @@
+{
+ "company": "kualitatem",
+ "questions": [
+  {
+   "slug": "kualitatem-tech-01",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "fundamentals"
+   ],
+   "prompt": "What is the difference between verification and validation, and between a bug, a defect and a failure?",
+   "ideal_answer": "Verification checks that the product is built right according to the specification, and validation checks that the right product is built for the user's need. A defect is a flaw in the code or design, which can cause a failure, the visible wrong behaviour. A bug is the everyday word for a defect.",
+   "key_points": [
+    "Built right vs right product",
+    "Defect causes failure",
+    "Different questions"
+   ],
+   "follow_ups": [
+    "Give an example where tests pass but the product is wrong."
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-02",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "test-design"
+   ],
+   "prompt": "How do you write good test cases for a login page?",
+   "ideal_answer": "Cover valid login, wrong password, unknown user, empty fields, locked accounts, password rules, session timeout, logout and security cases such as SQL injection text, plus usability and accessibility. Each case states steps, data and the expected result.",
+   "key_points": [
+    "Positive and negative cases",
+    "Boundaries and security cases",
+    "Clear steps and expected results"
+   ],
+   "follow_ups": [
+    "Which cases would you automate first?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-03",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "techniques"
+   ],
+   "prompt": "Explain equivalence partitioning and boundary value analysis with an example of an age field that accepts 18 to 60.",
+   "ideal_answer": "Equivalence partitioning groups inputs that behave the same, such as below 18, 18 to 60 and above 60, and tests one from each. Boundary value analysis tests at the edges, 17, 18, 19, 59, 60 and 61, where bugs concentrate.",
+   "key_points": [
+    "Partitions of equal behaviour",
+    "Edges: 17, 18, 60, 61",
+    "Fewer, smarter tests"
+   ],
+   "follow_ups": [
+    "How do you test a field with no stated limits?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-04",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "bug-reports"
+   ],
+   "prompt": "What does a good bug report contain and how do you decide its severity and priority?",
+   "ideal_answer": "A good report has a clear title, steps to reproduce, expected and actual results, environment, evidence such as screenshots or logs and the version. Severity is the technical impact, priority is how soon the business wants it fixed, and they can differ.",
+   "key_points": [
+    "Reproducible steps and evidence",
+    "Severity vs priority",
+    "Environment and version"
+   ],
+   "follow_ups": [
+    "Give a high severity but low priority example."
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-05",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "strategy"
+   ],
+   "prompt": "What is the test pyramid and why is a suite made only of end-to-end tests a problem?",
+   "ideal_answer": "The pyramid has many fast unit tests, fewer integration tests and a small number of end-to-end tests. Too many end-to-end tests are slow, fragile and hard to debug, so failures take long to diagnose.",
+   "key_points": [
+    "Layers and proportions",
+    "Cost of UI tests",
+    "Fast feedback"
+   ],
+   "follow_ups": [
+    "Where do API tests fit?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-06",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "risk"
+   ],
+   "prompt": "You have two days to test a release that normally takes a week. How do you decide what to test?",
+   "ideal_answer": "Assess risk by the impact and likelihood of failure and by what changed, test critical user journeys and changed areas first, run automated regression, agree with stakeholders on what is skipped and report the remaining risk clearly.",
+   "key_points": [
+    "Risk-based prioritisation",
+    "Critical paths and changes",
+    "Communicate remaining risk"
+   ],
+   "follow_ups": [
+    "How would you decide whether to delay the release?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-07",
+   "kind": "technical",
+   "category": "automation",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "selenium"
+   ],
+   "prompt": "What is Selenium and what makes UI automation tests flaky?",
+   "ideal_answer": "Selenium controls a browser to run UI tests automatically. Flakiness comes from timing, such as acting before an element is ready, unstable selectors, shared or changing test data and environment differences.",
+   "key_points": [
+    "Browser automation",
+    "Timing and selectors",
+    "Test data and environment"
+   ],
+   "follow_ups": [
+    "How do waits help?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-08",
+   "kind": "technical",
+   "category": "automation",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "python-testing"
+   ],
+   "prompt": "How would you automate API tests in Python and what would each test check?",
+   "ideal_answer": "Use pytest with the requests library, send calls to endpoints and assert the status code, response body and headers, and the effect on the database for writes. Use fixtures for setup and parametrised tests for many inputs.",
+   "key_points": [
+    "pytest and requests",
+    "Status, body, side effects",
+    "Fixtures and parametrisation"
+   ],
+   "follow_ups": [
+    "How do you test an endpoint that needs a login?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-09",
+   "kind": "technical",
+   "category": "automation",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "page-object"
+   ],
+   "prompt": "What is the page object pattern and why does it help?",
+   "ideal_answer": "It wraps each page's elements and actions in a class so tests call methods such as login, not raw selectors. When the page changes you fix one class instead of many tests, which reduces duplication and maintenance.",
+   "key_points": [
+    "Page as a class",
+    "Tests use actions",
+    "One place to fix changes"
+   ],
+   "follow_ups": [
+    "What is a downside?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-10",
+   "kind": "technical",
+   "category": "automation",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "ci"
+   ],
+   "prompt": "How do you integrate automated tests into a CI pipeline and handle a test that fails randomly?",
+   "ideal_answer": "Run fast tests on every push and slower suites on merges or nightly, publish reports and block merges on failures. For a flaky test find the cause, such as timing or shared data, fix or quarantine it with a ticket instead of ignoring failures.",
+   "key_points": [
+    "Staged test runs",
+    "Reports and gates",
+    "Fix or quarantine flaky tests"
+   ],
+   "follow_ups": [
+    "How do you measure flakiness?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-11",
+   "kind": "technical",
+   "category": "automation",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "performance"
+   ],
+   "prompt": "How would you do a basic load test of an API and which numbers do you report?",
+   "ideal_answer": "Use a tool such as JMeter or Locust to simulate users ramping up, measure response time percentiles, throughput, error rate and resource use, and find the point where performance degrades. Test in an environment like production.",
+   "key_points": [
+    "Ramp up simulated users",
+    "Percentiles, throughput, errors",
+    "Realistic environment"
+   ],
+   "follow_ups": [
+    "Why use the 95th percentile and not the average?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-12",
+   "kind": "technical",
+   "category": "security",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "owasp"
+   ],
+   "prompt": "Name three common web vulnerabilities from the OWASP Top 10 and how you would test for them.",
+   "ideal_answer": "SQL injection by entering query fragments in inputs and observing errors or behaviour, cross-site scripting by submitting script text and checking if it runs, and broken access control by trying to open another user's data or admin pages. Always test only with permission.",
+   "key_points": [
+    "Injection, XSS, access control",
+    "Simple test approaches",
+    "Only with permission"
+   ],
+   "follow_ups": [
+    "How do developers prevent each one?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-13",
+   "kind": "technical",
+   "category": "security",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "authentication"
+   ],
+   "prompt": "How would you test the security of a password reset feature?",
+   "ideal_answer": "Check that reset links are random, expire and work once, responses do not reveal whether an email exists, attempts are rate limited, the old password stops working and the link is not leaked in logs or referrers.",
+   "key_points": [
+    "Random, expiring, single-use tokens",
+    "No account enumeration",
+    "Rate limits"
+   ],
+   "follow_ups": [
+    "What is account enumeration?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-14",
+   "kind": "technical",
+   "category": "security",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "pen-testing"
+   ],
+   "prompt": "What are the phases of a penetration test and how does it differ from a vulnerability scan?",
+   "ideal_answer": "A test typically includes scoping and permission, reconnaissance, scanning, exploitation to prove impact, reporting and retesting. A scan automatically lists known weaknesses, while a penetration test uses manual skill to chain and exploit them.",
+   "key_points": [
+    "Phases from scope to retest",
+    "Scan lists, test exploits",
+    "Written permission first"
+   ],
+   "follow_ups": [
+    "Why is a written scope essential?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-15",
+   "kind": "technical",
+   "category": "security",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "api-security"
+   ],
+   "prompt": "What security issues would you look for in a REST API and how would you test them?",
+   "ideal_answer": "Look for missing authentication, broken object-level authorisation, excessive data in responses, weak rate limiting, missing input validation and verbose errors. Test by calling endpoints without tokens, with other users' ids and with malformed input.",
+   "key_points": [
+    "Authentication and object-level authorisation",
+    "Data exposure and rate limits",
+    "Malformed input"
+   ],
+   "follow_ups": [
+    "What is IDOR?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-16",
+   "kind": "technical",
+   "category": "security",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "encryption"
+   ],
+   "prompt": "What is the difference between hashing, encryption and encoding, with a use for each?",
+   "ideal_answer": "Hashing is one-way and used for passwords and integrity, encryption is reversible with a key and protects confidentiality, and encoding such as Base64 only changes representation and gives no secrecy.",
+   "key_points": [
+    "One-way vs reversible vs no secrecy",
+    "Password hashing",
+    "Base64 is not security"
+   ],
+   "follow_ups": [
+    "Why is Base64 never a protection?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-17",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "test-data"
+   ],
+   "prompt": "How would you use SQL to verify that a data migration moved all records correctly?",
+   "ideal_answer": "Compare row counts and key totals between source and target, check for missing or duplicate keys with joins, compare sample records field by field and look for null or truncated values.",
+   "key_points": [
+    "Counts and totals",
+    "Anti-joins for missing keys",
+    "Field-level sampling"
+   ],
+   "follow_ups": [
+    "How would you automate the checks?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-18",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "python",
+    "scripting"
+   ],
+   "prompt": "Write the idea of a Python script that checks a list of URLs and reports which return errors or are slow.",
+   "ideal_answer": "Loop over the URLs with the requests library using timeouts, record the status code and elapsed time, flag errors and slow responses, use concurrency for many URLs and write the results to a file.",
+   "key_points": [
+    "requests with timeouts",
+    "Record status and time",
+    "Concurrency and a report"
+   ],
+   "follow_ups": [
+    "How would you avoid being blocked as a bot?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-19",
+   "kind": "technical",
+   "category": "agile-qa",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "agile"
+   ],
+   "prompt": "What is the role of QA in an Agile team and what is shift-left testing?",
+   "ideal_answer": "QA joins from the start, clarifying requirements, writing acceptance criteria, testing continuously and automating regression. Shift-left means testing earlier, such as reviewing requirements and unit testing, because late defects cost more to fix.",
+   "key_points": [
+    "QA throughout the sprint",
+    "Acceptance criteria",
+    "Earlier is cheaper"
+   ],
+   "follow_ups": [
+    "What is a definition of done?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-20",
+   "kind": "technical",
+   "category": "api-testing",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "postman"
+   ],
+   "prompt": "How do you test an API that returns a list with pagination and filters?",
+   "ideal_answer": "Check the default page, page size limits, first and last page, an out-of-range page, each filter alone and combined, sorting, empty results and invalid parameters, and verify counts against the database.",
+   "key_points": [
+    "Pagination boundaries",
+    "Filter combinations",
+    "Invalid parameters and counts"
+   ],
+   "follow_ups": [
+    "How would you check performance for deep pages?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-21",
+   "kind": "scenario",
+   "category": "kual-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "defects"
+   ],
+   "prompt": "Scenario: a developer says your bug is not a bug and works as designed. What do you do?",
+   "ideal_answer": "Check the requirement or specification, show the evidence and the user impact, discuss calmly with the developer and product owner to confirm the intended behaviour, and record the outcome, either fixing it or updating the documentation.",
+   "key_points": [
+    "Check the requirement",
+    "Show evidence and impact",
+    "Agree and record"
+   ],
+   "follow_ups": [
+    "What if there is no written requirement?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-22",
+   "kind": "scenario",
+   "category": "kual-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "automation-design"
+   ],
+   "prompt": "Scenario: a team wants to automate 2,000 manual test cases next quarter. How do you plan it?",
+   "ideal_answer": "Prioritise stable, high-value and repeated cases, automate at the lowest sensible level, build a maintainable framework with reporting and CI, track coverage and maintenance cost and keep exploratory testing manual. Do not try to automate everything.",
+   "key_points": [
+    "Prioritise by value and stability",
+    "Right level and framework",
+    "Keep exploratory testing"
+   ],
+   "follow_ups": [
+    "How do you measure return on automation?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-23",
+   "kind": "scenario",
+   "category": "kual-scenario",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "communication"
+   ],
+   "prompt": "Scenario: you find a critical bug one hour before release. What do you do?",
+   "ideal_answer": "Verify and reproduce it quickly, document the impact, inform the release owner and team immediately with facts, suggest options such as a fix, a workaround or a delay and let the decision-maker choose.",
+   "key_points": [
+    "Verify and document",
+    "Escalate immediately",
+    "Offer options"
+   ],
+   "follow_ups": [
+    "What would you do afterwards?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-24",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "regression"
+   ],
+   "prompt": "What is regression testing and smoke testing and when do you run each?",
+   "ideal_answer": "Smoke testing is a quick check that the main functions work after a new build, deciding whether deeper testing is worthwhile. Regression testing reruns existing tests after changes to confirm old behaviour still works, and is best automated.",
+   "key_points": [
+    "Quick build check vs broad re-check",
+    "Run smoke first",
+    "Automate regression"
+   ],
+   "follow_ups": [
+    "What would you include in a smoke suite?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "kualitatem-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "backend-developer",
+    "full-stack-developer"
+   ],
+   "companies": [
+    "kualitatem"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe a testing, automation or security exercise you did. What did you find and how did you report it?",
+   "ideal_answer": "A strong answer describes the target and scope, what you tested and how, a real finding with its impact, how you reported it and what you learned.",
+   "key_points": [
+    "Scope and method",
+    "A real finding and impact",
+    "Clear reporting"
+   ],
+   "follow_ups": [
+    "What would you automate from it?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

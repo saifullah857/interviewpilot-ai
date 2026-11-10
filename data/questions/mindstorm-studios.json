@@ -1,0 +1,780 @@
+{
+ "company": "mindstorm-studios",
+ "questions": [
+  {
+   "slug": "mindstorm-studios-tech-01",
+   "kind": "technical",
+   "category": "csharp",
+   "difficulty": "easy",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "csharp"
+   ],
+   "prompt": "What is the difference between a class and a struct in C#, and why do games care about it?",
+   "ideal_answer": "A class is a reference type allocated on the heap and a struct is a value type copied on assignment. Games care because many small heap objects create garbage that can cause frame stutters, so small data such as vectors are often structs.",
+   "key_points": [
+    "Reference vs value type",
+    "Heap allocation and garbage",
+    "Small data as structs"
+   ],
+   "follow_ups": [
+    "Why can copying a large struct be slow?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-02",
+   "kind": "technical",
+   "category": "csharp",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "memory"
+   ],
+   "prompt": "What causes garbage collection spikes in a Unity game and how do you reduce them?",
+   "ideal_answer": "Allocating objects every frame, such as creating new lists, strings or closures in Update, fills the heap and triggers the collector, which pauses the game. Reuse objects with pooling, cache references and avoid string concatenation in hot paths.",
+   "key_points": [
+    "Per-frame allocations",
+    "Object pooling",
+    "Cache and reuse"
+   ],
+   "follow_ups": [
+    "How would you find where allocations come from?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-03",
+   "kind": "technical",
+   "category": "csharp",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "oop"
+   ],
+   "prompt": "How do inheritance and composition differ when building game characters, and which is usually better in Unity?",
+   "ideal_answer": "Inheritance builds a deep class tree such as Enemy and FlyingEnemy, which becomes rigid. Composition attaches small components such as Health and Movement to an object, which is the Unity model and easier to mix and reuse.",
+   "key_points": [
+    "Rigid hierarchies",
+    "Components are reusable",
+    "Unity favours composition"
+   ],
+   "follow_ups": [
+    "How do components talk to each other?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-04",
+   "kind": "technical",
+   "category": "unity",
+   "difficulty": "easy",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "lifecycle"
+   ],
+   "prompt": "What are Awake, Start, Update, FixedUpdate and LateUpdate in Unity and what goes in each?",
+   "ideal_answer": "Awake and Start initialise an object, Update runs every frame for input and logic, FixedUpdate runs at a fixed rate for physics and LateUpdate runs after all updates, for example for a camera following a target.",
+   "key_points": [
+    "Initialisation vs per-frame",
+    "FixedUpdate for physics",
+    "LateUpdate for cameras"
+   ],
+   "follow_ups": [
+    "Why is movement multiplied by Time.deltaTime?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-05",
+   "kind": "technical",
+   "category": "unity",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "physics"
+   ],
+   "prompt": "Why should physics movement be done in FixedUpdate and what is the difference between a collider and a trigger?",
+   "ideal_answer": "Physics runs on a fixed time step, so applying forces in FixedUpdate keeps behaviour consistent regardless of frame rate. A collider physically blocks other bodies, while a trigger only reports overlap without blocking.",
+   "key_points": [
+    "Fixed time step",
+    "Frame-rate independence",
+    "Collider vs trigger"
+   ],
+   "follow_ups": [
+    "What is a Rigidbody for?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-06",
+   "kind": "technical",
+   "category": "unity",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "performance"
+   ],
+   "prompt": "A mobile game drops to 20 frames per second. How do you find and fix the cause?",
+   "ideal_answer": "Use the profiler to see whether the CPU, GPU or memory is the limit, then reduce draw calls with batching and atlases, cut expensive per-frame code, lower overdraw and shader cost, and test on a real low-end device.",
+   "key_points": [
+    "Profile first",
+    "Draw calls and overdraw",
+    "Test on real devices"
+   ],
+   "follow_ups": [
+    "What is batching?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-07",
+   "kind": "technical",
+   "category": "unity",
+   "difficulty": "hard",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "architecture"
+   ],
+   "prompt": "How would you structure a Unity project so that game logic is testable and not tied to scenes and components?",
+   "ideal_answer": "Keep core rules in plain C# classes without Unity dependencies, use MonoBehaviours as thin adapters, communicate with events or interfaces and use scriptable objects for data. Plain classes can then be unit tested.",
+   "key_points": [
+    "Plain C# for logic",
+    "Thin MonoBehaviours",
+    "Events and data assets"
+   ],
+   "follow_ups": [
+    "What are the downsides of singletons in games?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-08",
+   "kind": "technical",
+   "category": "unity",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "pooling"
+   ],
+   "prompt": "What is object pooling and when would you use it for bullets or enemies?",
+   "ideal_answer": "A pool pre-creates objects and reuses them by activating and deactivating instead of creating and destroying them. This avoids allocation and garbage collection costs for things spawned often, such as bullets.",
+   "key_points": [
+    "Reuse instead of destroy",
+    "Avoids garbage",
+    "Reset state on reuse"
+   ],
+   "follow_ups": [
+    "What bug appears if you forget to reset a pooled object?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-09",
+   "kind": "technical",
+   "category": "game-dev",
+   "difficulty": "easy",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "game-loop"
+   ],
+   "prompt": "What is the game loop and why is frame-rate independence important?",
+   "ideal_answer": "The game loop repeatedly reads input, updates the game state and renders a frame. Movement and timers must use elapsed time, not frame counts, so the game runs at the same speed on fast and slow devices.",
+   "key_points": [
+    "Input, update, render",
+    "Use elapsed time",
+    "Same speed everywhere"
+   ],
+   "follow_ups": [
+    "What is a fixed time step?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-10",
+   "kind": "technical",
+   "category": "game-dev",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "math"
+   ],
+   "prompt": "How would you move an enemy toward the player at a constant speed and make it face the player?",
+   "ideal_answer": "Compute the direction as the normalised vector from the enemy to the player, multiply it by speed and delta time and add it to the position, and rotate the enemy to look along that direction. Stop when it is close enough.",
+   "key_points": [
+    "Normalised direction vector",
+    "Speed times delta time",
+    "Rotate toward the direction"
+   ],
+   "follow_ups": [
+    "Why is normalising needed?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-11",
+   "kind": "technical",
+   "category": "game-dev",
+   "difficulty": "hard",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "ai"
+   ],
+   "prompt": "How would you implement simple enemy behaviour that patrols, chases and attacks?",
+   "ideal_answer": "Use a finite state machine with states such as patrol, chase and attack and clear transitions based on distance or sight, keeping each state's logic separate. Use pathfinding such as A-star on a navigation mesh for movement.",
+   "key_points": [
+    "State machine",
+    "Transitions on conditions",
+    "Pathfinding for movement"
+   ],
+   "follow_ups": [
+    "When would you use a behaviour tree?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-12",
+   "kind": "technical",
+   "category": "game-dev",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "data-structures"
+   ],
+   "prompt": "Which data structures would you use for an inventory system and for finding all enemies near the player?",
+   "ideal_answer": "A dictionary from item id to quantity gives fast stack updates for an inventory. For nearby enemies, a spatial structure such as a grid or quadtree avoids checking every enemy each frame.",
+   "key_points": [
+    "Dictionary for inventory",
+    "Spatial partitioning",
+    "Avoid checking everything"
+   ],
+   "follow_ups": [
+    "How does a grid speed up collision checks?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-13",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "monetisation"
+   ],
+   "prompt": "What do you need to consider when adding ads and in-app purchases to a mobile game?",
+   "ideal_answer": "Respect the platform's store rules and privacy requirements, avoid interrupting gameplay badly, validate purchases on a server to stop fraud, handle failures and restores and test with sandbox accounts. Keep the experience fair.",
+   "key_points": [
+    "Store rules and privacy",
+    "Server-side validation",
+    "Sandbox testing"
+   ],
+   "follow_ups": [
+    "How do you restore a purchase on a new device?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-14",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "platforms"
+   ],
+   "prompt": "How do you handle different screen sizes and low-end devices in a mobile game?",
+   "ideal_answer": "Use anchors and scalable UI, test several aspect ratios, provide quality settings, compress textures and keep builds small. Always test on real low-end hardware, not only the editor.",
+   "key_points": [
+    "Scalable UI",
+    "Quality settings",
+    "Test on real devices"
+   ],
+   "follow_ups": [
+    "How do you reduce the build size?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-15",
+   "kind": "technical",
+   "category": "mobile",
+   "difficulty": "hard",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "networking"
+   ],
+   "prompt": "How would you design a basic online leaderboard and prevent obvious cheating?",
+   "ideal_answer": "Send scores to a server that validates them, for example against plausible ranges or replay data, authenticate players, store scores in a sorted structure or database index and rate limit submissions. Never trust the client alone.",
+   "key_points": [
+    "Server validates scores",
+    "Authentication and rate limits",
+    "Efficient ranking"
+   ],
+   "follow_ups": [
+    "How do you handle ties?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-16",
+   "kind": "technical",
+   "category": "backend",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "api"
+   ],
+   "prompt": "How would you save and load player progress both locally and in the cloud?",
+   "ideal_answer": "Serialise the data to JSON or a binary format with a version number, save locally for offline play, sync to a server with timestamps and a conflict rule and handle corrupted saves with backups.",
+   "key_points": [
+    "Versioned save format",
+    "Local plus cloud sync",
+    "Conflict rule and backups"
+   ],
+   "follow_ups": [
+    "What if the player plays on two devices?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-17",
+   "kind": "technical",
+   "category": "sql",
+   "difficulty": "easy",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "sql"
+   ],
+   "prompt": "Write the idea of a query that returns the top 10 players by score with their rank.",
+   "ideal_answer": "Select players ordered by score descending with a limit of 10, and add RANK() or ROW_NUMBER() over the same ordering to produce the rank, deciding how ties are shown.",
+   "key_points": [
+    "ORDER BY score DESC",
+    "LIMIT 10",
+    "RANK window function"
+   ],
+   "follow_ups": [
+    "How would you get a single player's rank?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-18",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "pathfinding"
+   ],
+   "prompt": "Explain breadth-first search and A-star and when you would use each on a game grid.",
+   "ideal_answer": "Breadth-first search explores outward equally and finds the shortest path on an unweighted grid. A-star adds a heuristic estimate of the distance to the goal, so it finds good paths faster, especially on large maps with different costs.",
+   "key_points": [
+    "BFS for unweighted grids",
+    "A-star uses a heuristic",
+    "Faster on large maps"
+   ],
+   "follow_ups": [
+    "What makes a heuristic admissible?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-19",
+   "kind": "technical",
+   "category": "dsa",
+   "difficulty": "hard",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "algorithms"
+   ],
+   "prompt": "How would you find the closest pair among 10,000 points more efficiently than checking all pairs?",
+   "ideal_answer": "Checking all pairs is O(n squared). Sort or grid the points and compare only neighbours in the same or adjacent cells, or use the divide-and-conquer closest pair algorithm in O(n log n).",
+   "key_points": [
+    "Brute force is quadratic",
+    "Spatial grid",
+    "Divide and conquer"
+   ],
+   "follow_ups": [
+    "How does a grid cell size affect speed?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-20",
+   "kind": "technical",
+   "category": "git",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "version-control"
+   ],
+   "prompt": "Why are game projects hard to manage in Git and how do you deal with large binary assets and scene conflicts?",
+   "ideal_answer": "Large binaries bloat repositories and scenes or prefabs are hard to merge. Use Git LFS or a suitable version control system, text-based serialisation for scenes, small prefabs and clear ownership so two people do not edit the same scene.",
+   "key_points": [
+    "Large binary files",
+    "Git LFS",
+    "Avoid editing the same scene"
+   ],
+   "follow_ups": [
+    "How do you structure scenes to reduce conflicts?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-21",
+   "kind": "scenario",
+   "category": "mind-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "debugging"
+   ],
+   "prompt": "Scenario: players report the game crashes on some Android phones but not on yours. How do you investigate?",
+   "ideal_answer": "Collect crash logs from a reporting tool, find the common device, OS version or graphics driver, reproduce on a similar device or emulator, fix the cause, such as memory or an unsupported shader, and release a test build to those users.",
+   "key_points": [
+    "Crash reporting data",
+    "Find the common factor",
+    "Reproduce and verify"
+   ],
+   "follow_ups": [
+    "How would you catch this before release?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-22",
+   "kind": "scenario",
+   "category": "mind-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: design the system for a daily reward that cannot be claimed twice or by changing the phone's clock.",
+   "ideal_answer": "Keep the claim time and streak on the server using server time, make the claim request idempotent per day and return the next available time. Never trust the device clock.",
+   "key_points": [
+    "Server time",
+    "Idempotent claims",
+    "Do not trust the client clock"
+   ],
+   "follow_ups": [
+    "How would you handle time zones?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-23",
+   "kind": "scenario",
+   "category": "mind-scenario",
+   "difficulty": "easy",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "teamwork"
+   ],
+   "prompt": "Scenario: an artist and a designer disagree with you about how a feature should work. What do you do?",
+   "ideal_answer": "Listen to their goals, show the options with a quick prototype and the technical cost of each, and decide together or escalate to the lead using the player experience as the common ground.",
+   "key_points": [
+    "Understand their goals",
+    "Prototype and show costs",
+    "Decide by player experience"
+   ],
+   "follow_ups": [
+    "How do you give feedback on a game build?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-24",
+   "kind": "technical",
+   "category": "csharp",
+   "difficulty": "easy",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "collections"
+   ],
+   "prompt": "When would you use a List, a Dictionary and a Queue in game code?",
+   "ideal_answer": "A List holds ordered items such as the enemies in a wave, a Dictionary gives fast lookup by key such as an item by id, and a Queue processes things in order, such as events or spawn requests. Choose by the operation you do most.",
+   "key_points": [
+    "List, Dictionary, Queue roles",
+    "Choose by operation",
+    "Lookup cost"
+   ],
+   "follow_ups": [
+    "What happens when you remove items from a list while looping over it?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "mindstorm-studios-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "mobile-app-developer",
+    "full-stack-developer",
+    "python-developer",
+    "backend-developer"
+   ],
+   "companies": [
+    "mindstorm-studios"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe a game or interactive app you built. What was your role, what was the hardest technical problem and how did you test it on devices?",
+   "ideal_answer": "A strong answer states the game and platform, your own role, one real problem such as performance or physics with its fix and how it was tested on real devices.",
+   "key_points": [
+    "Own role",
+    "A real problem and fix",
+    "Device testing"
+   ],
+   "follow_ups": [
+    "What would you improve?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}

@@ -1,0 +1,260 @@
+{
+  "_meta": {
+    "version": "2026-11-02",
+    "note": "General skill lists written by InterviewPilot for each role. They are NOT taken from any company's job ad. Company-specific requirements arrive in Phase 5 with sources."
+  },
+  "aliases": {
+    "js": "javascript",
+    "py": "python",
+    "ml": "machine learning",
+    "dl": "deep learning",
+    "sklearn": "scikit-learn",
+    "scikit learn": "scikit-learn",
+    "tf": "tensorflow",
+    "postgres": "sql",
+    "rest": "rest api",
+    "restful api": "rest api",
+    "restful apis": "rest api",
+    "rest apis": "rest api",
+    "apis": "rest api",
+    "api": "rest api",
+    "natural language processing": "nlp",
+    "llms": "llm",
+    "large language models": "llm",
+    "large language model": "llm",
+    "retrieval augmented generation": "rag",
+    "retrieval-augmented generation": "rag",
+    "numpy": "numpy",
+    "np": "numpy",
+    "pd": "pandas",
+    "unit testing": "testing",
+    "pytest": "testing",
+    "unittest": "testing",
+    "stats": "statistics",
+    "statistical analysis": "statistics",
+    "data viz": "data visualization",
+    "data visualisation": "data visualization",
+    "matplotlib": "data visualization",
+    "seaborn": "data visualization",
+    "tableau": "data visualization",
+    "power bi": "data visualization",
+    "github": "git",
+    "gitlab": "git",
+    "mysql": "sql",
+    "sqlite": "sql",
+    "postgresql": "sql",
+    "t-sql": "sql",
+    "es6": "javascript",
+    "node": "node.js",
+    "nodejs": "node.js",
+    "node js": "node.js",
+    "reactjs": "react",
+    "react.js": "react",
+    "react js": "react",
+    "nextjs": "next.js",
+    "next js": "next.js",
+    "ts": "typescript",
+    "html5": "html",
+    "css3": "css",
+    "tailwind": "tailwind css",
+    "tailwindcss": "tailwind css",
+    "expressjs": "express",
+    "express.js": "express",
+    "mongo": "mongodb",
+    "mongo db": "mongodb",
+    "flutter framework": "flutter",
+    "reactnative": "react native",
+    "react-native": "react native",
+    "database": "databases",
+    "dbms": "databases",
+    "responsive": "responsive design",
+    "responsive web design": "responsive design",
+    "bootstrap": "css",
+    "sass": "css",
+    "ci cd": "ci/cd",
+    "cicd": "ci/cd",
+    "a11y": "accessibility",
+    "bloc": "state management",
+    "provider": "state management",
+    "redux toolkit": "redux",
+    "django rest framework": "django",
+    "drf": "django",
+    "microservice": "microservices",
+    "psql": "sql"
+  },
+  "roles": [
+    {
+      "slug": "python-developer",
+      "title": "Python Developer",
+      "required": [
+        "python",
+        "sql",
+        "git",
+        "rest api",
+        "testing"
+      ],
+      "preferred": [
+        "django",
+        "flask",
+        "fastapi",
+        "docker",
+        "linux",
+        "data structures",
+        "algorithms"
+      ],
+      "family": "backend"
+    },
+    {
+      "slug": "ai-ml-engineer-intern",
+      "title": "AI/ML Engineer Intern",
+      "required": [
+        "python",
+        "machine learning",
+        "numpy",
+        "pandas",
+        "statistics"
+      ],
+      "preferred": [
+        "scikit-learn",
+        "pytorch",
+        "tensorflow",
+        "deep learning",
+        "nlp",
+        "sql",
+        "git"
+      ],
+      "family": "ai-ml"
+    },
+    {
+      "slug": "junior-ai-engineer",
+      "title": "Junior AI Engineer",
+      "required": [
+        "python",
+        "machine learning",
+        "deep learning",
+        "git",
+        "rest api"
+      ],
+      "preferred": [
+        "pytorch",
+        "tensorflow",
+        "llm",
+        "rag",
+        "nlp",
+        "docker",
+        "sql",
+        "fastapi"
+      ],
+      "family": "ai-ml"
+    },
+    {
+      "slug": "data-scientist",
+      "title": "Data Scientist",
+      "required": [
+        "python",
+        "sql",
+        "statistics",
+        "pandas",
+        "machine learning",
+        "data visualization"
+      ],
+      "preferred": [
+        "scikit-learn",
+        "numpy",
+        "spark",
+        "a/b testing",
+        "deep learning",
+        "git"
+      ],
+      "family": "data"
+    },
+    {
+      "slug": "frontend-developer",
+      "title": "Frontend Developer",
+      "required": [
+        "html",
+        "css",
+        "javascript",
+        "react",
+        "git",
+        "responsive design"
+      ],
+      "preferred": [
+        "typescript",
+        "tailwind css",
+        "redux",
+        "testing",
+        "rest api",
+        "next.js",
+        "accessibility"
+      ],
+      "family": "frontend"
+    },
+    {
+      "slug": "full-stack-developer",
+      "title": "Full-Stack Web Developer",
+      "required": [
+        "javascript",
+        "react",
+        "node.js",
+        "sql",
+        "rest api",
+        "git",
+        "html",
+        "css"
+      ],
+      "preferred": [
+        "typescript",
+        "next.js",
+        "mongodb",
+        "docker",
+        "testing",
+        "express",
+        "python"
+      ],
+      "family": "web"
+    },
+    {
+      "slug": "backend-developer",
+      "title": "Backend Developer",
+      "required": [
+        "python",
+        "sql",
+        "rest api",
+        "git",
+        "databases"
+      ],
+      "preferred": [
+        "django",
+        "fastapi",
+        "node.js",
+        "docker",
+        "redis",
+        "testing",
+        "linux",
+        "microservices"
+      ],
+      "family": "backend"
+    },
+    {
+      "slug": "mobile-app-developer",
+      "title": "Mobile App Developer",
+      "required": [
+        "flutter",
+        "dart",
+        "rest api",
+        "git",
+        "state management"
+      ],
+      "preferred": [
+        "react native",
+        "kotlin",
+        "swift",
+        "firebase",
+        "testing",
+        "ci/cd"
+      ],
+      "family": "mobile"
+    }
+  ]
+}

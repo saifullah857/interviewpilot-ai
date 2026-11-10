@@ -1,0 +1,780 @@
+{
+ "company": "confiz",
+ "questions": [
+  {
+   "slug": "confiz-tech-01",
+   "kind": "technical",
+   "category": "csharp",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "csharp"
+   ],
+   "prompt": "What is the difference between an interface and an abstract class in C#, and what is a record?",
+   "ideal_answer": "An interface is a contract that a class can combine with others, while an abstract class can carry shared code and state but allows one base only. A record is a reference type designed for immutable data with value-based equality and easy copying.",
+   "key_points": [
+    "Contract vs shared base",
+    "Single inheritance",
+    "Records: immutable, value equality"
+   ],
+   "follow_ups": [
+    "When would you pick a record over a class?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-02",
+   "kind": "technical",
+   "category": "csharp",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "collections"
+   ],
+   "prompt": "When would you choose a List, a Dictionary, a HashSet or a Queue in C#?",
+   "ideal_answer": "List gives ordered indexed items, Dictionary gives fast lookup by key, HashSet gives fast membership and uniqueness and Queue gives first-in first-out processing. Choose by the operation you do most.",
+   "key_points": [
+    "Four collections",
+    "Choose by operation",
+    "Lookup cost differences"
+   ],
+   "follow_ups": [
+    "What does Dictionary do on a missing key?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-03",
+   "kind": "technical",
+   "category": "csharp",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "memory"
+   ],
+   "prompt": "How does garbage collection work in .NET and what is IDisposable for?",
+   "ideal_answer": "The garbage collector frees managed objects that are no longer reachable, at times it chooses. IDisposable releases unmanaged resources such as files and connections deterministically, usually with a using statement.",
+   "key_points": [
+    "Reachability-based collection",
+    "Unmanaged resources need Dispose",
+    "using statement"
+   ],
+   "follow_ups": [
+    "What happens if you forget to dispose a database connection?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-04",
+   "kind": "technical",
+   "category": "dotnet",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "web-api"
+   ],
+   "prompt": "How would you validate input and return consistent errors in an ASP.NET Core API?",
+   "ideal_answer": "Use model validation attributes or a validation library, return problem details with the right status code, handle unexpected exceptions in a global handler and never expose stack traces to clients.",
+   "key_points": [
+    "Validation at the boundary",
+    "Problem details responses",
+    "Global exception handling"
+   ],
+   "follow_ups": [
+    "How do you version the API?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-05",
+   "kind": "technical",
+   "category": "dotnet",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "configuration"
+   ],
+   "prompt": "How do you manage configuration and secrets across development, test and production in .NET?",
+   "ideal_answer": "Use layered configuration files and environment variables per environment and keep secrets in a secrets store such as Azure Key Vault, never in source control. Bind settings to typed classes.",
+   "key_points": [
+    "Layered configuration",
+    "Secrets in a vault",
+    "Typed settings"
+   ],
+   "follow_ups": [
+    "How do you avoid committing a secret by accident?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-06",
+   "kind": "technical",
+   "category": "dotnet",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "entity-framework"
+   ],
+   "prompt": "What is the difference between tracking and no-tracking queries in Entity Framework and what is the N+1 problem?",
+   "ideal_answer": "Tracking keeps entities so changes can be saved, but costs memory. No-tracking is faster for read-only queries. N+1 means loading related data with one query per row, which you fix with Include, projection or a join.",
+   "key_points": [
+    "Tracking cost",
+    "AsNoTracking for reads",
+    "Include or projection against N+1"
+   ],
+   "follow_ups": [
+    "How do you spot N+1 in logs?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-07",
+   "kind": "technical",
+   "category": "sql-server",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "tsql"
+   ],
+   "prompt": "What is the difference between a clustered and a non-clustered index in SQL Server?",
+   "ideal_answer": "A clustered index defines the physical order of the table's rows, so there is only one per table, while a non-clustered index is a separate structure with pointers to the rows and a table can have many.",
+   "key_points": [
+    "Physical order vs separate structure",
+    "One clustered per table",
+    "Trade-offs for writes"
+   ],
+   "follow_ups": [
+    "What is a key lookup?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-08",
+   "kind": "technical",
+   "category": "sql-server",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "tsql"
+   ],
+   "prompt": "How would you write a query that returns the latest order for each customer in T-SQL?",
+   "ideal_answer": "Use ROW_NUMBER() OVER (PARTITION BY CustomerId ORDER BY OrderDate DESC) in a common table expression and filter to row number 1, or use CROSS APPLY with TOP 1.",
+   "key_points": [
+    "ROW_NUMBER with partition",
+    "CTE and filter",
+    "CROSS APPLY alternative"
+   ],
+   "follow_ups": [
+    "How do you handle ties?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-09",
+   "kind": "technical",
+   "category": "sql-server",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "performance"
+   ],
+   "prompt": "A stored procedure runs fast for some parameters and very slowly for others. What could be the reason?",
+   "ideal_answer": "This is often parameter sniffing, where the cached plan suits the first parameter values but not others. Compare execution plans, update statistics and consider recompile hints, query rewrites or better indexes.",
+   "key_points": [
+    "Parameter sniffing",
+    "Compare plans",
+    "Statistics, hints, indexes"
+   ],
+   "follow_ups": [
+    "Why can OPTION (RECOMPILE) be costly?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-10",
+   "kind": "technical",
+   "category": "data",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "etl"
+   ],
+   "prompt": "How would you design an ETL job that loads daily retail sales files into a data warehouse reliably?",
+   "ideal_answer": "Land the files, validate their structure and totals, transform into the warehouse model, load idempotently with a batch id, log counts and reject bad rows with reasons, and alert on failures. Keep raw files for reruns.",
+   "key_points": [
+    "Validate and reconcile",
+    "Idempotent load with batch id",
+    "Reject table and alerts"
+   ],
+   "follow_ups": [
+    "How do you handle a file that arrives twice?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-11",
+   "kind": "technical",
+   "category": "data",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "reporting"
+   ],
+   "prompt": "What is the difference between a fact table and a dimension table and what is a slowly changing dimension?",
+   "ideal_answer": "A fact table stores measurements such as sales, and dimension tables describe them, such as product or store. A slowly changing dimension handles descriptive data that changes, for example by keeping history rows with validity dates.",
+   "key_points": [
+    "Facts vs dimensions",
+    "Grain of the fact table",
+    "History with validity dates"
+   ],
+   "follow_ups": [
+    "Which type of slowly changing dimension keeps full history?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-12",
+   "kind": "technical",
+   "category": "data",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "power-bi"
+   ],
+   "prompt": "A Power BI report is slow and shows different totals than the source system. How do you investigate?",
+   "ideal_answer": "Check the data model for relationships and filters, review measures and aggregation, compare row counts and totals stepwise back to the source, look for duplicates and refresh timing and reduce model size with import mode choices and summaries.",
+   "key_points": [
+    "Trace totals step by step",
+    "Model relationships and measures",
+    "Performance of the model"
+   ],
+   "follow_ups": [
+    "What is the difference between import and DirectQuery?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-13",
+   "kind": "technical",
+   "category": "cloud",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "azure"
+   ],
+   "prompt": "What Azure services would you use to host a web API with a database and why?",
+   "ideal_answer": "Azure App Service or containers run the API, Azure SQL Database provides a managed relational database, Key Vault stores secrets, Application Insights monitors it and a managed identity gives access without stored passwords.",
+   "key_points": [
+    "Managed hosting and database",
+    "Key Vault and managed identity",
+    "Monitoring"
+   ],
+   "follow_ups": [
+    "How would you scale the API?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-14",
+   "kind": "technical",
+   "category": "cloud",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "messaging"
+   ],
+   "prompt": "When would you use a queue such as Azure Service Bus between services and how do you handle poison messages?",
+   "ideal_answer": "Use a queue to decouple services, smooth spikes and retry safely. A poison message that always fails is moved after several attempts to a dead-letter queue for inspection, so it does not block others.",
+   "key_points": [
+    "Decoupling and buffering",
+    "Retries then dead-letter",
+    "Idempotent consumers"
+   ],
+   "follow_ups": [
+    "Why must consumers be idempotent?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-15",
+   "kind": "technical",
+   "category": "retail",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "domain"
+   ],
+   "prompt": "How would you model products, prices and promotions for a retail system so that prices can change over time and past sales stay correct?",
+   "ideal_answer": "Store prices with validity dates and keep the price actually charged on each sale line, so later price changes do not alter history. Model promotions as rules with periods and priorities.",
+   "key_points": [
+    "Prices with validity periods",
+    "Store the charged price on the sale",
+    "Promotion rules and priority"
+   ],
+   "follow_ups": [
+    "How do you handle two promotions that overlap?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-16",
+   "kind": "technical",
+   "category": "retail",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "consistency"
+   ],
+   "prompt": "Many tills record sales offline and sync later. How do you avoid duplicates and conflicts?",
+   "ideal_answer": "Give each sale a unique id created on the till, make the server accept it idempotently, sync in batches with retries and resolve conflicts such as stock with defined rules and reconciliation.",
+   "key_points": [
+    "Unique id per sale",
+    "Idempotent sync",
+    "Conflict rules and reconciliation"
+   ],
+   "follow_ups": [
+    "How would you handle a till whose clock is wrong?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-17",
+   "kind": "technical",
+   "category": "oop",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "solid"
+   ],
+   "prompt": "What is dependency inversion and how does it help you test business logic?",
+   "ideal_answer": "High-level logic should depend on abstractions, not concrete classes. Injecting an interface for the database or email lets tests supply fakes and makes implementations replaceable.",
+   "key_points": [
+    "Depend on abstractions",
+    "Inject dependencies",
+    "Fakes in tests"
+   ],
+   "follow_ups": [
+    "What is the difference from dependency injection?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-18",
+   "kind": "technical",
+   "category": "oop",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "patterns"
+   ],
+   "prompt": "Explain the unit of work and repository patterns and a drawback of repositories over an ORM.",
+   "ideal_answer": "A repository hides data access behind an interface and a unit of work groups changes into one transaction. With an ORM that already does both, an extra repository layer can add boilerplate without benefit.",
+   "key_points": [
+    "Repository hides storage",
+    "Unit of work is one transaction",
+    "Possible redundant layer"
+   ],
+   "follow_ups": [
+    "When is a repository still worth it?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-19",
+   "kind": "technical",
+   "category": "python",
+   "difficulty": "easy",
+   "roles": [
+    "python-developer",
+    "data-scientist",
+    "backend-developer"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "python"
+   ],
+   "prompt": "Compare Python and C# for a data processing task and say when you would use each.",
+   "ideal_answer": "Python is quick to write with strong data libraries such as pandas, so it suits analysis and scripting, while C# is strongly typed and fast, fitting large maintainable services and Microsoft-stack applications. Choose by team skills and the ecosystem.",
+   "key_points": [
+    "Productivity vs type safety",
+    "Data libraries",
+    "Match the ecosystem"
+   ],
+   "follow_ups": [
+    "How could they work together?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-20",
+   "kind": "technical",
+   "category": "testing",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "testing"
+   ],
+   "prompt": "How do you write tests for an ASP.NET Core API without a real database?",
+   "ideal_answer": "Use unit tests with fakes for the services and integration tests with an in-memory or containerised test database, call endpoints through a test server and check status codes and results.",
+   "key_points": [
+    "Fakes for unit tests",
+    "Test server for integration",
+    "Isolated test data"
+   ],
+   "follow_ups": [
+    "Why is the in-memory provider not a perfect substitute?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-21",
+   "kind": "scenario",
+   "category": "confiz-scenario",
+   "difficulty": "medium",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "debugging"
+   ],
+   "prompt": "Scenario: month-end sales totals in the report are lower than in the point-of-sale system. How do you find out why?",
+   "ideal_answer": "Reconcile at day, store and transaction level to find where totals diverge, check for failed or late loads, duplicates removed by mistake, time zone cut-offs and filters in the report, then fix and add a daily reconciliation check.",
+   "key_points": [
+    "Narrow the difference",
+    "Check loads, duplicates, cut-offs",
+    "Permanent reconciliation"
+   ],
+   "follow_ups": [
+    "How would you explain it to the business?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-22",
+   "kind": "scenario",
+   "category": "confiz-scenario",
+   "difficulty": "hard",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "design"
+   ],
+   "prompt": "Scenario: design a dashboard backend that lets a retail manager see today's sales by store within a minute of each sale.",
+   "ideal_answer": "Stream sales events into a queue, aggregate them incrementally into a fast store or summary tables, serve the dashboard from those summaries and reconcile with the full data later. Handle late and duplicate events.",
+   "key_points": [
+    "Event stream",
+    "Incremental aggregation",
+    "Reconcile and handle duplicates"
+   ],
+   "follow_ups": [
+    "What if a store's connection is down?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-23",
+   "kind": "scenario",
+   "category": "confiz-scenario",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "teamwork"
+   ],
+   "prompt": "Scenario: a client reports a bug you cannot reproduce. What do you do?",
+   "ideal_answer": "Ask for exact steps, data, time and environment, check logs and monitoring around that time, try to reproduce with similar data and add logging if needed. Keep the client informed.",
+   "key_points": [
+    "Gather precise details",
+    "Check logs",
+    "Communicate"
+   ],
+   "follow_ups": [
+    "When do you add extra logging in production?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-24",
+   "kind": "technical",
+   "category": "git",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "git"
+   ],
+   "prompt": "How does your team use Git branches and pull requests, and what makes a good pull request?",
+   "ideal_answer": "Work on a short-lived branch per change, open a pull request with a clear description, linked task and tests, keep it small so it can be reviewed quickly and respond to review comments. Merge after checks pass.",
+   "key_points": [
+    "Branch per change",
+    "Small, described, tested",
+    "Review before merge"
+   ],
+   "follow_ups": [
+    "How do you handle a conflict with the main branch?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  },
+  {
+   "slug": "confiz-tech-25",
+   "kind": "scenario",
+   "category": "project",
+   "difficulty": "easy",
+   "roles": [
+    "backend-developer",
+    "full-stack-developer",
+    "python-developer",
+    "data-scientist",
+    "frontend-developer"
+   ],
+   "companies": [
+    "confiz"
+   ],
+   "topics": [
+    "projects"
+   ],
+   "prompt": "Describe a project using C#, .NET, SQL or data tools that you built. What was your part and what went wrong first?",
+   "ideal_answer": "A strong answer names the project, your own part and the stack, a real problem and its fix, and how you tested it.",
+   "key_points": [
+    "Own part and stack",
+    "A real problem and fix",
+    "Testing"
+   ],
+   "follow_ups": [
+    "What would you change?"
+   ],
+   "source_label": "company_focused_practice",
+   "source_note": "",
+   "enabled": true
+  }
+ ]
+}
